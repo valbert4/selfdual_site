@@ -33,6 +33,16 @@ python -m http.server 8000          # http://127.0.0.1:8000/
 The site is base-path safe (a per-page `<base>` tag is auto-detected), so it
 works at a domain root or a project sub-path like `/extremal72/`.
 
+## Publish on GitHub Pages
+
+This repository's CI workflow builds, verifies, link-checks, and deploys the
+static site to GitHub Pages on every push to `main`.
+
+One-time GitHub setup: in the repository, go to **Settings -> Pages** and set
+**Build and deployment -> Source** to **GitHub Actions**. After the next push to
+`main`, the site will publish at `https://valbert4.github.io/selfdual_site/`
+unless the repository is renamed or a custom domain is configured.
+
 ## Verify the proof-grade results yourself
 
 ```sh
