@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test pins down the 16-coordinate image code `J` attached to a length-40
 child and checks consistency. It is useful bookkeeping but eliminates no

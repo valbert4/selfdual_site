@@ -65,16 +65,3 @@ than killing the whole menu. The converse does **not** hold: ruling out `C_5`
 does not remove these rows, since a trivial-automorphism code could still cast
 any of them. The tag marks where the `C_5` branch overlaps the menu; it is not a
 kill.
-
-## Public Presentation
-
-The website should show a compact table first, generated at build time from the
-menu data (one row per surviving menu row). The row below is a column template,
-not content — the build step fills it:
-
-| k | a | b | status | witness | last exact test | next step |
-|---:|---:|---:|---|---|---|---|
-| _generated at build time_ | | | | | | |
-
-The full menu ledger is for specialists; link it as a technical reference rather
-than pasting it into the public page.

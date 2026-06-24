@@ -2,7 +2,7 @@
 
 Status: `proof-grade kill`
 
-## Public Summary
+## Summary
 
 Shorten on the union of the supports of two weight-16 words and ask which
 pairwise intersections remain possible. For one row the intersections are forced

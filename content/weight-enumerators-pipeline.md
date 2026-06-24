@@ -1,28 +1,25 @@
 # Weight Enumerators
 
-This page should be a catalog of downloadable enumerator data, not a second
-explanation of the whole search pipeline.
+This catalog collects the downloadable enumerator data and source bundles used
+by the search.
 
-## Public Goal
+## Data Shelf
 
-Make the calculated enumerators available in JSON format:
+The calculated enumerators are available in JSON format:
 
 - one-variable weight enumerators;
 - partition and residual biweight data;
 - genus-3 / triweight data, including large coefficient objects.
 - genus-3 invariant-space and candidate-space artifacts.
 
-Large triweight coefficients should stay machine-readable. The page can show a
-compact summary, but the primary public artifact should be JSON.
+Large triweight coefficients stay machine-readable. The compact summaries here
+point to the full JSON artifacts.
 
 The Simonis `menu_support_weight_r=*` and `residual_support_weight_r=*` files are
 support-weight screening data. They are useful for certificates and tests, but
-they should not live on the main enumerator shelf unless the site later creates
-a separate "support-weight certificates" catalog.
+are separate from the main enumerator shelf.
 
 ## Headline Objects
-
-The page can still show the most important small formulas.
 
 ```text
 A_16 = 249849
@@ -87,11 +84,11 @@ Note: the n=48 data included is the d_48+ closed-form atom, not the full
 
 ## Triweight Routines
 
-The triweight routines are a separate public service. Prior literature treats
-obtaining such enumerators as computationally hard, so the site should make
-these routines easy to find.
+The triweight routines are a separate reusable bundle. Prior literature treats
+obtaining such enumerators as computationally hard, so the routines are kept
+near the data they produce.
 
-The public bundle should include:
+The bundle includes:
 
 - row and column symmetrization routines;
 - support-pruned transforms;
@@ -100,9 +97,8 @@ The public bundle should include:
 - validation scripts and known-code checks;
 - short README notes explaining how to rerun or extend the computation.
 
-The public bundle should not include bulky generated caches, private run logs,
-or machine-specific scratch output unless those files are deliberately promoted
-as public data.
+Bulky generated caches, private run logs, and machine-specific scratch output
+are excluded from the public source bundle.
 
 ## QR48 Triweight Target
 
@@ -111,5 +107,5 @@ The repo has a generator for the extended quadratic-residue `[48,24,12]` code
 benchmark for the public triweight tools.
 
 However, a direct Golay-style enumeration would involve `2^72` triples. The
-site should list the QR48 triweight as a future target for the symmetrized /
-modular / reconciliation pipeline, not as an already-computed download.
+QR48 triweight remains a future target for the symmetrized / modular /
+reconciliation pipeline, not an already-computed download.

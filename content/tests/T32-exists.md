@@ -2,7 +2,7 @@
 
 Status: `active; one proof-grade empty row`
 
-## Public Summary
+## Summary
 
 This test moves beyond algebraic screens and directly tries to build (or
 completely exhaust) the actual length-40 codes for each menu row. A witness makes

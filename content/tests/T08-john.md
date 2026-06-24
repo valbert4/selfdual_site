@@ -2,7 +2,7 @@
 
 Status: `proof-grade kill`
 
-## Public Summary
+## Summary
 
 The weight-16 words of a length-40 child form a constant-weight code in the
 Johnson scheme. This test applies the exact two-point Delsarte bound to that

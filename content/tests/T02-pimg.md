@@ -2,7 +2,7 @@
 
 Status: `proof-grade kills`
 
-## Public Summary
+## Summary
 
 Each length-40 row must sit inside the forced `[56,21]` residual as the image of
 a 16-coordinate projection, with fibers of the right size. This test rejects rows

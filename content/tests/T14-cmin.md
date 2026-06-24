@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test applies minimum-weight and congruence constraints to the cosets used in
 the `40 -> 56` upward direction. It is a fast prefilter; all current rows pass.

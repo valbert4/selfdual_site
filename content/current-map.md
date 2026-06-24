@@ -1,7 +1,5 @@
 # Current Map
 
-This page should become the public dashboard.
-
 ## What Is Forced
 
 - Any `[72,36,16]` Type II code has a fixed Gleason weight enumerator.

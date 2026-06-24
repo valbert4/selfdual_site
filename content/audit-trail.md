@@ -1,8 +1,7 @@
 # Validation Standards
 
-The public site should state the stringency required for a test to change the
-headline menu count. The goal is to make every claimed elimination independently
-checkable.
+These are the standards required for a test to change the headline menu count.
+Every claimed elimination must be independently checkable.
 
 ## Public Rule
 
@@ -13,7 +12,7 @@ independent verifier.
 
 ## Proof-Grade Eliminations
 
-A published elimination should say:
+A published elimination says:
 
 - what mathematical object is tested;
 - which exact necessary condition fails;
@@ -23,8 +22,8 @@ A published elimination should say:
 
 ## Validation Targets
 
-Some methods are useful but need stronger public certificates before they should
-be counted as eliminators:
+Some methods are useful but need stronger public certificates before they count
+as eliminators:
 
 - A3/Schrijver-style SDP tests need an exact constraint system, exact objective
   data, and a replayable certificate.
@@ -37,17 +36,17 @@ be counted as eliminators:
 
 ## Downloadable Computations
 
-The same standard should apply to downloadable computational artifacts:
+The same standard applies to downloadable computational artifacts:
 
-- JSON enumerator files should include provenance and generation notes.
-- The triweight routine bundle should separate source code from large generated
+- JSON enumerator files include provenance and generation notes.
+- The triweight routine bundle separates source code from large generated
   caches and machine-specific logs.
-- Large coefficient objects should be distributed in machine-readable form, with
+- Large coefficient objects are distributed in machine-readable form, with
   compact checksums or summaries for the webpage.
 
 ## Why This Matters
 
-The site should distinguish:
+The project distinguishes:
 
 - proof-grade eliminations;
 - saturated relaxations;

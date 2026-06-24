@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test adds exact per-coset packing caps to the Mode-1 gluing picture,
 limiting how many words each coset can supply. The caps prune the profile pool

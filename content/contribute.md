@@ -37,6 +37,23 @@ So you can aim at something real, not a generic "help wanted":
 
 ---
 
+## A focused open problem: can a glue be ruled out?
+
+The project has tried many times to **glue** a known length-40 code up into the
+pivotal `[56,21,16]` residual, and cannot do it — but also cannot prove it is
+impossible. It is a sharp, self-contained challenge that touches exact algebra,
+SAT, and SDP at once, with a clean dividing line between what is *proven* and what
+is merely *search-exhausted*. If you want one concrete, meaty problem to bite
+into, start here:
+
+[**Ruling out a glue — the open problem**](ruling-out-gluing.md)
+
+That page lays out what has been tried (two opposite length-40 families, two
+different walls), why "no glue found" is not yet "no glue exists," and the
+specific sub-problems whose resolution would settle it.
+
+---
+
 ## "I can prove things"
 
 Coding theory, finite geometry, designs, invariant theory — turn a numerical

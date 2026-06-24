@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test studies the binary rank spanned by the minimum words of a length-40
 child and the incidence structure they force. It yields useful per-row rank

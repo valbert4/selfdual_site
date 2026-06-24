@@ -13,6 +13,11 @@
 <li>The automorphism group is narrowed to one of <code>{C_1, C_2, C_3, C_2×C_2, C_5}</code> but <strong>nothing is assumed</strong> — every test must hold for the trivial group <code>C_1</code>, the hardest case. There is a <a href="content/menu-summary.html"><code>C_5</code> sub-menu</a> of 16 rows with <code>a ≡ 0 (mod 5)</code>.</li>
 </ul>
 <hr />
+<h2 id="a-focused-open-problem-can-a-glue-be-ruled-out">A focused open problem: can a glue be ruled out?</h2>
+<p>The project has tried many times to <strong>glue</strong> a known length-40 code up into the pivotal <code>[56,21,16]</code> residual, and cannot do it — but also cannot prove it is impossible. It is a sharp, self-contained challenge that touches exact algebra, SAT, and SDP at once, with a clean dividing line between what is <em>proven</em> and what is merely <em>search-exhausted</em>. If you want one concrete, meaty problem to bite into, start here:</p>
+<p><a href="content/ruling-out-gluing.html"><strong>Ruling out a glue — the open problem</strong></a></p>
+<p>That page lays out what has been tried (two opposite length-40 families, two different walls), why "no glue found" is not yet "no glue exists," and the specific sub-problems whose resolution would settle it.</p>
+<hr />
 <h2 id="i-can-prove-things">"I can prove things"</h2>
 <p>Coding theory, finite geometry, designs, invariant theory — turn a numerical screen or a saturated relaxation into a proof-grade obstruction (or a construction). The highest-value targets are the ones where a continuous relaxation saturates but an integer/structural argument might still cut.</p>
 <p>First tasks:</p>
@@ -85,4 +90,4 @@
 <li><strong>A replayable certificate or an independent verifier</strong> — a Farkas/dual certificate, a route-3A witness/exhaust, or a pure-Python <code>verify.py</code> that re-derives the claim and exits <code>0</code> iff it holds. Match the <a href="content/computations-and-certificates.html">reproduction-bundle</a> format so it slots into <code>verify_all.py</code>.</li>
 </ol>
 <p>Then bring it to <strong>#extremal72</strong> on the <a href="https://discord.gg/gg3pJZNYxQ">Discord</a> for review. A row leaves the public menu only once its obstruction is exact and independently checkable.</p>
-</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>
+</article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

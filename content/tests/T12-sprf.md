@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test enumerates all weight-16 shortening profiles attached to a menu row and
 checks them for consistency. The profiles are a useful invariant but bind no

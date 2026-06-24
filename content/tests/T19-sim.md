@@ -2,7 +2,7 @@
 
 Status: `proof-grade kill`
 
-## Public Summary
+## Summary
 
 This test uses generalized (Simonis) support-weight identities, which couple the
 support distributions of order-`r` subcodes of `E` to those of its dual. One row

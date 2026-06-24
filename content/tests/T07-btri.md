@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test refines the two-anchor picture with a small three-anchor (baby
 triweight) calculation on the length-72 structure. It is a useful consistency

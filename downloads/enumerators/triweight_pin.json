@@ -6407,6 +6407,6 @@
   "n_menu_rows": 48
  },
  "provenance_notes": [
-  "menu snapshot refreshed 2026-06-12 to the 73-row pending set (MENU2.md totals; was 48 stale rows incl. T19-killed (6,1,60)); cross-checked vs MENU2 table parse."
+  "menu snapshot refreshed 2026-06-12 to the 73-row pending set (MENU.md totals; was 48 stale rows incl. T19-killed (6,1,60)); cross-checked vs MENU table parse."
  ]
 }

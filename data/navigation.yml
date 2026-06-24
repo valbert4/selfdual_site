@@ -15,8 +15,6 @@ primary:
     path: "content/tests/index.md"
   - title: "Weight Enumerators"
     path: "content/weight-enumerators-pipeline.md"
-  - title: "UI Layout"
-    path: "content/ui-layout.md"
   - title: "Validation Standards"
     path: "content/audit-trail.md"
   - title: "Ideas Not Pursued"

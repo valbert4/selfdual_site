@@ -13,11 +13,10 @@ The project has two possible endings:
 
 - [Current Map](current-map.md): the short status view.
 - [The Hierarchy](hierarchy.md): the `72 -> 56 -> 40 -> 24` strategy.
-- [Length-40 Menu](menu-summary.md): the current finite menu and `MENU2` stats.
+- [Length-40 Menu](menu-summary.md): the current finite menu and `MENU` stats.
 - [Tests](tests/index.md): one page for each test `T1` through `T32`.
 - [Weight Enumerators](weight-enumerators-pipeline.md): downloadable enumerator
   data and the triweight routine bundle.
-- [Tab-Based GUI Sketch](ui-layout.md): how the site can be organized as tabs.
 - [Validation Standards](audit-trail.md): exactness requirements for public
   eliminations and downloadable computations.
 - [Ideas Not Pursued](ideas-not-pursued.md): useful negative results and parked

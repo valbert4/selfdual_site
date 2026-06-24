@@ -1,11 +1,11 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Validation Standards - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="validation-standards">Validation Standards</h1>
-<p>The public site should state the stringency required for a test to change the headline menu count. The goal is to make every claimed elimination independently checkable.</p>
+<p>These are the standards required for a test to change the headline menu count. Every claimed elimination must be independently checkable.</p>
 <h2 id="public-rule">Public Rule</h2>
 <pre class="text"><code>No public status change without exact input data, an exact certificate, or an
 independent verifier.
 </code></pre>
 <h2 id="proof-grade-eliminations">Proof-Grade Eliminations</h2>
-<p>A published elimination should say:</p>
+<p>A published elimination says:</p>
 <ul>
 <li>what mathematical object is tested;</li>
 <li>which exact necessary condition fails;</li>
@@ -14,7 +14,7 @@ independent verifier.
 <li>how the certificate can be replayed from public data.</li>
 </ul>
 <h2 id="validation-targets">Validation Targets</h2>
-<p>Some methods are useful but need stronger public certificates before they should be counted as eliminators:</p>
+<p>Some methods are useful but need stronger public certificates before they count as eliminators:</p>
 <ul>
 <li>A3/Schrijver-style SDP tests need an exact constraint system, exact objective data, and a replayable certificate.</li>
 <li>Mode-1 per-coset gluing needs independently checked image counts and witness-preserving reconciliation.</li>
@@ -22,14 +22,14 @@ independent verifier.
 <li>LP-derived infeasibility needs exact reconstruction of the input coefficients before exact simplex arithmetic is trusted.</li>
 </ul>
 <h2 id="downloadable-computations">Downloadable Computations</h2>
-<p>The same standard should apply to downloadable computational artifacts:</p>
+<p>The same standard applies to downloadable computational artifacts:</p>
 <ul>
-<li>JSON enumerator files should include provenance and generation notes.</li>
-<li>The triweight routine bundle should separate source code from large generated caches and machine-specific logs.</li>
-<li>Large coefficient objects should be distributed in machine-readable form, with compact checksums or summaries for the webpage.</li>
+<li>JSON enumerator files include provenance and generation notes.</li>
+<li>The triweight routine bundle separates source code from large generated caches and machine-specific logs.</li>
+<li>Large coefficient objects are distributed in machine-readable form, with compact checksums or summaries for the webpage.</li>
 </ul>
 <h2 id="why-this-matters">Why This Matters</h2>
-<p>The site should distinguish:</p>
+<p>The project distinguishes:</p>
 <ul>
 <li>proof-grade eliminations;</li>
 <li>saturated relaxations;</li>
@@ -37,4 +37,4 @@ independent verifier.
 <li>open validation targets.</li>
 </ul>
 <p>That distinction is central to making the project community-verifiable.</p>
-</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>
+</article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

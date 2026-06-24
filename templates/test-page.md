@@ -2,7 +2,7 @@
 
 Status: `draft`
 
-## Public Summary
+## Summary
 
 One paragraph explaining what this test does without internal jargon.
 

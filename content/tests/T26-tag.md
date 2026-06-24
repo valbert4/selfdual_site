@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test combines genus-3 triweight aggregate constraints with residual Mode-1
 gluing data. The combined aggregate model stays feasible — another sign that

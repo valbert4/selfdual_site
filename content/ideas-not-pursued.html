@@ -12,13 +12,13 @@
 <li>weight-hierarchy partition, which is non-vacuous but kills no current row.</li>
 </ul>
 <h3 id="validation-heavy-routes">Validation-Heavy Routes</h3>
-<p>Some promising routes require more stringent certificates before they should affect the public menu count:</p>
+<p>Some promising routes require more stringent certificates before they can affect the public menu count:</p>
 <ul>
 <li>A3/Schrijver-style SDP cuts need exact constraint systems and replayable certificates;</li>
 <li>Mode-1 per-coset gluing needs exact image counts and witness-preserving reconciliation;</li>
 <li>LP-derived infeasibilities need exact input reconstruction before exact simplex arithmetic is trusted.</li>
 </ul>
-<p>These belong on the <a href="content/audit-trail.html">Validation Standards</a> page, but this page can summarize why not to rebuild the same route unchanged.</p>
+<p>See <a href="content/audit-trail.html">Validation Standards</a> for the certificate rules behind these labels.</p>
 <h3 id="too-weak-at-the-current-scale">Too Weak At The Current Scale</h3>
 <p>Some ideas are mathematically correct but too loose:</p>
 <ul>
@@ -39,14 +39,4 @@
 <ul>
 <li><strong>Construction A as a bridge to an extremal 72-dimensional lattice.</strong> The Construction-A lattice of the code, <code>Λ = (1/√2){x : x mod 2 ∈ C}</code>, always contains <code>√2·Z^72</code> (the zero codeword), so <code>√2·e_1 ∈ Λ</code> has norm <code>2</code>. Its minimum norm is therefore <code>2</code>, not <code>8</code>: it is even unimodular but <strong>not</strong> extremal (an extremal even unimodular lattice in dimension 72 has minimum norm <code>8</code>). The converse — searching a known extremal lattice for a <code>√2·Z^72</code> coordinate frame whose cosets form a doubly-even self-dual code — is vacuous for the same reason: an extremal lattice cannot contain such a frame, since the frame would inject a norm-<code>2</code> vector below the minimum. Plain Construction A is not the code↔︎extremal-lattice bridge in either direction. What does carry over is the methodological mirror: anchoring a minimal vector and using design moments to pin the cross-shell distribution exactly, the lattice image of the anchored-design machinery used on the code side.</li>
 </ul>
-<h2 id="how-to-present-a-parked-idea">How To Present A Parked Idea</h2>
-<p>Each idea should have:</p>
-<pre class="text"><code>Idea:
-Why it was tempting:
-What was tried:
-What happened:
-Why it is parked:
-What would make it worth revisiting:
-Source files:
-</code></pre>
-</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>
+</article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

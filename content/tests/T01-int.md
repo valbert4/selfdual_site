@@ -2,7 +2,7 @@
 
 Status: `defines raw menu`
 
-## Public Summary
+## Summary
 
 This test generates the length-40 menu. It enumerates every weight enumerator a
 doubly-even self-orthogonal `[40,k,>=16]` code containing the all-ones word could

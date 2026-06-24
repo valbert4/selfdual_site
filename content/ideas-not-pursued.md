@@ -23,8 +23,8 @@ Examples to expand:
 
 ### Validation-Heavy Routes
 
-Some promising routes require more stringent certificates before they should
-affect the public menu count:
+Some promising routes require more stringent certificates before they can affect
+the public menu count:
 
 - A3/Schrijver-style SDP cuts need exact constraint systems and replayable
   certificates;
@@ -33,8 +33,8 @@ affect the public menu count:
 - LP-derived infeasibilities need exact input reconstruction before exact
   simplex arithmetic is trusted.
 
-These belong on the [Validation Standards](audit-trail.md) page, but this page
-can summarize why not to rebuild the same route unchanged.
+See [Validation Standards](audit-trail.md) for the certificate rules behind
+these labels.
 
 ### Too Weak At The Current Scale
 
@@ -70,17 +70,3 @@ These are not parked; they are ruled out as written.
   is the methodological mirror: anchoring a minimal vector and using design
   moments to pin the cross-shell distribution exactly, the lattice image of the
   anchored-design machinery used on the code side.
-
-## How To Present A Parked Idea
-
-Each idea should have:
-
-```text
-Idea:
-Why it was tempting:
-What was tried:
-What happened:
-Why it is parked:
-What would make it worth revisiting:
-Source files:
-```

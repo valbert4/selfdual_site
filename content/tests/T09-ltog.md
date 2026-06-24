@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test applies the toggle-stabilizer divisibility constraints locally, inside
 a single `16|24` split around one minimum word. The constraints are valid but

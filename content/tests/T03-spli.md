@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test asks whether the first recursive split system around a minimum word has
 an integer solution compatible with a menu row. It is a real constraint, but

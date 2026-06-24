@@ -103,7 +103,7 @@ function renderTests() {
       const link = document.createElement("a");
       link.className = "test-page-link";
       link.href = test.page;
-      link.textContent = "Draft page";
+      link.textContent = "Summary";
 
       const badges = document.createElement("div");
       badges.className = "badge-row";

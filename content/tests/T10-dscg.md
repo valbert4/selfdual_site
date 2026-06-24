@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 For a length-40 child to extend upward into the `[56,21]` residual, its
 discriminant form and coset-weight data must match. This test checks that

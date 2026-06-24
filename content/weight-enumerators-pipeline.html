@@ -1,17 +1,16 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Weight Enumerators - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="weight-enumerators">Weight Enumerators</h1>
-<p>This page should be a catalog of downloadable enumerator data, not a second explanation of the whole search pipeline.</p>
-<h2 id="public-goal">Public Goal</h2>
-<p>Make the calculated enumerators available in JSON format:</p>
+<p>This catalog collects the downloadable enumerator data and source bundles used by the search.</p>
+<h2 id="data-shelf">Data Shelf</h2>
+<p>The calculated enumerators are available in JSON format:</p>
 <ul>
 <li>one-variable weight enumerators;</li>
 <li>partition and residual biweight data;</li>
 <li>genus-3 / triweight data, including large coefficient objects.</li>
 <li>genus-3 invariant-space and candidate-space artifacts.</li>
 </ul>
-<p>Large triweight coefficients should stay machine-readable. The page can show a compact summary, but the primary public artifact should be JSON.</p>
-<p>The Simonis <code>menu_support_weight_r=*</code> and <code>residual_support_weight_r=*</code> files are support-weight screening data. They are useful for certificates and tests, but they should not live on the main enumerator shelf unless the site later creates a separate "support-weight certificates" catalog.</p>
+<p>Large triweight coefficients stay machine-readable. The compact summaries here point to the full JSON artifacts.</p>
+<p>The Simonis <code>menu_support_weight_r=*</code> and <code>residual_support_weight_r=*</code> files are support-weight screening data. They are useful for certificates and tests, but are separate from the main enumerator shelf.</p>
 <h2 id="headline-objects">Headline Objects</h2>
-<p>The page can still show the most important small formulas.</p>
 <pre class="text"><code>A_16 = 249849
 </code></pre>
 <pre class="text"><code>W_D(y) =
@@ -46,8 +45,8 @@
 <p><strong>What <code>exact_V</code> is, and is not.</strong> The genus-3 triweight of the <code>[72,36,16]</code> code is <strong>not</strong> uniquely determined by the current constraints. <code>exact_V</code> is the exact 6-dimensional invariant <em>space</em> (one forced row plus a 5-dimensional freedom), recovered and CRT-verified. None of the 5 freedom directions has been pinned: every computable enumerator-level constraint applied so far leaves the full freedom intact. So <code>exact_V</code> is the pinned-down <em>space the triweight lives in</em>, not the triweight itself. Treat any single point in it as a representative, not "the" enumerator.</p>
 <p>Note: the n=48 data included is the d_48+ closed-form atom, not the full 31-dimensional invariant space (that artifact is not yet computed).</p>
 <h2 id="triweight-routines">Triweight Routines</h2>
-<p>The triweight routines are a separate public service. Prior literature treats obtaining such enumerators as computationally hard, so the site should make these routines easy to find.</p>
-<p>The public bundle should include:</p>
+<p>The triweight routines are a separate reusable bundle. Prior literature treats obtaining such enumerators as computationally hard, so the routines are kept near the data they produce.</p>
+<p>The bundle includes:</p>
 <ul>
 <li>row and column symmetrization routines;</li>
 <li>support-pruned transforms;</li>
@@ -56,8 +55,8 @@
 <li>validation scripts and known-code checks;</li>
 <li>short README notes explaining how to rerun or extend the computation.</li>
 </ul>
-<p>The public bundle should not include bulky generated caches, private run logs, or machine-specific scratch output unless those files are deliberately promoted as public data.</p>
+<p>Bulky generated caches, private run logs, and machine-specific scratch output are excluded from the public source bundle.</p>
 <h2 id="qr48-triweight-target">QR48 Triweight Target</h2>
 <p>The repo has a generator for the extended quadratic-residue <code>[48,24,12]</code> code (a <code>qr48_generators()</code> routine), and the code is the natural benchmark for the public triweight tools.</p>
-<p>However, a direct Golay-style enumeration would involve <code>2^72</code> triples. The site should list the QR48 triweight as a future target for the symmetrized / modular / reconciliation pipeline, not as an already-computed download.</p>
-</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>
+<p>However, a direct Golay-style enumeration would involve <code>2^72</code> triples. The QR48 triweight remains a future target for the symmetrized / modular / reconciliation pipeline, not an already-computed download.</p>
+</article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

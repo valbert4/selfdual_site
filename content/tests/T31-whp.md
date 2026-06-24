@@ -2,7 +2,7 @@
 
 Status: `saturates but non-vacuous`
 
-## Public Summary
+## Summary
 
 This test applies Wei duality and generalized-Hamming-weight (GHW) bounds to the
 length-40 child and its dual. It has real teeth — it would kill anomalous

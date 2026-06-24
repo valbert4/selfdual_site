@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test feeds menu information into the genus-3 triweight variables and asks
 whether the feedback rules out any row. It does not, through this aggregate LP.

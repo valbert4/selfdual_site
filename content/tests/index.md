@@ -1,9 +1,6 @@
 # Test Ledger
 
-This directory has one public page for each test column.
-
-The public site should not show the full `MENU2` matrix first. Instead, each
-test page should explain:
+Each test page records:
 
 - what the test checks;
 - which mathematical object it sees;
@@ -13,8 +10,6 @@ test page should explain:
 - what a contributor could do next.
 
 ## Tests
-
-The authoritative structured list is `website/data/tests.yml`.
 
 - [T01 - Integer and self-orthogonal validity](T01-int.md)
 - [T02 - Parent-image divisibility](T02-pimg.md)

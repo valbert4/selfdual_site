@@ -1,0 +1,64 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Ruling out a glue - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="ruling-out-a-glue">Ruling out a glue</h1>
+<p>A construction-side route to settling <code>[72,36,16]</code> is to build it <em>upward</em> from a known length-40 code. This is <strong>gluing</strong>. Despite many attempts, no glue has been built — and, just as importantly, no glue has been proven <em>impossible</em>. This page states the problem precisely, summarizes where the search stands, and lists the concrete sub-problems whose resolution would rule a glue in or out.</p>
+<p>If you want one sharp, self-contained challenge that touches exact algebra, SAT, and SDP at once, this is a good place to bite in. Bring questions to <a href="https://discord.gg/gg3pJZNYxQ"><strong>#extremal72</strong> on the Discord</a>.</p>
+<h2 id="the-construction-the-residual-tower-run-backwards">The construction (the residual tower, run backwards)</h2>
+<p>The search normally <em>descends</em></p>
+<pre><code>[72,36,16]  →  [56,21,≥16]  →  [40,k,≥16]  →  [24, …]
+</code></pre>
+<p>by repeatedly shortening at a weight-16 coordinate block. Gluing runs this <em>backward</em>: start from a classified <code>[40,k,16]</code> doubly-even self-orthogonal code <code>E</code> (containing the all-ones word) and try to extend it two steps back up to a <code>[72,36,16]</code>. There are two independent lifts:</p>
+<ul>
+<li><strong>Stage 1:</strong> <code>[40,k] → [56,21,≥16]</code></li>
+<li><strong>Stage 2:</strong> <code>[56,21] → [72,36,16]</code></li>
+</ul>
+<p>Everything below is about <strong>Stage 1</strong> (length 40 → 56). No Stage-1 code has ever been produced, so Stage 2 — the classical wall — has never been reached.</p>
+<p><strong>Why 56 is pivotal.</strong> <code>56 = 72 − 16</code>. If a Type II <code>[72,36,16]</code> exists, its residual at any weight-16 word is forced to be a <code>[56,21,≥16]</code> doubly-even self-orthogonal code containing the all-ones word, with a <em>unique</em> forced weight enumerator — in particular <strong>exactly <code>A_16 = 5082</code> minimum words</strong>. So a length-56 code carrying that exact enumerator is the middle object the whole construction route turns on.</p>
+<h2 id="the-glue-map">The glue map</h2>
+<p>Fix the length-16 block. A Stage-1 glue is a linear map</p>
+<pre><code>γ : J → Q_E = E^⊥ / E
+</code></pre>
+<p>from an image code <code>J</code> (with <code>dim J = 21 − k</code>) into the <strong>discriminant form</strong> <code>Q_E</code> — a quadratic space of dimension <code>40 − 2k</code>. It must satisfy:</p>
+<ul>
+<li><strong>kernel = the all-ones word exactly</strong>, so <code>γ</code> embeds <code>J / ⟨1⟩</code>;</li>
+<li><strong>it preserves the bilinear and quadratic forms</strong> (this is what makes the length-56 code doubly-even and self-orthogonal);</li>
+<li><strong>the binding condition:</strong> every glued coset has minimum weight high enough to hold the distance at <code>≥ 16</code>.</li>
+</ul>
+<p>Concretely, choosing <code>γ</code> means choosing <code>20 − k</code> coset images whose <em>every</em> XOR-combination clears its weight threshold — a "deep" packing condition. The form conditions are easy to satisfy; <strong>the distance condition is the wall.</strong></p>
+<h2 id="what-has-been-tried--and-the-two-walls">What has been tried — and the two walls</h2>
+<p>Two structurally <em>opposite</em> length-40 families were pushed hard. Each fails for a different reason, and in each case the failure is a <strong>search/solver limit, not an impossibility proof.</strong></p>
+<h3 id="family-a--a-highly-symmetric-duplicated-point-code-k--6">Family A — a highly symmetric "duplicated-point" code (k = 6)</h3>
+<p>Built from the 32 affine points of a Reed–Muller code plus 8 repeated copies of a single point. Here <code>Q_E</code> factors into a <em>linear</em> part and a small "duplicate-block" part, and the deepness condition splits cleanly:</p>
+<ul>
+<li>The linear/nonlinearity part is <strong>trivially solvable</strong> — a Gold/bent shell clears every binding combination instantly.</li>
+<li>The duplicate-block part is the wall: the required weight pattern is realizable only if the underlying cubic structure is a very special object (a <strong>Delsarte–Goethals / Kerdock shell</strong>), not a generic one. Generic choices pass every counting and parity test yet are <strong>unrealizable</strong> as a single linear pattern.</li>
+</ul>
+<p>This deep-realizability search is <em>monotone</em> (a failure at small depth forces failure at full depth), so it can be searched directly. It has been confirmed realizable only to a bounded depth; a 64-core, multi-hour cluster search found <strong>no glue and no proof of impossibility.</strong> Separately, every counting-style attempt to <em>kill</em> this code — exhaustive coset-supply counts, and an exact forced-enumerator + MacWilliams LP — comes back <strong>feasible</strong> (no obstruction). So the proof-grade evidence actually leans <em>toward</em> this code being glueable; we simply cannot exhibit the glue or rule it out.</p>
+<h3 id="family-b--clean-codes-with-no-repeated-points-k--7-8-9">Family B — "clean" codes with no repeated points (k = 7, 8, 9)</h3>
+<p>Here <code>Q_E</code> is a single quadratic space and the glue is a pure isometry search. The distinction that matters:</p>
+<ul>
+<li>a <strong>form-isometry</strong> preserves the algebra but ignores distance — one is found <strong>instantly</strong>, so there is no algebraic obstruction;</li>
+<li>a <strong>deep isometry</strong> is a form-isometry that <em>also</em> keeps every combination above threshold — this is what <code>d ≥ 16</code> requires.</li>
+</ul>
+<p>No deep isometry was found. Minimizing the <strong>leak</strong> (the number of below-threshold combinations) by every available heuristic <strong>floors at ≈ 10 for k = 9 and ≈ 11 for k = 8</strong>, and never reaches zero. An exact analysis localizes the obstruction to a specific class of about <code>30</code> combinations that cannot all be simultaneously deep. But that leak floor is a <em>heuristic minimum</em>, not a proven one — the true minimum could in principle be <code>0</code> in a basin the search never enters.</p>
+<h2 id="the-crux-search-exhaustion-is-not-a-proof">The crux: search-exhaustion is not a proof</h2>
+<p>This is the single most important point for anyone joining this problem.</p>
+<ul>
+<li><strong>Proven (proof-grade):</strong> the counting kills <em>fail</em>; a form-isometry <em>exists</em>; the obstruction is <em>localized</em>. These are exact statements.</li>
+<li><strong>Not proven:</strong> that <em>no</em> glue exists. Both walls are bounded by <strong>solver time</strong> (Family A) or <strong>heuristic search depth</strong> (Family B), not by an impossibility certificate.</li>
+</ul>
+<p>So the honest status is: <strong>neither family has been glued, and neither has been provably ruled out.</strong></p>
+<h2 id="why-ruling-one-out-is-hard">Why ruling one out is hard</h2>
+<p>The proof-grade verdict reduces to a single large finite <strong>SAT</strong> instance — encode the binding combinations exactly and solve once. <strong>UNSAT</strong> would prove no glue exists; <strong>SAT</strong> would hand back an actual <code>[56,21,16]</code>. The catch: the instance sits <em>exactly</em> at the SAT/UNSAT phase boundary and carries a quadratic-form coupling that makes it enormous — encodings with millions of variables have run for hours without resolving.</p>
+<p>The alternative is an exact LP/SDP <strong>infeasibility certificate</strong>, but it needs a relaxation that can <em>see that the glued image is closed under addition</em> (it is a group). The natural forced-enumerator LP provably cannot see that, which is exactly why it saturates.</p>
+<h2 id="how-you-can-help">How you can help</h2>
+<p>Concrete, self-contained sub-problems — any one of these is a real result:</p>
+<ol>
+<li><strong>Finish or shrink the finite SAT.</strong> Drive the exact encoding to a verdict, or extract a <strong>minimal unsatisfiable core</strong> from the ~<code>30</code>-combination obstruction class. A small core is a far cheaper proof of "no glue with this image" than the full instance.</li>
+<li><strong>Break the quadratic coupling.</strong> Fix one image to automorphism-orbit representatives to linearize the dominant coupling that makes the SAT instance hard.</li>
+<li><strong>Build the special cubic shell (construction route).</strong> For Family A, replace the generic cubic extension with the explicit Delsarte–Goethals / Kerdock shell so the weight pattern is realizable <em>by construction</em>. Success here yields the first concrete <code>[56,21,16]</code> — settling it by <em>finding</em> rather than ruling out.</li>
+<li><strong>A group-aware relaxation.</strong> Add linked-triple (subgroup-closure) constraints, or a Terwilliger-style PSD layer, to the forced-enumerator LP — the only remaining counting-style lever that could produce an exact kill.</li>
+<li><strong>A stronger heuristic aimed at leak 0.</strong> For Family B, a deeper annealing/restart search that <em>finds</em> a deep isometry would resolve the "tiny-basin" uncertainty by exhibiting a glue.</li>
+</ol>
+<h2 id="an-honest-caveat-about-scope">An honest caveat about scope</h2>
+<p>Ruling out a glue is a sharp and worthwhile sub-problem, but it is <strong>not</strong> how <code>[72,36,16]</code> non-existence would be proven. Non-existence, if true, has to come from the Delsarte / <a href="content/menu-summary.html">menu</a> side of the search; ruling out a glue for one code — or even every classified code — does not by itself exclude the <code>[72,36,16]</code>. So treat gluing primarily as a <strong>construction</strong> effort (find a real <code>[56,21,16]</code>, then attack the genuine Stage-2 wall), and treat "rule it out" as a clean, self-contained challenge: <em>can even a single candidate glue be proven impossible?</em></p>
+<p>See also the <a href="content/open-problems.html">Open Problems</a> and <a href="content/computations-and-certificates.html">Computations and Certificates</a> pages, and the <a href="content/hierarchy.html">Hierarchy</a> for the <code>[72] → [56] → [40] → [24]</code> descent.</p>
+</article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

@@ -2,7 +2,7 @@
 
 Status: `diagnostic consistency check; no public elimination`
 
-## Public Summary
+## Summary
 
 This test couples pairs (and subgroups) of cosets and checks an overcode-style
 consistency condition on the upward glue. Its current value is as a consistency

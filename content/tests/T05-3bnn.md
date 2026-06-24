@@ -2,7 +2,7 @@
 
 Status: `proof-grade kills`
 
-## Public Summary
+## Summary
 
 Anchor two disjoint weight-16 words and study the induced `16|16|40` split. Some
 menu rows force a negative count somewhere in that split, which no real code can

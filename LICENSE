@@ -23,6 +23,6 @@ SOFTWARE.
 ----------------------------------------------------------------------------
 Note on prose and data: the code (build scripts, verifiers, dashboard JS) is
 under the MIT License above. The written content (the Markdown pages and prose)
-and the enumerator data are additionally offered under CC-BY-4.0
+and the enumerator data are licensed under CC-BY-4.0
 (https://creativecommons.org/licenses/by/4.0/) so they can be reused with
-attribution. Confirm or adjust this licensing choice before public launch.
+attribution.

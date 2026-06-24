@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test builds the local `16|24` split table around a minimum word and checks
 that the counts are realizable. Every row that reaches it is consistent.

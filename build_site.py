@@ -67,8 +67,8 @@ def page(title, body, depth=1):
         '<link rel=stylesheet href="prototype/dark-skin.css?v=3">'
         '<link rel=stylesheet href="site.css?v=3"></head><body>'
         f'{navbar()}<main class="app-shell"><article class="doc">{body}</article></main>'
-        '<footer class="doc-footer">Extremal 72 - static site. '
-        "Status numbers mirror <code>data/menu-summary.yml</code>.</footer>"
+        '<footer class="doc-footer">Extremal 72. '
+        "Proof-grade claims include replayable reproduction bundles.</footer>"
         "</body></html>"
     )
 

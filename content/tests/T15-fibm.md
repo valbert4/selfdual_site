@@ -2,7 +2,7 @@
 
 Status: `saturates`
 
-## Public Summary
+## Summary
 
 This test asks whether the fiber and coset multisets of a length-40 child can be
 matched to the forced split rows of the residual. The aggregate matching is
