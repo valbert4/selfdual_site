@@ -53,9 +53,9 @@ from an image code `J` (with `dim J = 21 − k`) into the **discriminant form**
 - **the binding condition:** every glued coset has minimum weight high enough to
   hold the distance at `≥ 16`.
 
-Concretely, choosing `γ` means choosing `20 − k` coset images whose *every*
-XOR-combination clears its weight threshold — a "deep" packing condition. The
-form conditions are easy to satisfy; **the distance condition is the wall.**
+Concretely, choosing `γ` means choosing `20 − k` coset images such that *every*
+one of their XOR-combinations clears its weight threshold. The form conditions are
+easy to satisfy; **this distance condition is the wall.**
 
 ## What has been tried — and the two walls
 
@@ -67,48 +67,49 @@ impossibility proof.**
 
 Built from the 32 affine points of a Reed–Muller code plus 8 repeated copies of a
 single point. Here `Q_E` factors into a *linear* part and a small
-"duplicate-block" part, and the deepness condition splits cleanly:
+"duplicate-block" part, and the distance condition splits cleanly between them:
 
-- The linear/nonlinearity part is **trivially solvable** — a Gold/bent shell
-  clears every binding combination instantly.
+- The linear part is **trivially solvable** — a known bent-function (Gold)
+  construction clears every binding combination instantly.
 - The duplicate-block part is the wall: the required weight pattern is realizable
-  only if the underlying cubic structure is a very special object (a
-  **Delsarte–Goethals / Kerdock shell**), not a generic one. Generic choices pass
-  every counting and parity test yet are **unrealizable** as a single linear
-  pattern.
+  only if the underlying cubic structure is a very special one — the structure
+  behind the **Kerdock / Delsarte–Goethals codes** — and not a generic cubic.
+  Generic choices pass every counting and parity test yet turn out to be
+  **unrealizable** as a single linear pattern.
 
-This deep-realizability search is *monotone* (a failure at small depth forces
-failure at full depth), so it can be searched directly. It has been confirmed
-realizable only to a bounded depth; a 64-core, multi-hour cluster search found
-**no glue and no proof of impossibility.** Separately, every counting-style
-attempt to *kill* this code — exhaustive coset-supply counts, and an exact
-forced-enumerator + MacWilliams LP — comes back **feasible** (no obstruction). So
-the proof-grade evidence actually leans *toward* this code being glueable; we
-simply cannot exhibit the glue or rule it out.
+This realizability search is *monotone* (a failure at small depth forces failure
+at full depth), so it can be searched directly. It has been confirmed realizable
+only to a bounded depth; a 64-core, multi-hour cluster search found **no glue and
+no proof of impossibility.** Separately, every counting-style attempt to *kill*
+this code — exhaustive coset-supply counts, and an exact forced-enumerator +
+MacWilliams LP — comes back **feasible** (no obstruction). So the proof-grade
+evidence actually leans *toward* this code being glueable; we simply cannot
+exhibit the glue or rule it out.
 
 ### Family B — "clean" codes with no repeated points (k = 7, 8, 9)
 
 Here `Q_E` is a single quadratic space and the glue is a pure isometry search.
 The distinction that matters:
 
-- a **form-isometry** preserves the algebra but ignores distance — one is found
-  **instantly**, so there is no algebraic obstruction;
-- a **deep isometry** is a form-isometry that *also* keeps every combination
-  above threshold — this is what `d ≥ 16` requires.
+- a map that preserves the algebra but ignores distance — a **form-only
+  isometry** — is found **instantly**, so there is no algebraic obstruction;
+- what `d ≥ 16` actually needs is a form-only isometry that *additionally* keeps
+  every XOR-combination above its weight threshold.
 
-No deep isometry was found. Minimizing the **leak** (the number of below-threshold
-combinations) by every available heuristic **floors at ≈ 10 for k = 9 and ≈ 11
-for k = 8**, and never reaches zero. An exact analysis localizes the obstruction
-to a specific class of about `30` combinations that cannot all be simultaneously
-deep. But that leak floor is a *heuristic minimum*, not a proven one — the true
-minimum could in principle be `0` in a basin the search never enters.
+No such distance-preserving isometry was found. Across every available heuristic,
+the **number of below-threshold combinations stalls at about 10 for k = 9 and
+about 11 for k = 8**, and never reaches zero. An exact analysis localizes the
+obstruction to a specific class of about `30` combinations that cannot all clear
+the threshold at once. But that stalling value is a *heuristic minimum*, not a
+proven one — the true minimum could in principle be zero, in a basin the search
+never enters.
 
 ## The crux: search-exhaustion is not a proof
 
 This is the single most important point for anyone joining this problem.
 
-- **Proven (proof-grade):** the counting kills *fail*; a form-isometry *exists*;
-  the obstruction is *localized*. These are exact statements.
+- **Proven (proof-grade):** the counting kills *fail*; a form-only isometry
+  *exists*; the obstruction is *localized*. These are exact statements.
 - **Not proven:** that *no* glue exists. Both walls are bounded by **solver time**
   (Family A) or **heuristic search depth** (Family B), not by an impossibility
   certificate.
@@ -141,27 +142,51 @@ Concrete, self-contained sub-problems — any one of these is a real result:
 2. **Break the quadratic coupling.** Fix one image to automorphism-orbit
    representatives to linearize the dominant coupling that makes the SAT instance
    hard.
-3. **Build the special cubic shell (construction route).** For Family A, replace
-   the generic cubic extension with the explicit Delsarte–Goethals / Kerdock shell
-   so the weight pattern is realizable *by construction*. Success here yields the
-   first concrete `[56,21,16]` — settling it by *finding* rather than ruling out.
-4. **A group-aware relaxation.** Add linked-triple (subgroup-closure) constraints,
-   or a Terwilliger-style PSD layer, to the forced-enumerator LP — the only
+3. **Build the special cubic structure (construction route).** For Family A,
+   replace the generic cubic extension with the explicit Kerdock /
+   Delsarte–Goethals construction so the weight pattern is realizable *by
+   construction*. Success here yields the first concrete `[56,21,16]` — settling
+   it by *finding* rather than ruling out.
+4. **A group-aware relaxation.** Add constraints that encode that the glued image
+   is closed under addition (the triples `w, w', w⊕w'` must occur together), or a
+   Terwilliger-style PSD layer, on top of the forced-enumerator LP — the only
    remaining counting-style lever that could produce an exact kill.
-5. **A stronger heuristic aimed at leak 0.** For Family B, a deeper
-   annealing/restart search that *finds* a deep isometry would resolve the
-   "tiny-basin" uncertainty by exhibiting a glue.
+5. **A stronger heuristic that reaches zero.** For Family B, a deeper
+   annealing/restart search that drives the below-threshold count to zero — i.e.
+   that *finds* a distance-preserving isometry — would resolve the "tiny-basin"
+   uncertainty by exhibiting a glue.
 
 ## An honest caveat about scope
 
-Ruling out a glue is a sharp and worthwhile sub-problem, but it is **not** how
-`[72,36,16]` non-existence would be proven. Non-existence, if true, has to come
-from the Delsarte / [menu](menu-summary.md) side of the search; ruling out a glue
-for one code — or even every classified code — does not by itself exclude the
-`[72,36,16]`. So treat gluing primarily as a **construction** effort (find a real
-`[56,21,16]`, then attack the genuine Stage-2 wall), and treat "rule it out" as a
-clean, self-contained challenge: *can even a single candidate glue be proven
-impossible?*
+Ruling out a glue is a sharp and worthwhile sub-problem, but on its own it does
+**not** prove `[72,36,16]` non-existence — and it is worth being precise about why,
+because it is easy to assume otherwise.
+
+A *menu candidate* is a **weight enumerator** — an arithmetic shadow that survived
+the length-40 filters — **not a code.** Ruling out a glue, by contrast, is a
+statement about one specific **code.** A single surviving enumerator can be
+realized by many inequivalent length-40 codes, and the gluing computation has to
+be redone for each one. The attempts so far covered a handful of specific realized
+codes, not the full population under each row — and the direct classification of
+length-40 distance-16 codes is itself **incomplete**, so "every code we have
+classified" is a proper subset of "every code." A `[72,36,16]`, if it exists,
+descends to *some* length-40 residual that realizes a surviving row, but that
+residual could be a code that was never enumerated and so never tested.
+
+So to exclude the `[72,36,16]` this way you would have to rule out a glue for
+**every** length-40 code realizing **every** surviving row — an open-ended,
+not-fully-known population — and each individual rule-out is itself the intractable
+computation above. That asymmetry is the whole point: a construction needs **one**
+glue to succeed, whereas a non-existence proof by gluing must exhaust the entire
+population. Non-existence, if true, is therefore better pursued on the
+Delsarte / [menu](menu-summary.md) side, which bounds the **enumerators** directly
+without ever enumerating codes. (And even a successful Stage-1 glue would only
+deliver a `[56,21,16]`; the actual `[72,36,16]` still requires the separate Stage-2
+lift.)
+
+Treat gluing primarily as a **construction** effort — find a real `[56,21,16]`,
+then attack the genuine Stage-2 wall — and treat "rule it out" as a clean,
+self-contained challenge: *can even a single candidate glue be proven impossible?*
 
 See also the [Open Problems](open-problems.md) and
 [Computations and Certificates](computations-and-certificates.md) pages, and the
