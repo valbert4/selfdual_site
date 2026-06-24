@@ -1,0 +1,7 @@
+{
+  "test": "T23",
+  "tier": "cluster/licensed",
+  "kind": "diagnostic (no public kill)",
+  "result": "pairwise coupling needs exact subgroup reconciliation to count",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

@@ -1,0 +1,32 @@
+# Extremal 72 genus-3 invariant-space artifacts
+# Self-contained data bundle for the Extremal 72 project. Files:
+  agl_n32_p13.meta.json.gz
+  agl_n32_p13.nullbasis.json.gz
+  agl_n32_p17.meta.json.gz
+  agl_n32_p17.nullbasis.json.gz
+  agl_n40_p13.meta.json.gz
+  agl_n40_p13.nullbasis.json.gz
+  agl_n40_p17.meta.json.gz
+  agl_n40_p17.nullbasis.json.gz
+  agl_n72_mindist_p13.meta.json.gz
+  agl_n72_mindist_p13.nullbasis.json.gz
+  agl_n72_mindist_p17.meta.json.gz
+  agl_n72_mindist_p17.nullbasis.json.gz
+  agl_n72_mindist_p2899999901.meta.json.gz
+  agl_n72_mindist_p2899999901.nullbasis.json.gz
+  agl_n72_mindist_p2899999903.meta.json.gz
+  agl_n72_mindist_p2899999903.nullbasis.json.gz
+  agl_n72_mindist_p2899999931.meta.json.gz
+  agl_n72_mindist_p2899999931.nullbasis.json.gz
+  agl_n72_mindist_p2899999957.meta.json.gz
+  agl_n72_mindist_p2899999957.nullbasis.json.gz
+  charzero_cons_basis.json.gz
+  charzero_integer.json.gz
+  exact_V.json.gz
+  lattice_extract_result.json.gz
+  n40_basis_p13.json.gz
+  n40_basis_p17.json.gz
+  n40_dnplus_p13.json.gz
+  n40_dnplus_p17.json.gz
+  n48_dnplus_p13.json.gz
+  n48_dnplus_p17.json.gz

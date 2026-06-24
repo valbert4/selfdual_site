@@ -1,0 +1,324 @@
+{
+"tests": [
+{
+"id": "T01",
+"abbr": "int",
+"title": "Integer and self-orthogonal validity",
+"status": "defines raw menu",
+"kills": 0,
+"result": "132 raw candidates",
+"category": "menu generation",
+"page": "content/tests/T01-int.html"
+},
+{
+"id": "T02",
+"abbr": "pImg",
+"title": "Parent-image divisibility",
+"status": "proof-grade kills",
+"kills": 32,
+"result": "k<=5 rows plus (11,615,816)",
+"category": "dimension and fiber divisibility",
+"page": "content/tests/T02-pimg.html"
+},
+{
+"id": "T03",
+"abbr": "splI",
+"title": "Full split integrality",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "split feasibility",
+"page": "content/tests/T03-spli.html"
+},
+{
+"id": "T04",
+"abbr": "imgC",
+"title": "Image-code classification",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "image-code consistency",
+"page": "content/tests/T04-imgc.html"
+},
+{
+"id": "T05",
+"abbr": "3bNN",
+"title": "Three-block nonnegativity",
+"status": "proof-grade kills",
+"kills": 7,
+"result": "seven k=10 high-a rows",
+"category": "three-block nonnegativity",
+"page": "content/tests/T05-3bnn.html"
+},
+{
+"id": "T06",
+"abbr": "Smth",
+"title": "Toggle-stabilizer Smith congruence",
+"status": "proof-grade kills",
+"kills": 16,
+"result": "sixteen k=6 even-a rows",
+"category": "divisibility",
+"page": "content/tests/T06-smth.html"
+},
+{
+"id": "T07",
+"abbr": "bTri",
+"title": "Fixed three-anchor baby-triweight",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "triweight refinement",
+"page": "content/tests/T07-btri.html"
+},
+{
+"id": "T08",
+"abbr": "John",
+"title": "Johnson/Delsarte two-point bound",
+"status": "proof-grade kill",
+"kills": 1,
+"result": "(9,255,0)",
+"category": "constant-weight bound",
+"page": "content/tests/T08-john.html"
+},
+{
+"id": "T09",
+"abbr": "lTog",
+"title": "Local toggle-stabilizer divisibility",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "local divisibility",
+"page": "content/tests/T09-ltog.html"
+},
+{
+"id": "T10",
+"abbr": "dscG",
+"title": "Discriminant-form and coset-weight gluing",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "gluing",
+"page": "content/tests/T10-dscg.html"
+},
+{
+"id": "T11",
+"abbr": "lSpl",
+"title": "Local 16.24 split table",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "local split",
+"page": "content/tests/T11-lspl.html"
+},
+{
+"id": "T12",
+"abbr": "sPrf",
+"title": "All weight-16 shortening profiles",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "shortening profiles",
+"page": "content/tests/T12-sprf.html"
+},
+{
+"id": "T13",
+"abbr": "dShr",
+"title": "Double-shortening forced-intersection screen",
+"status": "proof-grade kill",
+"kills": 1,
+"result": "(9,247,16)",
+"category": "forced intersections",
+"page": "content/tests/T13-dshr.html"
+},
+{
+"id": "T14",
+"abbr": "cMin",
+"title": "Coset minimum and congruence prefilter",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "coset constraints",
+"page": "content/tests/T14-cmin.html"
+},
+{
+"id": "T15",
+"abbr": "fibM",
+"title": "Fiber/coset multiset match",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "coset matching",
+"page": "content/tests/T15-fibm.html"
+},
+{
+"id": "T16",
+"abbr": "r56M",
+"title": "Length-56 residual biweight global mixture",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "residual biweight",
+"page": "content/tests/T16-r56m.html"
+},
+{
+"id": "T17",
+"abbr": "A3",
+"title": "A3 constant-weight SDP",
+"status": "validation standard documented; no public elimination",
+"kills": 0,
+"result": "requires exact SDP certificate with verified constraint system",
+"category": "validation standard",
+"page": "content/tests/T17-a3.html"
+},
+{
+"id": "T18",
+"abbr": "M1",
+"title": "Mode-1 per-coset upward-glue obstruction",
+"status": "validation standard documented; no public elimination",
+"kills": 0,
+"result": "requires exact image counts and witness-preserving gluing checks",
+"category": "validation standard",
+"page": "content/tests/T18-m1.html"
+},
+{
+"id": "T19",
+"abbr": "Sim",
+"title": "Simonis support-weight feasibility",
+"status": "proof-grade kill",
+"kills": 1,
+"result": "(6,1,60)",
+"category": "support weights",
+"page": "content/tests/T19-sim.html"
+},
+{
+"id": "T20",
+"abbr": "g2",
+"title": "Coupled genus-2 biweight feasibility",
+"status": "proof-grade kill",
+"kills": 1,
+"result": "(9,239,32)",
+"category": "biweight",
+"page": "content/tests/T20-g2.html"
+},
+{
+"id": "T21",
+"abbr": "rA3",
+"title": "Row-aware A3 feasibility",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "row-aware SDP",
+"page": "content/tests/T21-ra3.html"
+},
+{
+"id": "T22",
+"abbr": "pkC",
+"title": "Mode-1 per-coset packing caps",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "packing caps",
+"page": "content/tests/T22-pkc.html"
+},
+{
+"id": "T23",
+"abbr": "pwG",
+"title": "Mode-1 pairwise/subgroup coset coupling",
+"status": "diagnostic consistency check; no public elimination",
+"kills": 0,
+"result": "requires exact pairwise/subgroup count reconciliation",
+"category": "gluing validation",
+"page": "content/tests/T23-pwg.html"
+},
+{
+"id": "T24",
+"abbr": "3bM",
+"title": "Three-block Mode-1 per-coset tiling",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "three-block gluing",
+"page": "content/tests/T24-3bm.html"
+},
+{
+"id": "T25",
+"abbr": "mTr",
+"title": "Menu-to-triweight feedback LP",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "triweight",
+"page": "content/tests/T25-mtr.html"
+},
+{
+"id": "T26",
+"abbr": "tAg",
+"title": "Triweight aggregate plus residual Mode-1",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "triweight aggregate",
+"page": "content/tests/T26-tag.html"
+},
+{
+"id": "T27",
+"abbr": "bRk",
+"title": "Binary-rank incidence constraints",
+"status": "saturates",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "rank/incidence",
+"page": "content/tests/T27-brk.html"
+},
+{
+"id": "T28",
+"abbr": "B4",
+"title": "Polak B4 quadruple SDP",
+"status": "saturates; closed",
+"kills": 0,
+"result": "B4 equals Delsarte at n=40",
+"category": "moment hierarchy",
+"page": "content/tests/T28-b4.html"
+},
+{
+"id": "T29",
+"abbr": "a3p",
+"title": "Anchored 3-point SDP",
+"status": "linear layer done; PSD critical/open",
+"kills": 0,
+"result": "no proof-grade kill",
+"category": "anchored SDP",
+"page": "content/tests/T29-a3p.html"
+},
+{
+"id": "T30",
+"abbr": "aM1",
+"title": "Anchored-aggregated Mode-1 mixture",
+"status": "saturates",
+"kills": 0,
+"result": "all probes feasible",
+"category": "aggregate gluing",
+"page": "content/tests/T30-am1.html"
+},
+{
+"id": "T31",
+"abbr": "whP",
+"title": "Wei-duality weight-hierarchy partition",
+"status": "saturates but non-vacuous",
+"kills": 0,
+"result": "no rows eliminated",
+"category": "weight hierarchy",
+"page": "content/tests/T31-whp.html"
+},
+{
+"id": "T32",
+"abbr": "exists",
+"title": "Route-3A direct existence exhaust",
+"status": "active; one proof-grade empty row",
+"kills": 1,
+"result": "(6,29,4) empty; 51 witnessed; 21 unresolved",
+"category": "the project sources",
+"page": "content/tests/T32-exists.html"
+}
+]
+}

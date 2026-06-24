@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T19 - Simonis Support-Weight Feasibility - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t19---simonis-support-weight-feasibility">T19 - Simonis Support-Weight Feasibility</h1>
+<p>Status: <code>proof-grade kill</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test uses generalized (Simonis) support-weight identities, which couple the support distributions of order-<code>r</code> subcodes of <code>E</code> to those of its dual. One row fails the order-4 system.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the order-<code>r</code> support-weight distributions of <code>E</code> and <code>E^⊥</code>, <code>r = 2..7</code>.</li>
+<li>Input: the row <code>(k,a,b)</code> and the coupled support-weight identities.</li>
+<li>Necessary condition: a nonnegative solution to the coupled order-<code>r</code> system exists for every <code>r</code>.</li>
+<li>Output: rows infeasible at some order.</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>1</code> — <code>(6,1,60)</code>, infeasible at order <code>r = 4</code> (its dual would need no 4-dimensional subcode of effective length 2 or 3). Orders <code>r = 2, 3</code> saturate.</li>
+<li>Status: proof-grade (exact Farkas certificate at <code>r = 4</code>).</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact-rational Farkas certificate of the order-4 system.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T19-sim-repro.tar.gz">Download <code>T19-sim-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to reproduce: (6,1,60) proven infeasible at order 4, Farkas-certified. The Farkas certificate was generated once by the solver (<code>reproduce/</code>); the verifier only checks it. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>; run all with <code>python3 verify_all.py</code>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Confirm the order-4 Farkas certificate for <code>(6,1,60)</code> independently, and check whether any other low-<code>a</code> row fails at order 5–7.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

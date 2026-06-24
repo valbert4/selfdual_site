@@ -1,0 +1,7 @@
+{
+  "test": "T29",
+  "tier": "cluster/licensed",
+  "kind": "open (cluster/licensed)",
+  "result": "anchored 3-pt SDP: linear layer 0 kills (exact); PSD layer open at the boundary",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

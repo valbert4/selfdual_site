@@ -1,0 +1,7 @@
+{
+  "test": "T17",
+  "tier": "cluster/licensed",
+  "kind": "validation target (no public kill)",
+  "result": "an A3 bound needs an exact, replayable dual certificate before it counts",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

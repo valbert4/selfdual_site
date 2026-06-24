@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T25 - Menu-to-Triweight Feedback LP - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t25---menu-to-triweight-feedback-lp">T25 - Menu-to-Triweight Feedback LP</h1>
+<p>Status: <code>saturates</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test feeds menu information into the genus-3 triweight variables and asks whether the feedback rules out any row. It does not, through this aggregate LP.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the genus-3 triweight invariant space, fed by menu (min-word-triple) data.</li>
+<li>Input: the row <code>(k,a,b)</code> and the triweight feedback constraints.</li>
+<li>Necessary condition: the row is consistent with some point of the triweight space.</li>
+<li>Output: rows inconsistent with the triweight feedback (none, here).</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code>.</li>
+<li>Status: saturates. The triweight is itself an unpinned family — the exact 6-dimensional invariant space carries a 5-dimensional freedom, none of it pinned — so the aggregate feedback has slack to absorb every row.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact-rational aggregate LP feasibility.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T25-mtr-repro.tar.gz">Download <code>T25-mtr-repro.tar.gz</code></a> — a 🟡 solver-required bundle. Menu-&gt;triweight feedback LP feasible (triweight freedom absorbs it). Reproduce in the research repo (the bundle ships the source script and the exact command); for the proof-grade kills a one-click pure-Python verifier is the next upgrade. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Replace the aggregate feedback with the un-averaged (per-anchor) min-word-triple coupling, where the triweight freedom is not washed out by averaging.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

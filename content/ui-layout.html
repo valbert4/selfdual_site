@@ -1,0 +1,187 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Tab-Based GUI Sketch - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="tab-based-gui-sketch">Tab-Based GUI Sketch</h1>
+<p>The site can use a tab-based interface without becoming a heavy web app.</p>
+<p>The goal is progressive disclosure:</p>
+<ul>
+<li>first tab: readable public summary;</li>
+<li>second tab: current status and numbers;</li>
+<li>third tab: technical details;</li>
+<li>fourth tab: source/provenance;</li>
+<li>fifth tab: how to help.</li>
+</ul>
+<p>This lets specialists reach the ledger quickly while keeping the first screen usable for a broader mathematical audience.</p>
+<h2 id="1-global-top-level-tabs">1. Global Top-Level Tabs</h2>
+<p>Use a persistent top navigation with 6 primary tabs:</p>
+<pre class="text"><code>Overview | Hierarchy | Menu | Tests | Enumerators | Contribute
+</code></pre>
+<p>Recommended mapping:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tab</th>
+<th>Page</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overview</td>
+<td><code>index.md</code></td>
+<td>project statement, stakes, current headline</td>
+</tr>
+<tr class="even">
+<td>Hierarchy</td>
+<td><code>hierarchy.md</code></td>
+<td>the <code>72 -&gt; 56 -&gt; 40 -&gt; 24</code> story</td>
+</tr>
+<tr class="odd">
+<td>Menu</td>
+<td><code>menu-summary.md</code></td>
+<td><code>MENU2</code> stats and survivor/exhaustion status</td>
+</tr>
+<tr class="even">
+<td>Tests</td>
+<td><code>tests/index.md</code></td>
+<td>T1-T32 ledger and test pages</td>
+</tr>
+<tr class="odd">
+<td>Enumerators</td>
+<td><code>weight-enumerators-pipeline.md</code></td>
+<td>data catalog and downloads</td>
+</tr>
+<tr class="even">
+<td>Contribute</td>
+<td><code>contribute.md</code> + <code>ideas-not-pursued.md</code></td>
+<td>open tasks, parked ideas, proof standards</td>
+</tr>
+</tbody>
+</table>
+<p>The top tabs should be ordinary links styled as tabs. That keeps the site static, fast, and easy to host on GitHub Pages.</p>
+<h2 id="2-page-level-tabs">2. Page-Level Tabs</h2>
+<p>Each complex page should have its own local tabs.</p>
+<h3 id="21-home--overview">2.1 Home / Overview</h3>
+<pre class="text"><code>Snapshot | Why It Matters | How To Help
+</code></pre>
+<ul>
+<li><code>Snapshot</code>: the headline numbers and open status.</li>
+<li><code>Why It Matters</code>: find-it vs rule-it-out stakes.</li>
+<li><code>How To Help</code>: links to open problem cards and test pages.</li>
+</ul>
+<h3 id="22-hierarchy">2.2 Hierarchy</h3>
+<pre class="text"><code>72 | 56 | 40 | 24 | Diagram
+</code></pre>
+<ul>
+<li><code>72</code>: Type II code and forced global enumerator.</li>
+<li><code>56</code>: anchored residual and <code>5082</code> minimum words.</li>
+<li><code>40</code>: length-40 menu and <code>(k,a,b)</code>.</li>
+<li><code>24</code>: rigid bottom rung.</li>
+<li><code>Diagram</code>: visual residual tower.</li>
+</ul>
+<h3 id="23-menu">2.3 Menu</h3>
+<pre class="text"><code>Summary | Survivors | Eliminations | Witnesses | Full Ledger
+</code></pre>
+<ul>
+<li><code>Summary</code>: <code>132 -&gt; 72</code>, with caveats.</li>
+<li><code>Survivors</code>: public table of surviving rows.</li>
+<li><code>Eliminations</code>: grouped by mathematical idea.</li>
+<li><code>Witnesses</code>: route-3A nonempty rows and unresolved rows.</li>
+<li><code>Full Ledger</code>: link to the generated technical ledger.</li>
+</ul>
+<h3 id="24-tests">2.4 Tests</h3>
+<pre class="text"><code>All | Kills | Saturated | Validation | Open
+</code></pre>
+<p>Recommended grouping from <code>tests.yml</code>:</p>
+<ul>
+<li><code>Kills</code>: T02, T05, T06, T08, T13, T19, T20, T32.</li>
+<li><code>Saturated</code>: T03, T04, T07, T09-T16, T21-T31 except T29 details.</li>
+<li><code>Validation</code>: T17, T18, T23.</li>
+<li><code>Open</code>: T29 PSD status and unresolved T32 rows.</li>
+</ul>
+<p>Each test page should then use:</p>
+<pre class="text"><code>Summary | Result | Verification | Sources | Help
+</code></pre>
+<h3 id="25-enumerators">2.5 Enumerators</h3>
+<pre class="text"><code>Catalog | JSON Bundle | Triweight Routines | Manifest
+</code></pre>
+<ul>
+<li><code>Catalog</code>: all staged one-weight, biweight, support-weight, and triweight data.</li>
+<li><code>JSON Bundle</code>: download all enumerator JSON files at once.</li>
+<li><code>Triweight Routines</code>: full source bundle for row/column symmetrization, modular prime runs, and reconciliation.</li>
+<li><code>Manifest</code>: machine-readable file list, provenance, and caveats.</li>
+</ul>
+<h3 id="26-contribute">2.6 Contribute</h3>
+<pre class="text"><code>Open Tasks | Parked Ideas | Saturated Routes | Validation Policy
+</code></pre>
+<ul>
+<li><code>Parked Ideas</code>: ideas sketched but not built.</li>
+<li><code>Saturated Routes</code>: things that were tried and should not be rebuilt unchanged.</li>
+<li><code>Validation Policy</code>: exact-input and certificate rules.</li>
+</ul>
+<h2 id="3-static-implementation-strategy">3. Static Implementation Strategy</h2>
+<p>The first implementation should stay static.</p>
+<p>Use one of these:</p>
+<ol>
+<li>Plain HTML/CSS/JS generated from Markdown.</li>
+<li>Astro with Markdown content collections.</li>
+<li>Eleventy with YAML data files.</li>
+<li>Jekyll if staying close to GitHub Pages defaults.</li>
+</ol>
+<p>Best fit for this project:</p>
+<pre class="text"><code>Astro or Eleventy
+</code></pre>
+<p>Reason: both make it easy to read <code>website/data/tests.yml</code>, generate one card per test, and build tabbed pages without turning the site into a client-side app.</p>
+<h2 id="4-accessibility-rules">4. Accessibility Rules</h2>
+<p>Tabs should be accessible:</p>
+<ul>
+<li>use real links for top-level page tabs;</li>
+<li>for in-page tabs, use buttons with <code>role="tab"</code> and panels with <code>role="tabpanel"</code>;</li>
+<li>keep content reachable if JavaScript is disabled;</li>
+<li>sync tab state to the URL hash, e.g. <code>#survivors</code> or <code>#verification</code>;</li>
+<li>do not hide essential proof status only inside JavaScript-rendered content.</li>
+</ul>
+<h2 id="5-visual-layout">5. Visual Layout</h2>
+<p>Use a dense, calm interface:</p>
+<pre class="text"><code>Top tab bar
+Status strip
+Page title
+Local tab bar
+Main content panel
+Right-side source/provenance rail on desktop
+</code></pre>
+<p>On mobile:</p>
+<pre class="text"><code>Top tabs become horizontal scroll
+Local tabs become segmented control or compact dropdown
+Source rail moves below content
+</code></pre>
+<h2 id="6-concrete-first-screen">6. Concrete First Screen</h2>
+<p>The home page should look roughly like:</p>
+<pre class="text"><code>Extremal 72
+[Overview] [Hierarchy] [Menu] [Tests] [Enumerators] [Contribute]
+
+Open problem: decide whether a binary Type II [72,36,16] code exists.
+
+[Snapshot] [Why It Matters] [How To Help]
+
+Snapshot
+  A_16: 249849
+  residual minimum words: 5082
+  length-40 menu: 132 raw / 60 eliminated / 72 surviving
+  witnessed rows: 51
+  unresolved rows: 21
+</code></pre>
+<h2 id="7-what-to-build-first">7. What To Build First</h2>
+<p>Before creating the separate repo, build a tiny static prototype in this folder:</p>
+<pre class="text"><code>website/prototype/
+  index.html
+  styles.css
+  tabs.js
+</code></pre>
+<p>The prototype should demonstrate:</p>
+<ul>
+<li>top tabs;</li>
+<li>local tabs;</li>
+<li>menu summary cards;</li>
+<li>test-status grouped tabs;</li>
+<li>one sample test page layout.</li>
+</ul>
+<p>Once that feels right, start the separate public site repo and move the prototype into a real static-site framework.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

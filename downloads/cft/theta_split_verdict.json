@@ -1,0 +1,17 @@
+{
+  "M_monomials": 3487009,
+  "n_orbits": 4228,
+  "K_points": 24,
+  "theta_normalization_valid": true,
+  "j8_over_scale_max": 9.091756277865182e-22,
+  "R0_abs_min": 3.907547802997638e-30,
+  "singular_values": [
+    4.934330253433297,
+    0.99568856206054,
+    0.00457135405258665,
+    0.000902571011208882,
+    9.49075979971354e-07
+  ],
+  "visible_dim": 5,
+  "kernel_dim_among_freedoms": 0
+}

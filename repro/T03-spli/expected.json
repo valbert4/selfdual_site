@@ -1,0 +1,7 @@
+{
+  "test": "T03",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "first split system is integer-feasible for every surviving row",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

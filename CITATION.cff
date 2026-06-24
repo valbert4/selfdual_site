@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this project or its data/certificates, please cite it."
+title: "Extremal 72: searching for a [72,36,16] extremal Type II code"
+abstract: >-
+  A community-verifiable search to decide whether a binary doubly-even self-dual
+  [72,36,16] code exists. Includes the forced weight-enumerator data, a finite
+  length-40 residual menu, and exact, independently checkable reproduction
+  bundles (Farkas/Smith/Delsarte certificates and exhaustive witnesses) for every
+  proof-grade elimination.
+type: software
+license: MIT
+authors:
+  - family-names: Albert
+    given-names: "Victor V."
+  - family-names: Barg
+    given-names: Alexander
+keywords:
+  - coding theory
+  - self-dual codes
+  - Type II codes
+  - error-correcting codes
+  - "[72,36,16]"
+  - extremal codes
+repository-code: "https://github.com/REPLACE-ME/extremal72"
+url: "https://REPLACE-ME.github.io/extremal72/"

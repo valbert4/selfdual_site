@@ -1,0 +1,8 @@
+{
+  "test": "T20",
+  "tier": "exact-replayable",
+  "kind": "coupled genus-2 biweight kill",
+  "result": "(9,239,32) proven infeasible \u2014 the coupled genus-2 family has no nonnegative point (Farkas-certified)",
+  "solver": "none for verification (pure Python Farkas check); certificate found once by the solver",
+  "reproduces": "section 27.1"
+}

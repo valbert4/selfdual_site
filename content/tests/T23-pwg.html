@@ -1,0 +1,29 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T23 - Mode-1 Pairwise/Subgroup Coset Coupling - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t23---mode-1-pairwisesubgroup-coset-coupling">T23 - Mode-1 Pairwise/Subgroup Coset Coupling</h1>
+<p>Status: <code>diagnostic consistency check; no public elimination</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test couples pairs (and subgroups) of cosets and checks an overcode-style consistency condition on the upward glue. Its current value is as a consistency layer; this page states what it would need to become an eliminator.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: pairs / subgroups of cosets in the upward-glue step.</li>
+<li>Input: the row <code>(k,a,b)</code> and the pairwise/subgroup coupling constraints.</li>
+<li>Necessary condition: the coupled counts are consistent with a <code>[40,k+2]</code>-valid overcode structure.</li>
+<li>Output: rows with inconsistent coupling (subject to the requirements below).</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code> (no public elimination).</li>
+<li>Status: diagnostic / validation target.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<p>Requirements for a pairwise-coupling elimination to count publicly:</p>
+<ul>
+<li><p>pairwise and subgroup counts reconcile exactly with the row-level coset normalization;</p></li>
+<li><p>the coupling uses the exact subgroup structure of the image, not an approximation;</p></li>
+<li><p>any constructive witness for the row is excluded under the exact hypothesis.</p></li>
+<li><p>Certificate type: exact pairwise/subgroup reconciliation (required).</p></li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T23-pwg-repro.tar.gz">Download <code>T23-pwg-repro.tar.gz</code></a> — a 🔴 bundle. This test is open / validation-only: pairwise coupling needs exact subgroup reconciliation to count. The archive ships a spec and the source path, not a one-click run. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Lift the per-coset coupling to exact pairwise <code>E + ⟨y_j, y_{j'}⟩</code> validity using the image subgroup, and look for a row where the coupled supply is exhausted.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

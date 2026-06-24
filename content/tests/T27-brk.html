@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T27 - Binary-Rank Incidence Constraints - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t27---binary-rank-incidence-constraints">T27 - Binary-Rank Incidence Constraints</h1>
+<p>Status: <code>saturates</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test studies the binary rank spanned by the minimum words of a length-40 child and the incidence structure they force. It yields useful per-row rank windows but eliminates no current row.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the binary rank and incidence structure of the weight-16 words of <code>E</code>.</li>
+<li>Input: the row <code>(k,a,b)</code> and rank/incidence bounds (notably for <code>k = 9, 10</code>).</li>
+<li>Necessary condition: a consistent incidence configuration of the required rank exists.</li>
+<li>Output: rows with no consistent configuration (none, here).</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code>.</li>
+<li>Status: saturates. The rank windows are real constraints but do not close on any surviving row.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact rank / incidence feasibility.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T27-brk-repro.tar.gz">Download <code>T27-brk-repro.tar.gz</code></a> — a 🟡 solver-required bundle. Binary-rank incidence windows bind no row. Reproduce in the research repo (the bundle ships the source script and the exact command); for the proof-grade kills a one-click pure-Python verifier is the next upgrade. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Couple the rank windows to the genus-3 triweight support (which lives on linearly-independent triples) to see whether rank and triweight jointly bind.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

@@ -1,0 +1,7 @@
+{
+  "test": "T13",
+  "tier": "exact-replayable",
+  "kind": "exact Johnson-bound kill",
+  "result": "bound 7657/67 < 247 kills (9,247,16)",
+  "solver": "none (pure Python standard library)"
+}

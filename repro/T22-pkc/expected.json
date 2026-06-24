@@ -1,0 +1,7 @@
+{
+  "test": "T22",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "per-coset packing caps absorbed by aggregate freedom",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

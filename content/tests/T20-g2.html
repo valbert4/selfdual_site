@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T20 - Coupled Genus-2 Biweight Feasibility - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t20---coupled-genus-2-biweight-feasibility">T20 - Coupled Genus-2 Biweight Feasibility</h1>
+<p>Status: <code>proof-grade kill</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test checks whether a length-40 row admits a nonnegative point in the exact genus-2 (biweight) family, coupled to its dual-closure constraints. One row has no such point.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the per-row genus-2 biweight of <code>E</code>, with dual-closure ties.</li>
+<li>Input: the row <code>(k,a,b)</code> and the exact coupled biweight system.</li>
+<li>Necessary condition: a nonnegative point exists in the coupled biweight family.</li>
+<li>Output: rows with an empty coupled family.</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>1</code> — <code>(9,239,32)</code>. Nearby rows remain feasible, so the cut is sharp.</li>
+<li>Status: proof-grade (exact biweight nonnegativity infeasibility).</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact-rational biweight nonnegativity infeasibility.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T20-g2-repro.tar.gz">Download <code>T20-g2-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to reproduce: (9,239,32) proven infeasible — the coupled genus-2 family has no nonnegative point (Farkas-certified). The Farkas certificate was generated once by the solver (<code>reproduce/</code>); the verifier only checks it. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>; run all with <code>python3 verify_all.py</code>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Reproduce the empty coupled family for <code>(9,239,32)</code> and provide a per-row nonnegativity certificate; then sweep the remaining high-<code>a</code> rows for the same obstruction.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

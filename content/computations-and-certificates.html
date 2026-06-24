@@ -1,0 +1,101 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Computations and Certificates - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="computations-and-certificates">Computations and Certificates</h1>
+<p>This page is about trust. The project lives or dies on whether outsiders can <em>check</em> it, so we hold our own status changes to a standard we want others to hold us to.</p>
+<h2 id="the-public-rule">The public rule</h2>
+<p>Numerical evidence is welcome. It is how almost every result here started: a solver returns "infeasible," an LP bottoms out, an SDP sits near a boundary. That is enough to point effort, and we publish it as such.</p>
+<p>But a <strong>status change</strong> — moving a <a href="content/menu-summary.html">menu</a> row from <em>surviving</em> to <em>eliminated</em>, or calling a branch closed — requires more than a solver's verdict. It requires at least one of:</p>
+<ul>
+<li><strong>exact input</strong> — the constraint system reconstructed in exact rational arithmetic, with no value rounded on the way in;</li>
+<li><strong>an independently replayable certificate</strong> — a Farkas vector, a Smith-form witness, an exhaustive enumeration — that a second party can re-check without re-running our search;</li>
+<li><strong>a separate verifier</strong> — a short program, ideally in different software from the one that found the result, that confirms the claim from public data.</li>
+</ul>
+<p>A row is not removed from the public menu unless the obstruction is exact and independently checkable. We publish corrections as part of the result.</p>
+<h2 id="the-three-reproduction-tiers">The three reproduction tiers</h2>
+<p>Every <a href="content/tests/index.html">test</a> ships a reproduction bundle. Each bundle carries a verifier — the part that must run everywhere — and, optionally, the original solver that <em>found</em> the certificate. Bundles are sorted into three tiers by how hard they are to re-run.</p>
+<ul>
+<li>🟢 <strong>exact-replayable</strong> — pure-Python standard library, exact arithmetic, no solver, no license. Runs in CI on every commit. The verifier consumes the same published enumerator data the site serves, pinned by <code>sha256</code>, so "reproduces" means <em>recomputes the claim from data whose checksum matches what we publish</em>. These are the bundles that back our proof-grade kills.</li>
+<li>🟡 <strong>solver-required</strong> — needs an exact solver (PPL, Sage, or <code>glpsol --exact</code>). Ships the real solver plus the exact command. Run in extended/nightly CI, not on every commit. These are saturation results (LP/SDP screens that did not kill a row); they carry <strong>0 kills</strong>, so nothing in the public status depends on reproducing them — they are shipped for completeness.</li>
+<li>🔴 <strong>cluster / licensed or open</strong> — not a one-click run. Ships a <em>spec</em> — the payload, the memory estimate, the certificate path that <em>would</em> close it — not a button. The anchored 3-point SDP (<code>T29</code>) is the headline example: its linear layer gives <code>0</code> kills exactly (checkable), but its PSD layer is unresolved at the feasibility boundary and needs a licensed solver at cluster scale. The full <code>(6,29,4)</code> empty-exhaust is the other 🔴 bundle.</li>
+</ul>
+<h2 id="the-9-exact-replayable-bundles">The 9 exact-replayable bundles</h2>
+<p>These are the bundles behind the project's proof-grade results. All 8 kills plus the menu re-enumeration are reproduced here with <strong>no floating point, no licensed solver, and no external service</strong> in the verify path — every certificate is an exact rational vector, a Farkas/Smith witness, or an exhaustive enumeration.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Bundle</th>
+<th>What it proves</th>
+<th>Certificate type</th>
+<th>How it is checked</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>T01</strong> <code>int</code></td>
+<td>The raw menu is exactly the <code>132</code> integer, self-orthogonal candidates</td>
+<td>exhaustive enumeration</td>
+<td>re-enumerate the <code>132</code> from the validity filter and compare the set</td>
+</tr>
+<tr class="even">
+<td><strong>T02</strong> <code>pImg</code></td>
+<td>Parent-image dimension bound <code>21 − k ≤ 15</code> (<strong>31 kills</strong>)</td>
+<td>exact dimension inequality</td>
+<td>recompute the image dimension per row; flag every row that violates the bound</td>
+</tr>
+<tr class="odd">
+<td><strong>T05</strong> <code>3bNN</code></td>
+<td>Three-block (<code>16∣16∣40</code>) MacWilliams counts cannot go negative (<strong>7 kills</strong>)</td>
+<td>Farkas vector (exact rational)</td>
+<td>replay the Farkas certificate against the block system; confirm the forced negative count</td>
+</tr>
+<tr class="even">
+<td><strong>T06</strong> <code>Smth</code></td>
+<td>Toggle-stabilizer divisibility via integer Smith normal form (<strong>16 kills</strong>)</td>
+<td>Smith-form solvability witness</td>
+<td>solve the congruence in pure Python; <strong>cross-checked against Sage</strong></td>
+</tr>
+<tr class="odd">
+<td><strong>T08</strong> <code>John</code></td>
+<td>Exact Delsarte two-point bound <code>= 247</code>, by vertex enumeration</td>
+<td>exact LP vertex enumeration</td>
+<td>enumerate vertices in exact arithmetic; bound <code>247</code> kills <code>(9,255,0)</code></td>
+</tr>
+<tr class="even">
+<td><strong>T13</strong> <code>dShr</code></td>
+<td>Single-distance Johnson bound <code>7657/67</code> after forced intersections</td>
+<td>exact rational bound</td>
+<td>recompute the bound as an exact fraction; it kills <code>(9,247,16)</code></td>
+</tr>
+<tr class="odd">
+<td><strong>T19</strong> <code>Sim</code></td>
+<td>Simonis order-4 support-weight infeasibility</td>
+<td>Farkas vector (exact rational)</td>
+<td>replay the support-weight Farkas certificate; kills <code>(6,1,60)</code></td>
+</tr>
+<tr class="even">
+<td><strong>T20</strong> <code>g2</code></td>
+<td>Coupled genus-2 biweight nonnegativity fails</td>
+<td>Farkas vector (exact rational)</td>
+<td>replay the biweight Farkas certificate; kills <code>(9,239,32)</code></td>
+</tr>
+<tr class="odd">
+<td><strong>T32</strong> <code>exists</code></td>
+<td>The <code>1528</code> route-3A nonempty witnesses are genuine</td>
+<td>explicit constructive witnesses</td>
+<td>re-certify each of the <code>1528</code> witnesses from scratch</td>
+</tr>
+</tbody>
+</table>
+<p><code>T02</code>, <code>T05</code>, <code>T06</code>, <code>T08</code>, <code>T13</code>, <code>T19</code>, <code>T20</code>, and <code>T32</code> are the <strong>8 proof-grade kills</strong>; <code>T01</code> fixes the <code>132</code> they all start from. Together they account for the <code>60</code> eliminated menu rows and the witnessed-nonempty side of the survivors. Each certificate type above is closed under exact re-checking: a Farkas vector either certifies infeasibility against the exact system or it does not, with no tolerance to tune.</p>
+<h2 id="the-solver-audit-lesson">The solver-audit lesson</h2>
+<p>The hardest trust lessons here came from <em>infeasibility</em> claims, which are exactly the claims that change public status. The lesson, stated once:</p>
+<blockquote>
+<p>An exact simplex does not save you from a constraint that was rounded while the LP file was <em>parsed</em>.</p>
+</blockquote>
+<p><code>glpsol --exact</code> switches to exact rational arithmetic — but only <em>after</em> the LP/MPS reader has turned the input text into numbers. When coefficients are large (as they are for high-weight enumerators), a value can be rounded at that parse step, before exact arithmetic ever sees it. The solver then computes an exact answer to the wrong problem, and an "infeasible" verdict can be an artifact of the reader, not a property of the code.</p>
+<p>This is not hypothetical: it is why we now require exact input reconstruction, exact Farkas certificates, or guarded exports (no value passing through a float-printing reader) before any kill counts — and why a row is reinstated, not quietly kept, the moment a verdict's input cannot be reconstructed exactly. Past results have been retracted and later reinstated on exactly this basis; we keep that history visible on the <a href="content/audit-trail.html">Audit Trail</a> as a lesson, not a footnote.</p>
+<p>The same caution applies one floor up, to SDP. A numerical SDP that sits <em>on</em> its feasibility boundary — margin <code>≈ 0</code> — is <strong>not proof-grade</strong>. It is a strong hint that the constraint is tight, and a good reason to invest in an exact certificate, but on its own it neither kills a row nor closes a branch. <code>T29</code> is in exactly this state: real, suggestive, and explicitly <strong>open</strong>.</p>
+<h2 id="run-it-then-argue-with-it">Run it, then argue with it</h2>
+<p>Reproduce every 🟢 bundle in one command from the reproduction bundle:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">python3</span> repro/verify_all.py</span></code></pre></div>
+<p>It runs each bundle's verifier and reports <code>PASS</code>/<code>FAIL</code> (<code>9/9</code> reproduced). Add <code>--all</code> to attempt the 🟡 solver tier as well.</p>
+<p>Found a rounding hazard, a tighter certificate, or a verifier that disagrees with us? That is the most valuable kind of contribution. Bring it to the <strong>#extremal72</strong> channel of the Error Correction Zoo Discord: <a href="https://discord.gg/gg3pJZNYxQ">https://discord.gg/gg3pJZNYxQ</a>.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

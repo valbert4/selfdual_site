@@ -1,0 +1,7 @@
+{
+  "test": "T15",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "fiber/coset multiset matching feasible (totally unimodular)",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

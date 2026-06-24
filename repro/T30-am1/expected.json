@@ -1,0 +1,7 @@
+{
+  "test": "T30",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "anchored-aggregated Mode-1 mixture feasible for every probe",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

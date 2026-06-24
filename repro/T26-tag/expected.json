@@ -1,0 +1,7 @@
+{
+  "test": "T26",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "triweight aggregate + residual Mode-1 feasible for every row",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

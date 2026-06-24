@@ -1,0 +1,7 @@
+{
+  "test": "T01",
+  "tier": "exact-replayable",
+  "kind": "menu definition",
+  "result": "re-enumerates exactly 132 candidates",
+  "solver": "none (pure Python standard library)"
+}

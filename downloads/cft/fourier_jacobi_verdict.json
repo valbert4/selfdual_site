@@ -1,0 +1,68 @@
+{
+  "unit_tests_ok": true,
+  "vacuous": true,
+  "phi0": {
+    "phi0_R0_equals_W2": true,
+    "phi0_phi72_freedoms_vanish": true,
+    "den": 64,
+    "W2_states": 1177
+  },
+  "sigma_collapse": {
+    "all_combos_in_kerTheta": true,
+    "sigma": "a_1 + (921/34) a_2 + (42/17) a_3 + (32/17) a_4 + (128/17) a_5",
+    "kernel_combos": [
+      "34 F_2 - 921 F_1",
+      "17 F_3 -  42 F_1",
+      "17 F_4 -  32 F_1",
+      "17 F_5 - 128 F_1"
+    ],
+    "per_prime": {
+      "2899999957": {
+        "n_points": 60,
+        "combos_vanish_on_j8": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "F1_nonzero_points": 60
+      },
+      "2899999931": {
+        "n_points": 60,
+        "combos_vanish_on_j8": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "F1_nonzero_points": 60
+      },
+      "2899999903": {
+        "n_points": 60,
+        "combos_vanish_on_j8": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "F1_nonzero_points": 60
+      }
+    }
+  },
+  "membership_m16": {
+    "index_m": 16,
+    "anchored_orbits": 5735,
+    "rank_homo": 8,
+    "rank_F_homo": 8,
+    "a_freedom": 5,
+    "genuine_consistent": true,
+    "vacuous": true
+  },
+  "sigma": "a_1 + (921/34) a_2 + (42/17) a_3 + (32/17) a_4 + (128/17) a_5",
+  "verdict": "#7 VACUOUS: phi_m(Theta(v)) is the m-th Fourier-Jacobi coefficient of the genuine Siegel modular form Theta(v) = Theta(R_0) + sigma*Theta(F_1), hence automatically a genus-2 Jacobi form of weight 18 / index m for EVERY sigma (confirmed empirically at m=16). #7 imposes no condition: sigma stays free. CFT-side (degeneration) constraints are EXHAUSTED; the remaining freedom is a code-side / SDP problem (anchored Terwilliger 19).",
+  "primes": [
+    2899999957,
+    2899999931,
+    2899999903
+  ]
+}

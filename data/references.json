@@ -1,0 +1,1251 @@
+{
+"references": [
+{
+"id": "mananohas-on-the-representation-of-the-weight-enum",
+"title": "On the Representation of the Weight Enumerator of d_n^+",
+"authors": "Mananohas M.L., Mongi C.E., Pandara D., Montolalu C.E.J.C., Mo'o M.P.M.",
+"year": "2021",
+"source": "(see project bibliography)",
+"category": "gleason-extremal",
+"provides": "Shows the genus-1 weight enumerator of the family d_n^+ lies in the Type II Gleason ring Z[W_{d_8^+}, phi_24] and equivalently in Z[1/24][W_{d_8^+}, W_{d_24^+}], relating the two generating sets and proving no Type II enumerator has a unique isobaric representation in the over-complete degree (8,24,24,24,24) basis. For the [72,36,16] project it is background on the d_n^+ enumerator ring and the Gleason basis for Type II codes; the project actually relies on the related Fujii-Oura (2018) genus-3 closed form (the project's data, the project's code), not this genus-1 derivative.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "sloane-1973",
+"title": "Is There a (72,36) d=16 Self-Dual Code?",
+"authors": "Sloane, N. J. A.",
+"year": "1973",
+"source": "IEEE Trans. Inform. Theory 19 (1973), 251",
+"category": "gleason-extremal",
+"provides": "The original problem-posing note for the project: it states the open existence question for a binary Type II [72,36,16] self-dual code and gives the Gleason-forced weight distribution (A_16 = A_56 = 249849, etc.) that anchors the entire search, together with the Assmus-Mattson consequence that weight-16 codewords would form a 5-(72,16,78) design.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "2303-07587",
+"title": "Note on the Type II codes of length 24",
+"authors": "Nagaoka S., Oura M.",
+"year": "2023",
+"source": "arXiv:2303.07587",
+"category": "invariant-theory",
+"provides": "Gives explicit component generator matrices (e_7, e_8, d_n, g_24) and closed-form genus-1 and genus-2 weight enumerators for all nine Type II [24,12] codes via the single parameter h_i, plus the Phi-operator splitting basis (X_24, Y_24). Crucially documents that this h_i parametrization breaks at genus 3 (C_8 = d_16+e_8 and C_9 = e_8^3 share h but differ in W^(3)), which the project cites as evidence that its degree-32 genus-3 stall is intrinsic and that the d16+ vs e8^2 distinction first appears at the triweight level.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus2-biweight-72",
+"genus3-invariant-space",
+"genus3-triweight-72",
+"baby-triweight"
+],
+"confidence": "high"
+},
+{
+"id": "2411-04647",
+"title": "Neighbors, Neighbor Graphs and Invariant Rings in Coding Theory",
+"authors": "Chakraborty H.S., Chiari W., Miezaki T., Oura M.",
+"year": "2024",
+"source": "arXiv:2411.04647",
+"category": "invariant-theory",
+"provides": "Provides the genus-3 invariant ring structure used by the triweight [72,36,16] pipeline: the order |G_3| = 743,178,240 of the Type II genus-3 weight-enumerator group, the B^(3) Hilbert/Molien series (denominators giving d_n^+ generators at lengths 8,16,24,24,40,56,72,120), and the explicit degree-24 genus-3 basis showing D^(3) (subsetneq) A^(3) (subsetneq) B^(3). It supplies the neighbor map N_C(v) recipe and identifies the non-d_n^+ degree-24 generators as neighbors of d24+ (e.g. C_1=d12^2, C_8) among the nine Type II [24,12] codes, which the project needs to build the full genus-3 invariant basis beyond d_n^+ closed forms.",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "arxiv-2412-00001",
+"title": "Centralizer Algebras of Two Permutation Groups of Order 1344",
+"authors": "Kosuda M., Oura M., Sarbaini",
+"year": "2024",
+"source": "arXiv:2412.00001",
+"category": "invariant-theory",
+"provides": "Identifies and makes explicit the order-1344 group G = AGL(3,2) = F_2^3:GL(3,2), 2-transitive on 8 points, which is precisely the monomial symmetry group of the genus-3 complete (triweight) enumerator of any linear code containing the all-ones vector. Supplies explicit generators, character table, and a verified tensor-centralizer dimension formula (2,16,342,14606,... for k=1..6), serving as the genus-3 instance of the Kosuda-Oura E-polynomial/centralizer-algebra program and driving the SCOPE 1.2 AGL(3,2)-orbit reduction of triweight coefficients.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus3-triweight-72",
+"genus3-invariant-space"
+],
+"confidence": "high"
+},
+{
+"id": "duke-codes-siegel-modular-forms",
+"title": "On Codes and Siegel Modular Forms",
+"authors": "Duke, W.",
+"year": "1993",
+"source": "International Mathematics Research Notices 1993, No. 5",
+"category": "invariant-theory",
+"provides": "Proves that the theta substitution W -> W(theta) maps the r-fold weight-enumerator algebra of doubly-even (self-dual) codes ISOMORPHICALLY onto the relevant Siegel modular-form algebra for r <= 2, and gives explicit free generators and Poincare series for the biweight (genus-2) algebra (generators d_8^+, d_24^+, d_40^+, g_24 plus one d_32^+ secondary; W_2(1) tied to Shephard-Todd group no. 31 of order 46080). The project uses it as an independent genus-2 marginal/biweight guardrail (the project's notes sections 10.x) and as the source for the Type II theta-series subspace constraint in the code-CFT analysis (the project's notes [cite:54]); it also explains why the genus-3 case is intrinsically harder (no such clean isomorphism for r >= 3), reinforcing the decision not to expect a direct code-generator expansion at genus 3.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus2-biweight-72",
+"genus3-invariant-space",
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "fujii-oura-2018",
+"title": "Ring of the weight enumerators of d_n^+",
+"authors": "Fujii M., Oura M.",
+"year": "2018",
+"source": "Tsukuba J. Math. 42 (2018), no. 1, 53-63",
+"category": "invariant-theory",
+"provides": "Gives the explicit closed-form genus-g weight enumerator of the doubly-even self-dual code d_n^+ (eq. 89: W_{d_n^+}^{(g)} = (1/2^g) sum_{b,g'} (sum_alpha (-1)^{a.b} x_{a+g'} x_a)^{n/2}), plus the result that the ring D^{(g)} of all d_n^+ enumerators is finitely generated by lengths n <= 2^{2g+3}. The project's the project's code implements this eq. (89) to emit each genus-3 d_n^+ enumerator as an atom of the genus-3 invariant space used to build and constrain the [72,36,16] triweight.",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72",
+"genus2-biweight-72",
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "masscodsubmitted2004",
+"title": "Mass formula for various generalized weight enumerators of binary self-dual codes",
+"authors": "Munemasa A., Ozeki M.",
+"year": "2004",
+"source": "(see project bibliography)",
+"category": "invariant-theory",
+"provides": "Gives explicit genus-2 mass formulas for biweight and Jacobi enumerators of binary (Type I/II) self-dual codes, expressed via the E8/F4 root system (biweights) and D4/B2 (Jacobi), and shows the resulting power sums generate the relevant reflection-group invariant ring. The project uses it as a genus-2 normalization/marginal anchor for the triweight pipeline (verifying biweight conventions, variable ordering, and MacWilliams scaling at n=72) and adapts its Lemma 4.1 Z4 finite-Fourier residue projector toward a genus-3 analogue; it cannot by itself determine the extremal [72,36,16] code since it averages over all labeled Type II codes with no minimum-distance conditioning.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus2-biweight-72",
+"jacobi-enumerator",
+"genus3-invariant-space"
+],
+"confidence": "high"
+},
+{
+"id": "nebe-rains-sloane-codes-invariant-theory",
+"title": "Codes and invariant theory",
+"authors": "Nebe G., Rains E.M., Sloane N.J.A.",
+"year": "2004",
+"source": " (Math. Nachr. 274/275 (2004); cf. math/0001038, Springer book 2006)",
+"category": "invariant-theory",
+"provides": "Gives the foundational Clifford-Weil generalization of Gleason's theorem (Theorem 3.5): for R=F_2 the genus-m weight/biweight/triweight enumerators of Type II binary self-dual codes span exactly the invariant ring of the complex Clifford group. For the [72,36,16] search this is the rigorous guarantee that the genus-3 triweight of the putative code must lie in (and is spanned by) the Clifford-Weil/Runge invariant ring, justifying the triweight invariant-space construction and its Hilbert-series dimension checks.",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72",
+"genus2-biweight-72",
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "nebe-self-dual-codes-and-invariant-theory",
+"title": "Self-dual codes and invariant theory",
+"authors": "Nebe, G.",
+"year": "2009",
+"source": "(see project bibliography)",
+"category": "invariant-theory",
+"provides": "Survey of the Clifford-Weil-group / Type formalism (generalized Gleason theorem): the complete weight enumerators of Type II self-dual codes span the invariant ring Inv(C_m(II)), and multiple (genus-m) weight enumerators are cwe of T^m codes. For the [72,36,16] genus-3 triweight pipeline it supplies (i) the Molien series fixing genus-3 invariant-ring dimensions 2/5/9 at lengths 16/24/32 (fourth independent confirmation of the D_3 dimension table); (ii) the Siegel Phi-operator Inv(C_m)->Inv(C_{m-1}) as a ring epimorphism (the marginal/genus-lowering map); (iii) that the genus-2 ring is generated by {e_8,g_24,d_24+,d_32+,d_40+} so the genus-2 biweight target is fully computable; (iv) that C_8 != C_9 and e_8^2 != d_16+ first separate at genus 3, explaining the intrinsic degree-32 stall; and (v) the Kneser-Hecke operator as an alternative combinatorial route to the missing genus-3 generators.",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72",
+"genus2-biweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "nrs-0311046",
+"title": "Codes and Invariant Theory",
+"authors": "Nebe G., Rains E. M., Sloane N. J. A.",
+"year": "2003",
+"source": "arXiv:math/0311046",
+"category": "invariant-theory",
+"provides": "Foundational Gleason-generalization: its Thm 3.5(ii) proves that for R=F_2 the invariant ring Inv(C_m(II)) of the genus-m Clifford-Weil group is exactly spanned by genus-m complete weight enumerators of Type II codes, which is the rigorous guarantee that the project's 152-dimensional genus-3 triweight space is a code-enumerator span. It also pins down the genus-3 Clifford-Weil group structure C_3(II)=Z_8.2^{1+6}.Sp_6(2), identified in the repo with the project's invariant group G_3, and gives the warning that high-degree ring generators are typically structureless codes (motivating the repo's Method-B self-equation route over code-product hunting).",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "on-siegel-modular-forms-part-ii",
+"title": "On Siegel Modular Forms Part II",
+"authors": "Runge, B.",
+"year": "1995",
+"source": "Nagoya Math. J. Vol. 138 (1995), 179-197",
+"category": "invariant-theory",
+"provides": "Gives the genus-3 invariant-ring framework (the group H_3 = G_{3,1}, its Poincaré/Hilbert series, and the spanning theorem that degree-N genus-3 invariants are spanned by genus-3 weight enumerators of length-N doubly-even self-dual codes). The project reads off from this series the exact dimension D_3(72)=152 of the degree-72 genus-3 triweight space, reducing the [72,36,16] triweight problem to linear algebra in 152 unknowns and guaranteeing the small-code basis is provably complete.",
+"relevant_tests": [
+"T07",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "oura",
+"title": "The dimension formula for the ring of code polynomials in genus 4",
+"authors": "Oura, M.",
+"year": "1997",
+"source": "(see project bibliography)",
+"category": "invariant-theory",
+"provides": "Gives the genus-4 Molien series (dimension formula) of the code-polynomial invariant ring C[f_a]^{H_4} and the full Sp(8,2) conjugacy-class / characteristic-polynomial data used to compute it. For this project it supplies the methodological template (conjugacy-class enumeration over Sp(2g,2) times N_g, exact group orders, the exact sequence 0->N_g->H_g->Sp(2g,2)->0) that underpins the genus-3 triweight invariant-ring build and the proposed genus-4 (Freitag-Oura) lift used to test freedom directions of the [72,36,16] enumerator.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "oura-survey",
+"title": "Invariant theoretical approaches to the ring of Siegel modular forms and the related topics (a survey)",
+"authors": "Oura, M.",
+"year": "2009",
+"source": "(see project bibliography)",
+"category": "invariant-theory",
+"provides": "A survey tying together the code / Construction-A lattice / Siegel modular form dictionary, including the genus-g Gleason theorem for Type II weight enumerators as invariants of the reflection group G_g, Runge's structure theorem A(Gamma_3) = C[x_a]_{H_3}/(W_{d16}^(3) - W_{d16'}^(3)), the dimension formula of the H_3 invariant ring, and the Witt problem on linear independence of genus-g theta/weight enumerators. For the [72,36,16] search it is the background reference framing the genus-3 invariant ring (Runge/Oura), the theta map x_a -> theta_{a0}(2tau), and the genus-4 Freitag-Oura theta relations that the triweight and proposed quadriweight-lift tests build on.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"genus3-triweight-72",
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "type-ii-codes-even-unimodular-lattices-and-invariant-rings",
+"title": "Type II Codes, Even Unimodular Lattices, and Invariant Rings",
+"authors": "Bannai E., Dougherty S.T., Harada M., Oura M.",
+"year": "1999",
+"source": "(see project bibliography)",
+"category": "invariant-theory",
+"provides": "Establishes the genus-g complete/symmetrized weight enumerator formalism, the MacWilliams identities for them, and the invariant rings (with Molien series) of the groups fixing Type II code weight enumerators — the \"BDHO\" framework that grounds the project's genus-g invariant-ring / triweight construction and the Construction-A link from a Type II [72,36,16] code to an even unimodular 72-dim lattice. It is cited as the reference for the genus-g group G^S_{g,1} whose invariants are spanned by Type II code weight enumerators, the backbone of the triweight invariant-space pipeline.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus3-invariant-space",
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "vardi-1999",
+"title": "Multiple Weight Enumerators of Codes",
+"authors": "Vardi, I.",
+"year": "1999",
+"source": " (IHES/M/99/09)",
+"category": "invariant-theory",
+"provides": "Gives exact higher-weight (biweight/triple/quadruple) enumerators of the Golay code g_24 via an M_24-transitivity / intersection-number method (M_24/M_12 two-point homogeneous), used in the triweight project as a third-party cross-check: the genus-2 marginals of e_8/g_24 computed by the repo reproduce Vardi's published biweight coefficients (e_8: 1,14,168; g_24: 759,2576,22770,340032), validating the genus-3 enumerator and Siegel Phi-marginal machinery. Also suggests an automorphism-orbit route to genus-3 enumerators of high-symmetry codes, though NRS's warning notes the needed degree>=32 generators may lack such symmetry.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus2-biweight-72",
+"genus3-triweight-72",
+"genus3-invariant-space"
+],
+"confidence": "high"
+},
+{
+"id": "01-jacobipoly-hp",
+"title": "Weight enumerators, intersection enumerators, and Jacobi polynomials",
+"authors": "Honma K., Okabe T., Oura M.",
+"year": "2018",
+"source": "(see project bibliography)",
+"category": "jacobi-designs",
+"provides": "Fixes the explicit variable-change dictionary among the genus-g complete weight enumerator, the genus-g intersection enumerator I_C^(g), and the genus-g Jacobi polynomial Jac^(g)(C,v). For the [72,36,16] search this lets the project export the solved genus-3 triweight into intersection variables (Thm 7), recognize the anchored genus-2 slice Jac^(2)(C,B) around a fixed weight-16 word, use Thm 8's I_C^(g+1)=sum_v Jac^(g)(C,v) Y^wt(v) to read the triweight as an average of fixed-reference Jacobi data, and convention-check marginal/Hadamard maps via the homogeneous Jacobi MacWilliams identity (Thm 12).",
+"relevant_tests": [
+"T07",
+"T20"
+],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"genus3-triweight-72",
+"genus2-biweight-72",
+"baby-triweight"
+],
+"confidence": "high"
+},
+{
+"id": "arxiv-2408-02229v2",
+"title": "Jacobi polynomials, invariant rings, and generalized t-designs",
+"authors": "Chakraborty H.S., Hamid N., Miezaki T., Oura M.",
+"year": "2024",
+"source": "arXiv:2408.02229",
+"category": "jacobi-designs",
+"provides": "Provides the genus-g Jacobi polynomial framework, the polarization operator A_(g)=sum_a y_a d/dx_a (Thm 3.6/3.7) that forces all order-t Jacobi polynomials of a t-homogeneous code from its genus-g weight enumerator by pure differentiation, plus the genus-g (and split) Jacobi MacWilliams self-equation (Thm 3.1/4.3). For the [72,36,16] project this is the exact source for the genus-3 Jacobi forcing tests: since an extremal Type II code is 5-homogeneous (Assmus-Mattson), a candidate triweight W^(3) must yield positive-integral, Hadamard-self-dual J_{C,t}^(3) for t=1..5 (TEST.md §14), and it supplies the rigorous split-Jacobi transform law and the AGL(3,2)-order-1344 monomial symmetry used to dedup the triweight invariant space.",
+"relevant_tests": [
+"T07",
+"T20",
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"genus3-triweight-72",
+"genus3-invariant-space",
+"genus2-biweight-72",
+"baby-triweight"
+],
+"confidence": "high"
+},
+{
+"id": "arxiv-2508-11909",
+"title": "Higher and Extended Jacobi Polynomials for Codes",
+"authors": "Chakraborty, H.S.; Miezaki, T.",
+"year": "2025",
+"source": "arXiv:2508.11909",
+"category": "jacobi-designs",
+"provides": "Introduces Jacobi-polynomial generalizations of the higher (generalized Hamming) and extended weight enumerators, with MacWilliams identities relating C and C^perp and a polarization theorem stating J_{C,T}^(r) is determined by the higher weight enumerator W_C^(r) when r-subcode supports of each weight form t-designs. For the [72,36,16] search it supplies the right language to count r-dimensional subcodes by support split across T|T^c (used in support_shadow.py and the residual higher-Jacobi filters of triweight SCOPE and RECURSIVE §§15.2-15.3), but only as a conditional/validation tool: the design hypothesis must be separately proved before the polarization shortcut applies to the [40]/[56] residual menu.",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "bonnecaze-sole-1999",
+"title": "Jacobi Polynomials, Type II Codes, and Designs",
+"authors": "Bonnecaze A., Mourrain B., Solé P.",
+"year": "1999",
+"source": "Des. Codes Cryptogr. 16 (1999) 215-234",
+"category": "jacobi-designs",
+"provides": "Gives the explicit genus-1 Jacobi polynomials J_{72,t} for t=1..5 of the putative extremal [72,36,16] Type II code (forced by Assmus-Mattson 5-design + invariant theory), plus the recovered weight enumerators of the [70,35,14] and elusive [68,34,12] children obtained by subtraction. The repo (the project's notes) uses these as the genus-1 Jacobi baseline that the genus-3 Jacobi family generalizes and as concrete cross-check targets for the anchored/baby-triweight (weight-16 anchor) pipeline.",
+"relevant_tests": [
+"T07"
+],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"genus1-weight-enumerator",
+"baby-triweight",
+"n68-child-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "chakraborty-miezaki-oura-tanaka-jacobi-designs",
+"title": "Jacobi polynomials and design theory I",
+"authors": "Chakraborty H.S., Miezaki T., Oura M., Tanaka Y.",
+"year": "2023",
+"source": "(see project bibliography)",
+"category": "jacobi-designs",
+"provides": "Foundational paper of the Jacobi-polynomials/design-theory series: defines Jacobi polynomials of a code with multiple reference vectors, proves their MacWilliams-type identity, and gives the Aronhold-polarization formula linking Jacobi coefficients to (generalized) t-designs. For the [72,36,16] project it supplies the conceptual/methodological basis for the polarized-Jacobi-and-design forcing tests (TEST.md D2.14-16) and the multiple-reference-vector Jacobi language extended by the genus-g sibling papers actually wired into the triweight pipeline; here it serves as background rather than a specific obstruction.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"jacobi-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "jacobi-2102-06369",
+"title": "Variants of Jacobi Polynomials in coding theory",
+"authors": "Chakraborty H.S., Miezaki T.",
+"year": "2021",
+"source": "arXiv:2102.06369",
+"category": "jacobi-designs",
+"provides": "Introduces the complete joint Jacobi polynomial of two codes over F_q and Z_k, its MacWilliams-type identity, and the average Jacobi / average complete joint Jacobi polynomial plus the average Jacobi intersection number. For the [72,36,16] search it supplies the formal \"average Jacobi\" machinery underlying the project's averaged-over-reference-words anchored Jacobi slices (the project's notes: average anchored genus-2 Jacobi polynomial over all reference words of a given weight), giving the MacWilliams self-equation conventions used to cross-check the baby-triweight / split-Jacobi exports.",
+"relevant_tests": [
+"T07"
+],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"baby-triweight"
+],
+"confidence": "medium"
+},
+{
+"id": "jacobi-design-2207-10911",
+"title": "Jacobi polynomials and design theory I",
+"authors": "Chakraborty H.S., Miezaki T., Oura M., Tanaka Y.",
+"year": "2022",
+"source": "arXiv:2207.10911",
+"category": "jacobi-designs",
+"provides": "Foundational Jacobi-polynomial / invariant-theory paper introducing Jacobi polynomials of a code with multiple reference vectors, their MacWilliams-type identity, and the Aronhold polarization operator formula J_{C,t}=A^t W_C/(n)_t for t-homogeneous codes. This is the genus-1 framework that the project's genus-g generalization (Chakraborty-Hamid-Miezaki-Oura) extends and that drives the forced genus-3 Jacobi family (jacobi_forcing.py) cross-checking the [72,36,16] triweight.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"jacobi-enumerator",
+"genus3-invariant-space"
+],
+"confidence": "high"
+},
+{
+"id": "jacobi-design-2304-06220",
+"title": "Jacobi polynomials and design theory II",
+"authors": "Chakraborty H.S., Ishikawa R., Tanaka Y.",
+"year": "2023",
+"source": "arXiv:2304.06220",
+"category": "jacobi-designs",
+"provides": "Introduces split complete Jacobi polynomials attached to multiple coordinate-place sets of an F_q-linear code, with their MacWilliams-type identity, plus generalized q-colored t-designs and colored packing/covering designs. This is the design-theory foundation behind the anchored split-Jacobi / split-design-moment machinery the project uses to pin anchored cross-shell distributions (baby_triweight split moments, anchored_jacobi/, triweight TEST.md split-Jacobi transform law); the paper itself is background (its coding applications are for Type III/IV codes, not directly wired to a [72,36,16] test).",
+"relevant_tests": [],
+"relevant_enumerators": [
+"jacobi-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "polak",
+"title": "New Methods in Coding Theory: Error-Correcting Codes and the Shannon Capacity (PhD thesis)",
+"authors": "Polak, S.C.",
+"year": "2019",
+"source": "(see project bibliography)",
+"category": "sdp-lp-bound",
+"provides": "Polak's thesis is the methodological source for the project's quadruple (4-point, B4) constant-weight SDP bound and the symmetry/block-diagonalization machinery for higher-order SDP bounds on A(n,d,w) in the Johnson scheme. The project implements his B4 reduction (the project's code) to run T28 on the menu's J(40,16) and J(56,16) residual minimum-word problems, and reuses the same 3-point/Terwilliger block-diagonalization for the anchored J(72,16) SDP (T29).",
+"relevant_tests": [
+"T28",
+"T29",
+"T17",
+"T08"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "polak-semidefinite-programming-bounds-for-constant",
+"title": "Semidefinite programming bounds for constant weight codes",
+"authors": "Polak, S.C.",
+"year": "2019",
+"source": "(see project bibliography)",
+"category": "sdp-lp-bound",
+"provides": "Defines the A_4(n,d,w) and B_4(n,d,w) quadruple-based semidefinite programming upper bounds on constant-weight codes (sharpening Schrijver's Terwilliger-algebra 3-point bound) together with the S_n symmetry/block-diagonalization reduction. This is the exact source for the project's T28 \"Polak B_4 quadruple SDP\" (the project's code), used to bound the number of weight-16 minimum-word supports in J(40,16) and J(56,16); the bounds saturated to Delsarte (no kill), and it underpins the anchored 3-point SDP (T29) machinery.",
+"relevant_tests": [
+"T28",
+"T17",
+"T29",
+"T08"
+],
+"relevant_enumerators": [
+"n40-biweight",
+"n56-residual-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "schrijver",
+"title": "New Code Upper Bounds from the Terwilliger Algebra and Semidefinite Programming",
+"authors": "Schrijver A.",
+"year": "2005",
+"source": "DOI:10.1109/TIT.2005.851748",
+"category": "sdp-lp-bound",
+"provides": "Provides the block-diagonalized Terwilliger-algebra 3-point SDP that strengthens the Delsarte LP bound on A(n,d) and A(n,d,w); this is the source model for the project's entire anchored A3/Terwilliger SDP machinery (constant-weight J(n,16) bounds at n=40, residual n=56, and the n=72 J(72,16) reparametrized SDP). Its valid R-only block PSD condition is the lever used to attempt to push the weight-16 minimum-word count below the Gleason floor.",
+"relevant_tests": [
+"T17",
+"T21",
+"T29"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "tsei-lai-yu-sdp",
+"title": "Semidefinite programming bounds for binary codes from a split Terwilliger algebra",
+"authors": "Tseng P.-C., Lai C.-Y., Yu W.-H.",
+"year": "2022",
+"source": "(see project bibliography)",
+"category": "sdp-lp-bound",
+"provides": "Gives a \"split Terwilliger algebra\" block-diagonalization that strengthens Schrijver's 3-point SDP for binary codes A(n,d) (improving A(18,4) to 6551). The project uses it as the concrete implementation route for the anchored 3-point / split-Hamming A3 SDP: split coordinates as w + (n-w) at a chosen anchor word and tensor Hamming Terwilliger blocks, the recipe behind the terwilliger_sdp J(72,16) / n=56 residual / B4 machinery.",
+"relevant_tests": [
+"T17",
+"T28",
+"T29"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "vallentin-hks",
+"title": "Semidefinite Programming Bounds for Error-Correcting Codes (Handbook chapter 13)",
+"authors": "Vallentin, F.",
+"year": "2021",
+"source": "(see project bibliography)",
+"category": "sdp-lp-bound",
+"provides": "A survey/reference chapter deriving the Delsarte LP and Schrijver 3-point SDP bounds for binary codes via symmetry reduction over matrix *-algebras, including the explicit block-diagonalization of the Terwilliger algebra of the binary Hamming scheme. This is the mathematical backbone the project uses to set up its anchored 3-point Terwilliger SDP for n=72 (T29) and the Schrijver-type constant-weight SDP (T17).",
+"relevant_tests": [
+"T17",
+"T29"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "binomial-moments-of-the-distance-distribution-bounds-and-applications",
+"title": "Binomial Moments of the Distance Distribution: Bounds and Applications",
+"authors": "Ashikhmin A., Barg A.",
+"year": "1999",
+"source": "IEEE Trans. Inform. Theory 45(2):438-452, 1999",
+"category": "higher-weights",
+"provides": "Defines binomial moments B_w = sum_j C(n-j,n-w)A_j = sum_{|E|=w}(2^{dim C_B^E}-1), which the project uses as the exact weight-level aggregate of the shortening/restriction dimensions targeted by the [72,36,16] recursion (the project's notes sec 9 inventory, support_weight/SCOPE sec 6.2). Supplies the C<->C^perp coupling (eq. 8) and a Delsarte-type lower-bound LP plus the A_w <= B_w self-orthogonality inequality and extremal-code ([24,12,8]) optimality validation; since B_w is a linear image of the forced weight enumerator it saturates as a standalone test and serves as the shortening-dimension dictionary feeding the support-weight feasibility filter.",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "britz-shiromoto-2007",
+"title": "Designs from subcode supports of linear codes",
+"authors": "Britz T., Shiromoto K.",
+"year": "2008",
+"source": "Des. Codes Cryptogr. 46 (2008) 175-189",
+"category": "higher-weights",
+"provides": "Proves a subcode-support generalization of the Assmus-Mattson theorem (Thm 4.9) and an automorphism characterization, showing that supports S_{m,i}(C) of m-dimensional subcodes of a given weight form t-designs. For an extremal Type II [72,36,16] code this yields t=5 designs at every weight, giving a design-theoretic interpretation of the higher support-weight (A_i^r) distributions that drive the project's Simonis support-weight feasibility route, with the [32,16,8] and [48,24,12] tables as validation benchmarks.",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "geometric-approach-to-higher-weights",
+"title": "Geometric Approach to Higher Weights",
+"authors": "Tsfasman M.A., Vlăduț S.G.",
+"year": "1995",
+"source": "(see project bibliography)",
+"category": "higher-weights",
+"provides": "Expository source on generalized Hamming / support weights (Wei weights) and the weight hierarchy d_r, including the duality theorem (cited in-repo as \"Tsfasman-Vlăduț Thm 4.2\") that pairs the hierarchies of a code and its dual via a partition of {1,...,n}, plus generalized Griesmer/Singleton/Plotkin bounds. This is the theoretical backbone for test T31 (Wei-duality weight-hierarchy partition on the length-40 child) and informs the Simonis support-weight feasibility machinery (T19).",
+"relevant_tests": [
+"T31",
+"T19"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "polynomial-invariants-maks-simonis",
+"title": "Polynomial invariants for binary linear codes",
+"authors": "Maks, J.G.; Simonis, J.",
+"year": "2000",
+"source": "(see project bibliography)",
+"category": "higher-weights",
+"provides": "Defines PGL(m,2)-invariant polynomials (averaged-subset invariants plus the discriminant) that, for m=3, give a 10-invariant system separating projective-multiset orbits, and a generalized MacWilliams identity (Theorem 7) for the resulting r-weight distributions A_p^r(C) ↔ A_p^r(C^perp). For the [72,36,16] search this is the theoretical underpinning of the T19 Simonis support-weight feasibility filter (the I_1 support-weight case) and the proposed refined 3-subcode projective-multiset enumerator buckets (the project's notes support_shadow, the project's notes §9; cited as \"available, refines support size with type obstructions\").",
+"relevant_tests": [
+"T19"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "simonis-1994",
+"title": "The Effective Length of Subcodes",
+"authors": "Simonis J.",
+"year": "1994",
+"source": "Appl. Algebra Eng. Commun. Comput. 5 (1994) 371-377",
+"category": "higher-weights",
+"provides": "Gives the generalized-MacWilliams identities coupling the order-r support-weight (effective-length) subcode distributions A_i^r(C) and A_i^r(C^perp), which the project implements directly as the T19 Simonis feasibility filter (the project's code) on the length-40 residual children. T19 is the only section-9-family test that ever produced a proof-grade cut: order r=4 is infeasible for row (6,1,60), killing it via an exact 18-multiplier Farkas certificate; the same machinery underpins T31 Wei-duality weight-hierarchy partitions and the planned n=56 residual support-weight escalation.",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"support-weight-enumerators",
+"n56-residual-biweight",
+"n40-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "the-higher-weight-enumerators-of-the-doubly-even-self-dual-48-24-12-code",
+"title": "The Higher Weight Enumerators of the Doubly-Even, Self-Dual [48,24,12] Code",
+"authors": "Britz D., Britz T., Shiromoto K., Sørensen H. K.",
+"year": "2007",
+"source": "(see project bibliography)",
+"category": "higher-weights",
+"provides": "Gives a Tutte-polynomial/Greene algorithm for all higher (support) weight enumerators W_C^(r) and the full set for the unique extremal [48,24,12] code, the n=48 sibling of the hypothetical [72,36,16]. In the project it is the validation reference and conceptual basis for the support-weight / generalized-Hamming-weight route (Simonis A_i^r feasibility on the n=40 child, full-code A_i^4(C) consistency probe, Wei-duality weight hierarchy).",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "the-third-support-weight-enumerators-of-the-doubly-even-self-dual-32168-codes",
+"title": "The Third Support Weight Enumerators of the Doubly-Even, Self-Dual [32,16,8] Codes",
+"authors": "Milenkovic O., Coffey S.T., Compton K.J.",
+"year": "2003",
+"source": "(see project bibliography)",
+"category": "higher-weights",
+"provides": "Gives a combinatorial method to compute higher (third) support weight enumerators of doubly-even self-dual codes by relating support-weight enumerators to complete coset weight enumerators (the \"duality principle\"). The project cites this as the conceptual route for organizing third-support / coset-weight data on n=40 and n=56 residual/glue subcodes, feeding the Simonis support-weight feasibility pipeline and the coset-weight gluing constraints.",
+"relevant_tests": [
+"T19",
+"T10"
+],
+"relevant_enumerators": [
+"support-weight-enumerators",
+"n56-residual-biweight",
+"n40-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "zhuang-luo-vinck-relative-profiles",
+"title": "On the relative profiles of a linear code and a subcode",
+"authors": "Zhuang Z., Dai B., Luo Y., Vinck A. J. Han",
+"year": "2012",
+"source": "(see project bibliography)",
+"category": "higher-weights",
+"provides": "Provides the relative dimension/length profiles (RDLP, IRDLP, RLDP) and relative generalized Hamming weights of a code and a subcode, with generalized Singleton/Plotkin/Griesmer bounds and conjugate (dual) profiles. This is the precise two-code language the project uses for the shortening recursion: the section 12 dim J = 21-k relation and the sections 14/15.3 shortening-dimension constraints on the pair (C_B, <B'>) are RDLP/RLDP statements that bound the dimension/support tradeoff feeding the [40,k] menu.",
+"relevant_tests": [
+"T19",
+"T31"
+],
+"relevant_enumerators": [
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "2510-06069",
+"title": "A recursive approach to the construction and enumeration of self-orthogonal and self-dual codes over finite commutative chain rings of even characteristic",
+"authors": "Yadav M., Sharma A.",
+"year": "2025",
+"source": "arXiv:2510.06069",
+"category": "classification",
+"provides": "Gives the general mass-formula / type-count theory for self-orthogonal and self-dual codes over even-characteristic chain rings (the kappa-even half; companion is 2510.06082), whose F_2 specialization underlies the Pless-type mass-formula completeness gate used in the project's code to certify exhaustiveness. The \"type\"/torsion bookkeeping and level-by-level recursive construction template are structurally analogous to the c1_search residual/gluing tower, but it counts codes by type, not by weight enumerator, so it bounds no binary minimum distance.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "2510-06082",
+"title": "Recursive construction and enumeration of self-orthogonal and self-dual codes over finite commutative chain rings of even characteristic",
+"authors": "Yadav M., Sharma A.",
+"year": "2025",
+"source": "arXiv:2510.06082",
+"category": "classification",
+"provides": "Gives the kappa-odd half of a complete mass-formula enumeration of self-orthogonal/self-dual codes over even-characteristic chain rings, whose F_2 specialization underlies the mass-formula completeness check in the project's notes; its doubly-even anchoring via Witt decomposition is the chain-ring shadow of the discriminant-form/doubly-even constraint the binary [72,36,16] search lives on. It counts codes by type rather than by weight enumerator, so it bears on completeness accounting of a classification, not on pruning the specific [40,k,>=16] menu.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "aguilar-melchor-gaborit-2008",
+"title": "On the Classification of Extremal [36, 18, 8] Binary Self-Dual Codes",
+"authors": "Aguilar Melchor C., Gaborit P.",
+"year": "2008",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Introduces a recursive \"converse of subtraction\" method that constructs all self-dual [n+2,n/2+1,d+2] codes from all [n,n/2,>=d] codes, applied to classify all 41 extremal [36,18,8] codes. For the [72,36,16] search this is methodological background for the route-3A direct existence/classification (recursive child-to-parent) approach, illustrating how shadow theory and mass formulas drive exhaustive classification of extremal self-dual codes.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "medium"
+},
+{
+"id": "arxiv-2003-05556v1",
+"title": "Quasi-symmetric designs on 56 points",
+"authors": "Krčadinac V., Vlahović Kruc R.",
+"year": "2020",
+"source": "arXiv:2003.05556",
+"category": "classification",
+"provides": "Supplies the catalogue of quasi-symmetric designs on 56 points (new (56,16,18) and (56,16,6) QSDs, plus non-existence results), which the project uses in the project's notes purely as a negative design-theoretic filter: the self-orthogonal codes from these QSDs have dimension 19-27 and weight-8/12 words, so none matches the forced [56,21] residual code, and a Diophantine intersection-number argument shows the 5082-word minimum-weight family of C_B cannot itself be quasi-symmetric. It also motivates the QSD-subfamily probe (77-word 2-(56,16,6) and 231-word 2-(56,16,18) searches) on candidate residual codes.",
+"relevant_tests": [
+"T15",
+"T16"
+],
+"relevant_enumerators": [
+"n56-residual-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "classification-of-binary-self-dual-codes-of-length-40",
+"title": "Classification of Binary Self-Dual Codes of Length 40",
+"authors": "Bouyukliev I., Dzhumalieva-Stoeva M., Monev V.",
+"year": "2015",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Gives the full isomorph-free building-up/shortening construction (Proposition 4 / Corollary 5: a self-dual [n,n/2,4] code is built from a self-dual [n-4,n/2-2] child via a weight-4 codeword support) plus the orbit-based parent test (Theorem 3) and mass-formula completeness check — this is the detailed Algorithm-1 contract adopted by the project's the project's code route-3A direct length-40 classifier (T32). It also documents the complete length-40 self-dual census whose doubly-even (Type II) sublist (the 94343/16470 BHM codes) supplies the [40,20] parent codes for the [72,36,16] residual enumeration.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "classification-self-dual-n40",
+"title": "A complete classification of doubly even self-dual codes of length 40",
+"authors": "Betsumiya K., Harada M., Munemasa A.",
+"year": "2012",
+"source": "arXiv:1104.3727",
+"category": "classification",
+"provides": "The complete classification of the 94343 doubly-even self-dual [40,20] codes (16470 extremal, 77873 with d=4), giving the project both a methodological template for its length-classification pipeline and a concrete validation/discovery oracle: the supplied generator-matrix files (40-II8.magma = 16470 extremal Type II parents, 40-II-d4.magma.gz) are loaded directly by the project's code as the Type II [40,20] parent pool from which [40,k] children are extracted and isomorph-rejected. It also anchors the mass-formula and direct-vs-parent count gates (R0 n=8, etc.) used to validate the route-3A/3C enumeration engine toward [72,36,16].",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [
+"n40-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "classification-self-orthogonal-f3-f4",
+"title": "Classification of Self-Orthogonal Codes over F_3 and F_4",
+"authors": "Bouyukliev I., Östergård P. R. J.",
+"year": "2006",
+"source": "DOI:10.1137/S0895480104441085",
+"category": "classification",
+"provides": "A methodological reference for isomorph-free classification of self-orthogonal codes (residual-code Lemma, canonical augmentation, nauty-based equivalence) over F_3 and F_4 up to length 29 and dimension 6, together with the F_4 Hermitian-self-orthogonal -> quantum-code construction. For the [72,36,16] project it supplies background classification machinery in the same family as the route-3A direct-enumeration engine (the binary specialization actually used lives in the companion Bouyukliev-Bouyuklieva / BBGO papers); this specific F_3/F_4 paper is not wired to any enumerator test.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "de24-residue-data",
+"title": "Residue codes of extremal Type II Z_4-codes of length 24 and the moonshine vertex operator algebra (classification data)",
+"authors": "Harada M., Lam C. H., Munemasa A.",
+"year": "2010",
+"source": "arXiv:1005.1144",
+"category": "classification",
+"provides": "Supplies the complete classification (Magma database, 179 codes, k=6..12) of doubly-even [24,k] binary codes containing the all-ones vector with dual distance >= 4, imported via the project's data It serves the [72,36,16] route-3B/3C pipeline as a validation/discovery oracle for the n=24 image-code block: the from-scratch n24_block descent engine reproduces this list (179 codes, Table 1 counts), and its 9 dim-12 codes are the 9 Type II [24,12] parents used in coordinate-partition gluing.",
+"relevant_tests": [
+"T04",
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "good-self-dual-codes-exist",
+"title": "Good Self Dual Codes Exist",
+"authors": "MacWilliams F.J., Sloane N.J.A., Thompson J.G.",
+"year": "1972",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Supplies the project's coverage oracle (Lemma 4.6): every doubly-even self-orthogonal code containing 1_n with n/4 even embeds in a Type II self-dual code, which underpins the route-3C subcode-extraction argument that every menu code embeds in one of the 94343 BHM [40,20] codes. Also provides the mass-formula counts (Theorems 2.1-2.3) for the number of (Type I/II) self-dual codes containing a fixed weakly-self-dual subcode, used as the completeness gate in the classification pipeline.",
+"relevant_tests": [
+"T32",
+"T04"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "on-the-classification-of-binary-optimal-self-ortho",
+"title": "On the Classification of Binary Optimal Self-Orthogonal Codes",
+"authors": "Bouyukliev I., Bouyuklieva S., Gulliver T.A., Östergård P.R.J.",
+"year": "2008",
+"source": " (IEEE Trans. Inform. Theory 54 (2008))",
+"category": "classification",
+"provides": "Classifies optimal binary self-orthogonal codes up to length 25 (and up to length 40, dim 10) via residual-code and extension methods, publishing explicit generator matrices. The project (the project's code) uses its four [35,7,16] doubly-even SO codes (W = 1+85y^16+32y^20+10y^24) to construct a verified [40,8] \"shape\" code, realizing menu rows (a,b)=(95,64) in the route-3A direct-existence exhaust for the [72,36,16] descent.",
+"relevant_tests": [
+"T04",
+"T32"
+],
+"relevant_enumerators": [
+"n40-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "optimal-subcodes-freibert-kim",
+"title": "Optimal subcodes and optimum distance profiles of self-dual codes",
+"authors": "Freibert F., Kim J.-L.",
+"year": "2013",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Gives the Chain Algorithms and optimum-distance-profile (ODP) facts for self-dual codes (small lengths n=8,16,24,32 and the q48/q72 quadratic-residue codes), used as ground-truth validation data for the project's subcode-extraction classification pipeline (route 3A/3C): e.g. RM(1,4)=[16,5,8] and the two [32,11,12] codes inside RM(1,5), and the Chain Algorithm I/II templates for maximal high-distance subcodes. For n=72 it constructs a self-orthogonal doubly-even [72,35,16] code with A_16=129972 and maximal subcodes [72,29,16], [72,23,20] of q72, framing the open [72,36,16] existence question.",
+"relevant_tests": [
+"T04",
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "pless-classification",
+"title": "A Classification of Self-Orthogonal Codes over GF(2)",
+"authors": "Pless V.",
+"year": "1972",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Gives the complete enumeration of all self-orthogonal binary [n,n/2] (even n<=20) and [n,(n-1)/2] (odd n<=19) codes, with their equivalence-class counts, automorphism groups, and weight distributions, plus the mass-count formula N = prod_{i}(2^i+1) for self-orthogonal subspaces. The project uses these tables and counts as external ground-truth validation for the route-3A/3B subcode-descent classification pipeline at small lengths (n=8,16,24), e.g. checking maximal self-orthogonal subcode tables and confirming inequivalent small codes can share a weight enumerator.",
+"relevant_tests": [
+"T04",
+"T32"
+],
+"relevant_enumerators": [
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "whatisqest",
+"title": "What is Q-Extension?",
+"authors": "Bouyukliev, I. G.",
+"year": "2007",
+"source": "(see project bibliography)",
+"category": "classification",
+"provides": "Documents the Q-Extension code-classification software (Bouyukliev), which enumerates all inequivalent linear codes by extension-up-to-length (q_ext_l) and extension-up-to-dimension/subcode (q_ext_d), with self-orthogonality, dual-distance, weight, and proportional-column restrictions, plus q_ext_tools for spectra/min-distance/automorphism/equivalence checks. The project treats it (and the bundled q_extl07.tar binaries) as a black-box sanity-check engine and methodological reference for the route-3A residual-tower enumeration of the [72,36,16] search, reusing its plain-text generator-matrix format and the Dodunekov residual Lemma 1; it is the predecessor engine to the Bouyukliev-Bouyuklieva Algorithm 1 used in the project's data",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "2classsub",
+"title": "Double Circulant Codes from Two Class Association Schemes",
+"authors": "Dougherty S.T., Kim J.-L., Solé P.",
+"year": "2002",
+"source": "(see project bibliography)",
+"category": "construction",
+"provides": "Constructs binary (and ternary/quaternary/Z4) self-dual codes from adjacency matrices of two-class association schemes (strongly regular graphs and doubly regular tournaments), unifying Karlin/Pless/Gaborit double-circulant constructions; yields new Type I and Type II [72,36,12] examples and rank-three-group-invariant self-dual codes. For the extremal [72,36,16] project it is background on double-circulant / association-scheme construction techniques and the landscape of (suboptimal, d=12) length-72 self-dual codes, but is not wired to any specific feasibility test.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "munemasa-tonchev-2002",
+"title": "A new quasi-symmetric 2-(56,16,6) design obtained from codes",
+"authors": "Munemasa A., Tonchev V. D.",
+"year": "2004",
+"source": "Discrete Mathematics 284 (2004) 231-234; DOI:10.1016/j.disc.2003.11.038",
+"category": "construction",
+"provides": "Provides a code-mining method (compatibility graph on weight-16 code vectors plus clique search for 77-word balanced subcollections) that the project (the project's notes §191-197) adopts as a probe on the forced [56,21] residual code: build the compatibility graph on the 5082 minimum-weight words and search for 77-word subfamilies forming a 2-(56,16,6) quasi-symmetric design, exposing rigid geometry of candidate residual codes for the [72,36,16] search. The negative QSD parameter argument (no 2-(56,16,396) QSD) and this subfamily probe together act as a structural filter on the n56 residual family.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"n56-residual-biweight"
+],
+"confidence": "high"
+},
+{
+"id": "2008-gulliver-harada",
+"title": "On double circulant doubly even self-dual [72, 36, 12] codes and their neighbors",
+"authors": "Gulliver, T. A.; Harada, M.",
+"year": "2008",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Classifies all 576 (443 pure + 134 bordered) double-circulant doubly-even self-dual [72,36,12] codes and proves, via a neighbor rank test (rank M < rank(M, j)), that none of them has an extremal doubly-even self-dual [72,36,16] neighbor. For this project it rules out the index-2 (double-circulant) construction route to the open [72,36,16] code, motivating the repo's pivot to index-3/4/8/9 circulant families and broader neighbor random-walk searches (cited explicitly in the project's notes).",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "borello-2012-order6",
+"title": "The automorphism group of a self-dual [72,36,16] binary code does not contain elements of order 6",
+"authors": "Borello, M.",
+"year": "2012",
+"source": "arXiv:1203.3321",
+"category": "automorphism-exclusion",
+"provides": "Excludes elements of order 6 from the automorphism group of any putative extremal Type II [72,36,16] code, via the F_2<g>-module decomposition (fixed subcode of g^2 plus a socle-restricted module) followed by exhaustive MAGMA search. In this project it is part of the cited literature reduction of Aut(C) (Conway-Pless through Borello 2014) and serves as the \"Phase 3B template\" module-decomposition pattern referenced in README.md and the route-3A/RECURSIVE direct-existence pipeline.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "borello-dallavolta-nebe-2013",
+"title": "The automorphism group of a self-dual [72,36,16] code does not contain S_3, A_4, or D_8",
+"authors": "Borello M., Dalla Volta F., Nebe G.",
+"year": "2013",
+"source": "arXiv:1303.4899",
+"category": "automorphism-exclusion",
+"provides": "A MAGMA computation excluding S_3, A_4, and D_8 from the automorphism group of a putative extremal self-dual [72,36,16] code, yielding the theorem that Aut(C) is cyclic of order 1,2,3,4,5 or elementary abelian of order 4 or 8. The project uses this as part of the literature reduction pinning the surviving Aut(C) candidates (README, the project's notes, and the CFT-with-symmetries enumeration of equivariant cases).",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "borello-dissertation",
+"title": "Automorphism groups of self-dual binary linear codes with a particular regard to the extremal case of length 72",
+"authors": "Borello M.",
+"year": "2014",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "PhD thesis collecting Borello's automorphism-exclusion results for a putative extremal self-dual [72,36,16] code, proving its automorphism group has order at most 5. Serves as the project's umbrella reference for the full literature reduction (Conway-Pless 1982 through Borello 2014) that pins the surviving cases to small prime orders; the repo also draws Propositions 3.1-3.3 / Theorem 3.8, the 22 intermediate V_4-invariant [72,26,16] codes D_i, and Appendix A computation-time benchmarks from it.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "borello-martino-2014",
+"title": "The automorphism group of a self-dual [72,36,16] code is not an elementary abelian group of order 8",
+"authors": "Borello, M.",
+"year": "2014",
+"source": "arXiv:1304.7162",
+"category": "automorphism-exclusion",
+"provides": "Excludes the elementary abelian group of order 8 (C_2xC_2xC_2) as the automorphism group of a putative extremal self-dual [72,36,16] code, by combining pairwise the subcodes fixed by involutions and classifying their sums in MAGMA; combined with prior literature this bounds |Aut(C)| to at most 5 (cyclic of order 1-5 or C_2xC_2). The project uses it in its literature-reduction chain and reuses its 22 intermediate [72,26,16] codes D_i as the seed for the Phase 3B-V4.4 V_4-invariant overcode construction.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "borello-willems-2013",
+"title": "Automorphisms of order 2p in binary self-dual extremal codes of length a multiple of 24",
+"authors": "Borello M., Willems W.",
+"year": "2013",
+"source": "arXiv:1209.5071",
+"category": "automorphism-exclusion",
+"provides": "Part of the prescribed-automorphism literature reduction (Conway-Pless 1982 through Borello 2014) that narrows the candidate automorphism group of a putative [72,36,16] code. Its Theorem 1 (C is a projective F_2<g>-module iff a natural projection of the fixed subcode C(g^p) is self-dual) and the fixed-point-free-involution fact (for m not in {1,5}) underpin the module-theoretic machinery used to exclude orders; the paper itself applies it to length-120 (orders 38, 58), with m=3 covered by the cited companion results.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "bouyuklieva-2002",
+"title": "On the Automorphisms of Order 2 with Fixed Points for the Extremal Self-Dual Codes of Length 24m",
+"authors": "Bouyuklieva, S.",
+"year": "2002",
+"source": "Designs, Codes and Cryptography 25 (2002)",
+"category": "automorphism-exclusion",
+"provides": "Proves (Theorem 5.3) that no doubly-even self-dual [72,36,16] code can have an automorphism of order 2 with fixed points, narrowing the possible automorphism group of any putative extremal length-72 code. Complementary to the enumerator/menu screen: it is conditional on a nontrivial order-2 automorphism and yields no weight-enumerator-level cut, but supplies the split generator-matrix / coordinate-partition homomorphism framework (self-orthogonal image code C') used in the classification methodology.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "bouyuklieva-obrien-willems",
+"title": "The automorphism group of a binary self-dual doubly-even [72,36,16] code is solvable",
+"authors": "Bouyuklieva S., O'Brien E.A., Willems W.",
+"year": "2024",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Proves that the automorphism group of a putative binary self-dual doubly-even [72,36,16] code is solvable, of order 5, 7, 10, 14, 56, or a divisor of 72 (via Sylow counting plus F2[G]-module/representation theory excluding the simple candidates A5, A6, SL(2,8)). For this project it is complementary background: it constrains the symmetry group conditional on a nontrivial automorphism but yields no enumerator-level cut and leaves the rigid Aut=1 case (the domain of the unconditional menu/the project's data screens) fully open; its only bridge is the fixed-point structure of order-5/7 elements feeding a putative order-p automorphism branch.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "feulner-nebe-2011",
+"title": "The automorphism group of an extremal [72,36,16] code does not contain Z_7, Z_3 x Z_3, or D_10",
+"authors": "Feulner T., Nebe G.",
+"year": "2011",
+"source": "arXiv:1110.6012",
+"category": "automorphism-exclusion",
+"provides": "Excludes D_10, Z_3 x Z_3, and Z_7 as automorphism subgroups of a putative extremal [72,36,16] code (so Aut(C) has order 5 or divides 24), and supplies the project's Phase 3A enumeration engine: the bijection C <-> (C_0, C_1) over extension fields of F_2 plus the 5-weight pruning function used to row-by-row enumerate G-invariant self-dual codes (the C_3, C_5, C_7 branches and the D_10/70-CPU-day runtime benchmark).",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "gulliver-double-circulant",
+"title": "On double circulant doubly even self-dual [72, 36, 12] codes and their neighbors",
+"authors": "Gulliver T.A., Harada M.",
+"year": "2008",
+"source": "Australasian J. Combin. 40 (2008), 137-144",
+"category": "automorphism-exclusion",
+"provides": "Classifies all 576 (443 pure + 134 bordered) double-circulant doubly-even self-dual [72,36,12] codes and proves via a neighbor-rank argument (rank M < rank(M, j^t)) that none has an extremal [72,36,16] self-dual neighbor, closing the index-2/double-circulant construction route for the open [72,36,16] existence problem. In this project it is cited (the project's notes) as the reason index-2 is exhausted, motivating index-3/4/8/9 multi-circulant and Type-I neighbor search routes instead.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "hannusch-major-2025",
+"title": "On Small Automorphism Groups of Binary Self-Dual Codes",
+"authors": "Hannusch C., Major S.R.",
+"year": "2025",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Proves general structural constraints on small automorphism groups of binary self-dual codes (no single transposition or 3-cycle, no automorphism acting on only one half of coordinates, asymmetry constraints under trivial Aut), and specializes to the [72,36,16] case: assuming Aut(C)=C_5 with exactly two fixpoints, the two fixed generator rows have weight-16 images with disjoint support (mu=0). Background for the C_5 / trivial-automorphism branch of any constructive or exhaustive search, but not wired to any LP/SDP/triweight test in this project.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "kiermaier-2013",
+"title": "There is No Self-Dual Z4-Linear Code Whose Gray Image Has the Parameters (72, 2^36, 16)",
+"authors": "Kiermaier M.",
+"year": "2013",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Proves that no self-dual Z4-linear code has a Gray image with the formally-self-dual (72, 2^36, 16) parameters, closing the Z4-linear construction route to an extremal length-72 code; the proof reduces to checking the 41 classified binary self-dual [36,18,8] codes (whose doubly-even-subcode duals have minimum distance 6 or 2). Pure background existence-exclusion for the [72,36,16] project: it removes one candidate construction avenue but is not wired to any LP/SDP/triweight test in this repo.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "nebe-2012",
+"title": "An extremal [72,36,16] binary code has no automorphism group containing Z_2 x Z_4, Q_8, or Z_10",
+"authors": "Nebe G.",
+"year": "2012",
+"source": "arXiv:1109.1680",
+"category": "automorphism-exclusion",
+"provides": "Proves any order-2 automorphism of an extremal [72,36,16] code acts fixed-point-freely making C a free F_2[C_2]-module of rank 18, with the fixed/projected code being exactly one of the 41 self-dual [36,18,8] codes; this excludes C_8, Q_8, Z_4xZ_2, and Z_10 from Aut(C). The project uses this as the structural basis for the C_2 branch (Phase 3B) of the route-3A direct existence exhaust, narrowing |Aut(C)| to 5 or a divisor of 24.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "obrien-willems-2011",
+"title": "On the automorphism group of a binary self-dual doubly-even [72,36,16] code",
+"authors": "O'Brien E.A., Willems W.",
+"year": "2011",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Narrows the possible automorphism group of a putative [72,36,16] Type II code to order 5, 7, 10, 14, a divisor of 18 or 24, or A_4 x C_3, by excluding all groups of order 72, 56, and (all but one) order 36 via modular representation theory on the binary group algebra F_2[G]. Supplies the foundational idempotent/permutation-module decomposition algorithm (README cites \"O'Brien-Willems Lemma 4\") that underpins the project's prescribed-automorphism-group classification search; it is complementary background that constrains Aut(C) but yields no enumerator-level menu cut and leaves the rigid Aut=1 case open.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "yorgov-yorgov-2013",
+"title": "The Automorphism Group of a Self-Dual Binary [72,36,16] Code Does Not Contain Z_4",
+"authors": "Yorgov V., Yorgov D.",
+"year": "2013",
+"source": "(see project bibliography)",
+"category": "automorphism-exclusion",
+"provides": "Excludes the cyclic group Z_4 (C_4) of order 4 as an automorphism of a putative extremal [72,36,16] Type II code, via an R=F_2<g> module parametrization (rank-9 free module, orthogonal/symmetric block conditions) reducing to three fixed [36,18,8] subcodes (C_4, C_12, C_19) exhaustively traversed on the Janus supercomputer (~6M core-hours). In this project it is background that pins the surviving automorphism-group list to {C_1, C_2, C_3, C_2xC_2, C_5}, accepted but not independently reproduced.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "bakalov-kac-0402315",
+"title": "Twisted Modules over Lattice Vertex Algebras",
+"authors": "Bakalov B., Kac V. G.",
+"year": "2004",
+"source": "arXiv:math/0402315",
+"category": "cft",
+"provides": "A foundational lattice vertex-algebra reference developing twisted modules over lattice VOAs; serves as background for the code-CFT / Construction-A lattice-VOA side of the project, supplying the twisted-module and orbifold machinery one would use to attach a holomorphic CFT to the even unimodular lattice from a Type II [72,36,16] code. No specific test or enumerator in the repo currently invokes it.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "dgh-9707008",
+"title": "Framed vertex operator algebras, codes and the moonshine module",
+"authors": "Dong C., Griess R. L. Jr., Höhn G.",
+"year": "1997",
+"source": "arXiv:q-alg/9707008",
+"category": "cft",
+"provides": "Foundational framed-VOA paper: for a VOA whose Virasoro element is a sum of commuting c=1/2 Virasoros, it associates two binary codes (a structure code and a Virasoro-frame code) and decomposes lattice VOAs and the moonshine module (48 Virasoros) accordingly. Supplies the code-CFT dictionary connecting binary self-dual codes to framed VOA / lattice constructions, relevant as background for the code-CFT and lattice-theta direction but not wired to any specific [72,36,16] test.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "dgm-9410029",
+"title": "Conformal Field Theories, Representations and Lattice Constructions",
+"authors": "Dolan L., Goddard P., Montague P.",
+"year": "1994",
+"source": "arXiv:hep-th/9410029",
+"category": "cft",
+"provides": "Develops the construction of meromorphic (chiral bosonic) self-dual conformal field theories H(Lambda) from even self-dual Euclidean lattices Lambda, and of lattices Lambda_C from doubly-even self-dual binary codes C, with self-duality preserved through the chain code -> lattice -> CFT. For the [72,36,16] project it is a background source on the code-to-lattice-to-CFT (Construction-A theta / code-CFT) pipeline that motivates projecting code triweights to lattice theta / partition functions; not wired to any specific test in the repo.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "dlm-9703016",
+"title": "Modular-invariance of trace functions in orbifold theory",
+"authors": "Dong C., Li H., Mason G.",
+"year": "1997",
+"source": "arXiv:q-alg/9703016",
+"category": "cft",
+"provides": "Provides the rigorous foundation that, for a rational and C2-cofinite vertex operator algebra, the space of (twisted) trace functions is finite-dimensional and modular invariant under SL(2,Z). This is general CFT/VOA background for the code-CFT / modular-bootstrap angle on the [72,36,16] code; it is not wired to any specific enumerator test in the repo.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "dong-nagatomo-9808088",
+"title": "Automorphism Groups and Twisted Modules for Lattice Vertex Operator Algebras",
+"authors": "Dong C., Nagatomo K.",
+"year": "1998",
+"source": "arXiv:math/9808088",
+"category": "cft",
+"provides": "A VOA/lattice background source: it gives a complete description of the full automorphism group of a lattice vertex operator algebra and classifies the irreducible theta-twisted modules (for theta lifted from the -1 lattice isometry) via the twisted Zhu algebra. For the [72,36,16] project it supplies the VOA-side automorphism/twisted-module theory underlying Construction-A code-CFT and theta-orbifold constructions, but it is not currently wired to any specific feasibility test.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "hkm-2112-05168",
+"title": "Classical Codes and Chiral CFTs at Higher Genus",
+"authors": "Henriksson J., Kakkar A., McPeak B.",
+"year": "2022",
+"source": "arXiv:2112.05168",
+"category": "cft",
+"provides": "Establishes the code-CFT correspondence at higher genus: the genus-g chiral partition function equals the higher-weight (genus-g) enumerator polynomial, Sp(2g,Z) modular invariance becomes linear maps on the 2^g enumerator variables, and the separating-degeneration/factorization limits must reproduce products of lower-genus partition functions. This project uses HKM's factorization map and identity directly as the genus-3 triweight \"constraint #6\" (factorization of the [72,36,16] triweight into its genus-1 and genus-2 marginals), and as the structural basis for the genus-3 Siegel-modular-form ambient space.",
+"relevant_tests": [
+"T25",
+"T26"
+],
+"relevant_enumerators": [
+"genus3-triweight-72",
+"genus3-invariant-space",
+"lattice-theta-codeCFT",
+"genus2-biweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "lam-yamauchi-0605176",
+"title": "On the structure of framed vertex operator algebras and their pointwise frame stabilizers",
+"authors": "Lam C.H., Yamauchi H.",
+"year": "2006",
+"source": "arXiv:math/0605176",
+"category": "cft",
+"provides": "Studies the structure of framed VOAs, showing the structure codes (C,D) satisfy duality conditions and that every framed VOA is a simple-current extension of the binary code VOA V_C, plus the explicit 4A-twisted orbifold construction of the Monster moonshine VOA. For the [72,36,16] project this is a code-CFT/VOA background source on how binary self-dual codes (the structure code C) govern framed VOA constructions; not wired to any specific enumerator test.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "miyamoto-9612032",
+"title": "Binary codes and vertex operator (super)algebras (representation theory of code VOAs M_D and Hamming-code VOA fusion rules)",
+"authors": "Miyamoto, M.",
+"year": "1996",
+"source": "arXiv:q-alg/9612032",
+"category": "cft",
+"provides": "Constructs vertex operator algebras M_D from even binary linear codes D via mutually orthogonal central-charge-1/2 conformal vectors (Ising/Virasoro), classifying their irreducible modules and fusion rules (notably the Hamming [8,4,4]-code VOA M_{H_8}) and giving a recipe to build VOAs from pairs of binary codes. For the [72,36,16] project it is a background code-to-CFT construction source: it underlies the code-VOA / chiral-CFT side that would attach a holomorphic VOA or partition function to a binary self-dual code, but it is not currently wired to any specific enumerator test in the repo.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"lattice-theta-codeCFT"
+],
+"confidence": "high"
+},
+{
+"id": "self-ortho-codes-and-modular-forms",
+"title": "Self-Orthogonal Codes and Modular Forms",
+"authors": "Maher, D.P.",
+"year": "1976",
+"source": " (Ph.D. dissertation, Lehigh University, 1975/1976)",
+"category": "cft",
+"provides": "Maher's thesis builds the foundational dictionary between Lee/shape weight enumerators of F_p codes and theta functions of their Construction-A lattices L(C), proving the MacWilliams equation is equivalent to the theta transformation formula (via Poisson summation) and that for F_2/F_3 no information is lost (equal weight enumerators imply rationally congruent quadratic forms). For the [72,36,16] project it is background on the code-weight-enumerator to lattice-theta / code-CFT correspondence: it re-derives Gleason's theorem from modular forms and exhibits the extremal-doubly-even / unimodular-lattice link (e.g. extremal code in F_2^24 implies a Ramanujan tau congruence), the conceptual basis for the lattice-theta and CFT enumerator pipeline. Not wired to any specific search test in the repo.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"lattice-theta-codeCFT",
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "arxiv-2408-10323",
+"title": "SDP bounds on quantum codes",
+"authors": "Anglès Munné G., Nemec A., Huber F.",
+"year": "2024",
+"source": "arXiv:2408.10323",
+"category": "quantum",
+"provides": "Gives a complete semidefinite-programming hierarchy (state-polynomial-optimization based) for the existence of quantum codes, recovering quantum Lovász/Delsarte bounds and an O(n^4) Terwilliger-algebra symmetry reduction that proves nonexistence of ((7,1,4)), ((8,9,3)) and ((10,5,4)) codes. For the classical binary [72,36,16] project it is background: it is the quantum analogue of the same Terwilliger-block-diagonalization SDP methodology used in the project's anchored 3-point bound, but it is not wired to any specific test in the repo.",
+"relevant_tests": [],
+"relevant_enumerators": [],
+"confidence": "high"
+},
+{
+"id": "chinen-imamura-riemann-hypothesis",
+"title": "On the Riemann hypothesis for self-dual weight enumerators of genera three and four",
+"authors": "Chinen K., Imamura Y.",
+"year": "2020",
+"source": "(see project bibliography)",
+"category": "zeta",
+"provides": "Gives equivalent conditions (in terms of only g leading coefficients A_d, A_{d+1}, A_{d+2}) for the Duursma-zeta Riemann hypothesis of self-dual / sigma_q-invariant weight enumerators of genera three and four, including extremal-code cases. This is the theoretical backing for the project's Duursma-zeta ranking layer (the project's code directory, length-40/56 zeta polynomials used as a compact menu coordinate and heuristic filter, not yet a proof-grade cut).",
+"relevant_tests": [],
+"relevant_enumerators": [
+"zeta-function",
+"genus1-weight-enumerator",
+"genus3-triweight-72"
+],
+"confidence": "high"
+},
+{
+"id": "duursma-zeta-functions",
+"title": "From weight enumerators to zeta functions",
+"authors": "Duursma, I.",
+"year": "2001",
+"source": "(see project bibliography)",
+"category": "zeta",
+"provides": "Defines the Duursma zeta function/polynomial of a linear code (the MDS-basis transform of its weight enumerator) and the code-theoretic Riemann-hypothesis analogue relating root locations to minimum-distance upper bounds. The project uses this to compute explicit zeta polynomials for the 75 surviving n=40 residual codes (the project's data), giving a compact distinct-fingerprint menu coordinate and a Weil-closeness root statistic for ranking, though not (yet) a proof-grade cut.",
+"relevant_tests": [
+"T32"
+],
+"relevant_enumerators": [
+"zeta-function",
+"n40-biweight",
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+},
+{
+"id": "kalai-open-problems",
+"title": "Open Problems in Coding Theory",
+"authors": "Dougherty S., Kim J.-L., Solé P.",
+"year": "2015",
+"source": "(see project bibliography)",
+"category": "background",
+"provides": "This survey states the central problem of the project as Open Question 7.1 (\"Does there exist a Type II [72,36,16] code?\") and supplies, via Gleason's theorem, the explicit forced weight enumerator (Table 1, A_16 = 134521-class data), the equivalent [70,35,14] Type I child code and shadow weight distributions (Tables 2-3), and the weight-4-neighbor [68,34,12] child enumerator (Table 4). It also defines Wei higher/support weights and reports the known second higher weight enumerator for the putative code (Table 5), framing the child-reduction and higher-weight attack lines used throughout the repo; it is cited in the project's notes as the source for the explicit extremal length-72 weight enumerator.",
+"relevant_tests": [
+"T31"
+],
+"relevant_enumerators": [
+"genus1-weight-enumerator",
+"n68-child-biweight",
+"support-weight-enumerators"
+],
+"confidence": "high"
+},
+{
+"id": "kim",
+"title": "A Prize Problem in Coding Theory",
+"authors": "Kim, J.-L.",
+"year": "2009",
+"source": "(see project bibliography)",
+"category": "background",
+"provides": "A short survey of the central open problem this whole project targets: existence of a binary Type II [72,36,16] code. It states the Gleason-forced weight enumerator (A_16 = 249849), the 5-(72,16,78) design implication, the allowed automorphism prime orders (2,3,5,7) and Yorgov's possible group orders, and child-code equivalences ([70,35,14] Type I, [72,36,14] Type I via Gulliver-Harada-Kim) as background context for the search.",
+"relevant_tests": [],
+"relevant_enumerators": [
+"genus1-weight-enumerator"
+],
+"confidence": "high"
+}
+]
+}

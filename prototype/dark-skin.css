@@ -1,0 +1,76 @@
+/* Dark skin for the Extremal 72 dashboard.
+   Loaded AFTER styles.css; overrides only colors, never layout. The dashboard's
+   organization (topbar, tabbar, panels, card grids) is unchanged. */
+
+:root {
+  color-scheme: dark;
+  --ink: #e6edf3;                       /* main text -> light */
+  --muted: #9aa7b4;
+  --paper: #0f1419;                     /* page background */
+  --panel: #161c24;                     /* cards / panels */
+  --line: #2a323d;
+  --green: #5fd08a;
+  --green-soft: rgba(95, 208, 138, 0.14);
+  --gold: #e7c46a;
+  --gold-soft: rgba(231, 196, 106, 0.14);
+  --red: #e8868b;
+  --red-soft: rgba(232, 134, 139, 0.14);
+  --blue: #6db3f2;
+  --blue-soft: rgba(109, 179, 242, 0.14);
+  --shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  --surface-strong: #6db3f2;            /* accent fill for active tabs / buttons */
+  --surface-2: #1d242e;                 /* secondary surface / hovers */
+}
+
+body {
+  background:
+    linear-gradient(90deg, rgba(109, 179, 242, 0.06) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(95, 208, 138, 0.05) 1px, transparent 1px),
+    var(--paper);
+  background-size: 56px 56px;
+}
+
+.topbar { background: rgba(15, 20, 25, 0.92); }
+.brand-mark { background: #0b0f14; border-color: #e8b34b; color: #ffe9bf; }
+
+.tab, .mini-tab { color: var(--muted); }
+.tab:hover, .mini-tab:hover, .tab:focus-visible, .mini-tab:focus-visible {
+  background: var(--surface-2); border-color: var(--line);
+}
+.tab.is-active, .mini-tab.is-active {
+  background: var(--surface-strong); border-color: var(--surface-strong); color: #0f1419;
+}
+
+/* Panel / card surfaces */
+.lede-panel, .status-board, .strip, .section-head, .hierarchy-stage,
+.ledger > article, .validation-card, .formula-block, .workboard > article,
+.pipeline-step, .two-column > article,
+.metric, .test-card, .enumerator-card, .download-panel > article,
+.filter-tabs, .search-box {
+  background: var(--panel);
+}
+.split-layout > section, .stat, .name-grid span { background: var(--surface-2); }
+.stage-card { background: var(--panel); border-color: var(--line); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5); }
+
+/* Muted body copy inside panels */
+.lede-panel p, .section-head p, .strip p, .two-column p, .workboard p,
+.validation-card p, .stage-card small, .stat-label, .test-card p,
+.pipeline-step p, .download-panel p, .enumerator-card p { color: var(--muted); }
+
+.accent-green { background: var(--green-soft); border-color: rgba(95, 208, 138, 0.4); }
+.accent-gold { background: var(--gold-soft); border-color: rgba(231, 196, 106, 0.4); }
+
+/* Status badges */
+.badge { color: var(--ink); border-color: var(--line); }
+.badge.kill { background: var(--red-soft); border-color: rgba(232, 134, 139, 0.4); color: var(--red); }
+.badge.open { background: var(--gold-soft); border-color: rgba(231, 196, 106, 0.4); color: var(--gold); }
+.badge.validation { background: var(--blue-soft); border-color: rgba(109, 179, 242, 0.4); color: var(--blue); }
+.badge.saturates { background: var(--green-soft); border-color: rgba(95, 208, 138, 0.4); color: var(--green); }
+
+/* Buttons */
+.button-link { background: var(--surface-strong); border-color: var(--surface-strong); color: #0f1419; }
+.button-link.secondary { background: var(--panel); color: var(--ink); border-color: var(--line); }
+
+.callout { background: var(--green-soft); border-left-color: var(--green); }
+.plain-list p { border-left-color: var(--gold); }
+.search-box input { background: transparent; color: var(--ink); }

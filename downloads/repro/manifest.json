@@ -1,0 +1,162 @@
+{
+  "T01-int": {
+    "file": "downloads/repro/T01-int-repro.tar.gz",
+    "sha256": "e7aca820a9eed6ef30c1a9b1fde8da5e8e9d8b4ab4f289424cc75674b6de6d9b",
+    "files": 4
+  },
+  "T02-pimg": {
+    "file": "downloads/repro/T02-pimg-repro.tar.gz",
+    "sha256": "a3eda2be5b27d22d43906cac3b76ba96b7ac8a316de17f88f0a8d1c83be6ddf4",
+    "files": 4
+  },
+  "T03-spli": {
+    "file": "downloads/repro/T03-spli-repro.tar.gz",
+    "sha256": "637edd00c6b7b50e11754354d0cca9926d357d22aa3e7e1819eec6dfdf72d932",
+    "files": 3
+  },
+  "T04-imgc": {
+    "file": "downloads/repro/T04-imgc-repro.tar.gz",
+    "sha256": "0382f472809428083fa3f735ddca043fa6d7c6c8c607d5df1a61be859cd24c0e",
+    "files": 3
+  },
+  "T05-3bnn": {
+    "file": "downloads/repro/T05-3bnn-repro.tar.gz",
+    "sha256": "a5d77e04c5db8f6915a796fa728fb22f22e8036b05e3476bcc1ef784bd1a586b",
+    "files": 5
+  },
+  "T06-smth": {
+    "file": "downloads/repro/T06-smth-repro.tar.gz",
+    "sha256": "c3a3ed7773c16341e0cd7db7bee5a9a76de56609d45a88a17c9ed953568f035d",
+    "files": 5
+  },
+  "T07-btri": {
+    "file": "downloads/repro/T07-btri-repro.tar.gz",
+    "sha256": "6feffebed7f4584058da50eef6960363331fd5a673087c41cb1a2ab1aba14078",
+    "files": 3
+  },
+  "T08-john": {
+    "file": "downloads/repro/T08-john-repro.tar.gz",
+    "sha256": "505b12ecfeb4034352e04de15d8eefae81c411d0dfbef2012887d0c6231dd486",
+    "files": 4
+  },
+  "T09-ltog": {
+    "file": "downloads/repro/T09-ltog-repro.tar.gz",
+    "sha256": "594a4babe8e5d9cde0801541d2af503dec3ee3961e67709f59f8ad439b4545f4",
+    "files": 3
+  },
+  "T10-dscg": {
+    "file": "downloads/repro/T10-dscg-repro.tar.gz",
+    "sha256": "868197a77c552582b25193acef7ed615217bc11f81be502967ab4554bdc57c22",
+    "files": 3
+  },
+  "T11-lspl": {
+    "file": "downloads/repro/T11-lspl-repro.tar.gz",
+    "sha256": "8f10ecdb45d115927b2ba8e8805cd6680635f2106168f61dbf2aed78ca6c8ed9",
+    "files": 3
+  },
+  "T12-sprf": {
+    "file": "downloads/repro/T12-sprf-repro.tar.gz",
+    "sha256": "b61878ab713c26908bd7a23102719d67dabae39b09222e9519e073131229da2f",
+    "files": 3
+  },
+  "T13-dshr": {
+    "file": "downloads/repro/T13-dshr-repro.tar.gz",
+    "sha256": "367493cb61ad94b15a2f65836317fdbe4d4370392c11cdab69243125258597ff",
+    "files": 4
+  },
+  "T14-cmin": {
+    "file": "downloads/repro/T14-cmin-repro.tar.gz",
+    "sha256": "d6117119ab98fdeff9b91358f295d30780de31782cfed49b655c6f4bc816dd6c",
+    "files": 3
+  },
+  "T15-fibm": {
+    "file": "downloads/repro/T15-fibm-repro.tar.gz",
+    "sha256": "bb0fa695c48a31c5d16c4009cd1b16bf205293838bd936ce414cfc1e9c6237c6",
+    "files": 3
+  },
+  "T16-r56m": {
+    "file": "downloads/repro/T16-r56m-repro.tar.gz",
+    "sha256": "21d0d66f8284f4ba3170ca20fc1edcab5a07b9aed211435d60b3d1af51f2af29",
+    "files": 3
+  },
+  "T17-a3": {
+    "file": "downloads/repro/T17-a3-repro.tar.gz",
+    "sha256": "76c3ef0f2b93ae1257eb580bd4615a86f7a8ff97c47040d319d0aa4f6ae3e1e7",
+    "files": 3
+  },
+  "T18-m1": {
+    "file": "downloads/repro/T18-m1-repro.tar.gz",
+    "sha256": "0dca5d4ba397cd5524a138203b329ae40003f5d9ab8f34de70b1cbccca1adbe4",
+    "files": 3
+  },
+  "T19-sim": {
+    "file": "downloads/repro/T19-sim-repro.tar.gz",
+    "sha256": "c30a7b2bdd5d1c38e738cfe6a1e376e47322a5cd2c285678cadbef8bebd43659",
+    "files": 12
+  },
+  "T20-g2": {
+    "file": "downloads/repro/T20-g2-repro.tar.gz",
+    "sha256": "2ea21398d966902b24884b19da50742e83a142ff5a86596a9006e6d252c6d9de",
+    "files": 5
+  },
+  "T21-ra3": {
+    "file": "downloads/repro/T21-ra3-repro.tar.gz",
+    "sha256": "4355522291a089d851a62e9c7ffffd47d8fdad9a0fe1674e05a3220c1edeecb4",
+    "files": 3
+  },
+  "T22-pkc": {
+    "file": "downloads/repro/T22-pkc-repro.tar.gz",
+    "sha256": "992416a97a70d6e33d89a305e0060c375f19207def05c4ea1f76ad498b08c029",
+    "files": 3
+  },
+  "T23-pwg": {
+    "file": "downloads/repro/T23-pwg-repro.tar.gz",
+    "sha256": "58d38d8f6b2bdd405bb6c6f8f4e22879eaeb9c96f44abf54ec8584278ded5c35",
+    "files": 3
+  },
+  "T24-3bm": {
+    "file": "downloads/repro/T24-3bm-repro.tar.gz",
+    "sha256": "d9e24c9d0c830705dab74dbbcbfe2da53a8699ec7b37383da63100e06db1d664",
+    "files": 3
+  },
+  "T25-mtr": {
+    "file": "downloads/repro/T25-mtr-repro.tar.gz",
+    "sha256": "51d3c3c973499b06dce85b6e06c62e9263785f679afdb9e8ecf79e2b28167f9d",
+    "files": 3
+  },
+  "T26-tag": {
+    "file": "downloads/repro/T26-tag-repro.tar.gz",
+    "sha256": "155950e19be496b4b3cb966c9d8921f8a448ddf9b78474fbdbbb543b7cae9d3c",
+    "files": 3
+  },
+  "T27-brk": {
+    "file": "downloads/repro/T27-brk-repro.tar.gz",
+    "sha256": "71203548e0dce95ed569e7cd1ac124c6e6b64610c2b378b6e82e0ff5e8878fea",
+    "files": 3
+  },
+  "T28-b4": {
+    "file": "downloads/repro/T28-b4-repro.tar.gz",
+    "sha256": "7a20a513d61db8ac12d45eafdc8472fa603f090f8e2087218aef39e8844b79b7",
+    "files": 3
+  },
+  "T29-a3p": {
+    "file": "downloads/repro/T29-a3p-repro.tar.gz",
+    "sha256": "1931f8d54df4ea29196bded5657e2fa4e83c74c5210aba442a6f13cf6afea503",
+    "files": 3
+  },
+  "T30-am1": {
+    "file": "downloads/repro/T30-am1-repro.tar.gz",
+    "sha256": "a12c02ac5a0d631afaeb08f36feddcbc53cc7660e3dcaf4abcdb8ec26587834e",
+    "files": 3
+  },
+  "T31-whp": {
+    "file": "downloads/repro/T31-whp-repro.tar.gz",
+    "sha256": "658762b369a5af489b26ef81cd285fee480bf61a7ba50a5bcc93eb5e70960970",
+    "files": 3
+  },
+  "T32-exists": {
+    "file": "downloads/repro/T32-exists-repro.tar.gz",
+    "sha256": "d50d4451e56a0f61d4e21459c3cb9b23b839bced5437ec79907315053412a35e",
+    "files": 272
+  }
+}

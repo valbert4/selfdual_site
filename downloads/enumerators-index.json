@@ -1,0 +1,24 @@
+{
+  "schema": "extremal72.data_manifest.v3",
+  "description": "Downloadable enumerator/invariant-space data and the genus-3 routines for the Extremal 72 project. Self-contained; no external paths.",
+  "bundles": {
+    "enumerator_json": {
+      "file": "enumerators-json-bundle.tar.gz",
+      "sha256": "1e2c500409930896ae41f2bcf5ac549eaf498c013be0951024364ac22df1bbb9",
+      "files": 18
+    },
+    "genus3_invariant_space": {
+      "file": "genus3-invariant-space-bundle.tar.gz",
+      "sha256": "6929d1bd437603f29f836e5abeedda3385e1902ad1e79c33913d9965a450b298",
+      "files": 31
+    },
+    "triweight_routines": {
+      "file": "triweight-routines-source.tar.gz",
+      "sha256": "3542706af6657d1a53621cc49428bee92da62332383b2bfe6a85733c0fcdfbf2"
+    },
+    "cft_projections": {
+      "dir": "cft/",
+      "note": "genus-3 theta-map projections of the triweight onto lattice functions"
+    }
+  }
+}

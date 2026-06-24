@@ -1,0 +1,8 @@
+{
+  "test": "T05",
+  "tier": "exact-replayable",
+  "kind": "three-block nonnegativity kill",
+  "result": "all 7 high-a k=10 rows killed by exact three-block nonnegativity (Farkas-certified)",
+  "solver": "none for verification (pure Python Farkas check); certificate found once by the solver",
+  "reproduces": "section 15.1"
+}

@@ -1,0 +1,7 @@
+{
+  "test": "T02",
+  "tier": "exact-replayable",
+  "kind": "dimension-bound kill",
+  "result": "31 k<=5 rows killed by dim J = 21-k <= 15",
+  "solver": "none (pure Python standard library)"
+}

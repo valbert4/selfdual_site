@@ -1,0 +1,7 @@
+{
+  "test": "T12",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "weight-16 shortening profiles consistent for every row",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

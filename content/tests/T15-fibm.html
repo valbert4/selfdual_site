@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T15 - Fiber/Coset Multiset Match - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t15---fibercoset-multiset-match">T15 - Fiber/Coset Multiset Match</h1>
+<p>Status: <code>saturates</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test asks whether the fiber and coset multisets of a length-40 child can be matched to the forced split rows of the residual. The aggregate matching is feasible for every row that reaches it.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the multiset of projection fibers and the multiset of residual split rows.</li>
+<li>Input: the row <code>(k,a,b)</code>, the fiber sizes, and the forced split-row multiset.</li>
+<li>Necessary condition: a multiset matching (transportation-style) between fibers and split rows exists.</li>
+<li>Output: rows with no valid matching (none, here).</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code>.</li>
+<li>Status: saturates. The aggregate matching cancels the unknown individual enumerators and is feasible for all surviving rows.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact (totally-unimodular) transportation feasibility.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T15-fibm-repro.tar.gz">Download <code>T15-fibm-repro.tar.gz</code></a> — a 🟡 solver-required bundle. Fiber/coset multiset matching feasible (totally unimodular). Reproduce in the research repo (the bundle ships the source script and the exact command); for the proof-grade kills a one-click pure-Python verifier is the next upgrade. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Replace the aggregate matching with the individual (per-coset) coupling and look for a row where disaggregation removes the slack.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

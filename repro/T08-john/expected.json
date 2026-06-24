@@ -1,0 +1,11 @@
+{
+  "test": "T08",
+  "name": "Johnson/Delsarte two-point bound",
+  "tier": "exact-replayable",
+  "kind": "exact-LP kill",
+  "delsarte_bound": "247",
+  "kill_row": [9, 255, 0],
+  "killed": true,
+  "solver": "none (pure Python standard library; exact rational vertex enumeration)",
+  "reproduces": "the reproduction bundle (Sage + PPL) -> bound 247"
+}

@@ -1,0 +1,7 @@
+{
+  "test": "T27",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "binary-rank incidence windows bind no row",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

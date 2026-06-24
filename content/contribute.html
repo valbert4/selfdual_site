@@ -1,0 +1,88 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Contribute - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="contribute">Contribute</h1>
+<p>This is an open, community-verifiable search. The job is to decide whether a binary Type II <code>[72,36,16]</code> code exists. Every status change needs exact input and an independently checkable certificate — numerical evidence is welcome as a probe, but it does not move the public count by itself.</p>
+<p>If you only have a few minutes: pick a lane below, then take one of its first tasks to the Discord.</p>
+<h2 id="discussion">Discussion</h2>
+<p>Questions, ideas, and progress live in the <strong>#extremal72</strong> channel of the <a href="https://discord.gg/gg3pJZNYxQ">Error Correction Zoo Discord</a>. That is the place to ask where to start, claim an <a href="content/open-problems.html">open problem</a>, say what you are about to run (so two people do not exhaust the same row), or share a computation for review.</p>
+<p><a href="https://discord.gg/gg3pJZNYxQ"><strong>Join the EC Zoo Discord — #extremal72</strong></a></p>
+<h2 id="where-the-problem-stands-right-now">Where the problem stands right now</h2>
+<p>So you can aim at something real, not a generic "help wanted":</p>
+<ul>
+<li>The search reduces to a finite <a href="content/menu-summary.html">length-40 menu</a>: <code>132</code> arithmetic shadows, <code>60</code> eliminated proof-grade, <code>72</code> still viable.</li>
+<li>Of the <code>72</code>, <code>51</code> are witnessed nonempty and <code>21</code> are <strong>unresolved</strong> — not yet exhausted, which is <em>not</em> evidence of emptiness. Closing or witnessing any of these <code>21</code> is the cleanest open prize.</li>
+<li>All <code>8</code> proof-grade kills now ship pure-Python verifiers; the open frontier is the solver-required saturations, the <code>3</code> validation-only tests (<code>T17</code>/<code>T18</code>/<code>T23</code>), and the cluster-scale anchored SDP (<code>T29</code>).</li>
+<li>The automorphism group is narrowed to one of <code>{C_1, C_2, C_3, C_2×C_2, C_5}</code> but <strong>nothing is assumed</strong> — every test must hold for the trivial group <code>C_1</code>, the hardest case. There is a <a href="content/menu-summary.html"><code>C_5</code> sub-menu</a> of 16 rows with <code>a ≡ 0 (mod 5)</code>.</li>
+</ul>
+<hr />
+<h2 id="i-can-prove-things">"I can prove things"</h2>
+<p>Coding theory, finite geometry, designs, invariant theory — turn a numerical screen or a saturated relaxation into a proof-grade obstruction (or a construction). The highest-value targets are the ones where a continuous relaxation saturates but an integer/structural argument might still cut.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Find a new exact obstruction for an unresolved row.</strong> Pick one of the <code>21</code> unresolved <a href="content/menu-summary.html">menu</a> rows and produce an argument no continuous LP/SDP can absorb (integer divisibility, forced intersection, design moment). See <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Sharpen the <code>[56,21]</code> residual design.</strong> The forced residual has exactly <code>5082</code> weight-16 words; constant-weight packing is far too loose for that target. Tighten it with design-theoretic / intersection structure on the minimum words (<code>5-(72,16,78)</code> consequences). See <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Close the <code>C_5</code> branch on paper.</strong> If automorphism-agnostic tests can eliminate all <code>16</code> rows with <code>a ≡ 0 (mod 5)</code>, the <code>C_5</code> case closes with no Hermitian <code>F_16</code> search. See the <a href="content/menu-summary.html">Menu</a>.</li>
+</ul>
+<h2 id="i-can-code-exact-algebra--verification">"I can code exact algebra / verification"</h2>
+<p>Re-derive a published result from scratch, in exact arithmetic, with no licensed solver — this is how a kill earns its place in the public count. Every proof-grade elimination ships a reproduction bundle whose verifier must run everywhere.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Write an independent split-enumerator verifier.</strong> Reproduce the uniquely forced split enumerator (<code>A_16 = 249849</code>, residual <code>5082</code>) from the partition MacWilliams system, in your own code, and compare against the published JSON (pinned by sha256). See <a href="content/computations-and-certificates.html">Computations and Certificates</a>.</li>
+<li><strong>Package the <code>T32</code> direct-existence exhaust for independent replay.</strong> The route-3A <code>(6,29,4)</code> empty row and the <code>51</code> nonempty witnesses should be re-checkable from scratch (the <code>T32</code> bundle already re-certifies the witness side). See the <a href="content/tests/index.html">Tests index</a> and <code>T32</code>.</li>
+<li><strong>Convert a solver-required test to a replayable verifier.</strong> Most of the saturating tests still depend on a solver; pick one and ship a pure-Python <code>verify.py</code> that re-checks its published claim against pinned input data. See <a href="content/computations-and-certificates.html">Computations and Certificates</a>.</li>
+</ul>
+<h2 id="i-can-run-cluster-jobs-hpc">"I can run cluster jobs (HPC)"</h2>
+<p>The remaining open work is partly a scale problem. Run bounded jobs, capture logs, publish checksums, and turn an "out of local reach" branch into a reproducible payload.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Exhaust an unresolved menu row.</strong> Take one of the <code>21</code> unresolved <a href="content/menu-summary.html">menu</a> rows through a route-3A direct-existence search to a definite verdict (witness or empty), and ship the state count plus a replayable result. See <code>T32</code> in the <a href="content/tests/index.html">Tests index</a>.</li>
+<li><strong>Stand up the anchored-SDP cluster payload.</strong> <code>T29</code>'s linear layer is exact (<code>0</code> kills); the PSD layer sits on the feasibility boundary and needs a proof-grade, cluster-scale certificate. Run the payload and publish the environment + checksums. See <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Package logs to spec.</strong> For any long run, produce the exact command, commit, machine, runtime, and output checksum required by <a href="content/computations-and-certificates.html">Computations and Certificates</a>.</li>
+</ul>
+<h2 id="i-know-sdpoptimization">"I know SDP/optimization"</h2>
+<p>Delsarte/Schrijver/Terwilliger and the anchored Jacobi layers are where the hardest open test lives. The lesson so far: several natural relaxations <em>saturate</em> (the Polak <code>B_4</code> quadruple SDP equals the ordinary Delsarte bound at length 40), so new leverage must come from exact certificates, not tighter floats.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Upgrade <code>T29</code> from linear feasibility to a PSD-certified kill (or prove it cannot kill).</strong> The anchored 3-point SDP is OPEN at the boundary, margin ≈ 0; a proof-grade dual certificate either closes the row or shows the boundary is genuine. See <code>T29</code> and <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Promote a validation-only SDP to proof-grade.</strong> <code>T17</code> (A3 constant-weight SDP) currently has <em>no</em> public elimination — it needs an exact SDP certificate with a verified constraint system before any row moves. See the <a href="content/tests/index.html">Tests index</a>.</li>
+<li><strong>Audit float-LP verdicts for rounding.</strong> Large coefficients can be rounded at LP/MPS input before exact simplex runs; classify older infeasibility claims by whether the input itself was exact. See <a href="content/computations-and-certificates.html">Computations and Certificates</a>.</li>
+</ul>
+<h2 id="i-know-cft--lattices--quantum-codes">"I know CFT / lattices / quantum codes"</h2>
+<p>The payoff side. A construction would produce a <code>5-(72,16,78)</code> design, a code CFT at central charge <code>c = 36</code>, and a <code>[[71,1,≥15]]</code> self-dual CSS code. These bridges should be stated precisely, with assumptions and references, not as front-page slogans.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Write the precise code-to-CFT bridge note.</strong> State the construction at <code>c = n/2 = 36</code>, with the genus-<code>g</code> partition function as the theta lift of the genus-<code>g</code> weight enumerator, and what the computed genus-3 Θ-projection does and does not pin. See <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Write the self-dual CSS bridge note.</strong> Pin down the <code>[[71,1,≥15]]</code> object obtained by puncturing and <code>CSS(C^⊥, C^⊥)</code>, with the distance bound argued exactly. See <a href="content/open-problems.html">Open Problems</a>.</li>
+<li><strong>Sanity-check the lattice claim.</strong> Construction A on <code>[72,36,16]</code> gives an even unimodular lattice with minimum norm <code>2</code> — <em>not</em> extremal (an extremal 72-dimensional even unimodular lattice has minimum norm <code>8</code>); the link to the known extremal lattices is the harder converse question. Verify and sharpen this. See <a href="content/open-problems.html">Open Problems</a>.</li>
+</ul>
+<h2 id="i-can-improve-the-websitedata">"I can improve the website/data"</h2>
+<p>Make the work legible and the certificates checkable in a browser. The site is static Markdown plus small structured <code>data/</code> files; keep retractions and audit notes visible.</p>
+<p>First tasks:</p>
+<ul>
+<li><strong>Rank the <code>21</code> unresolved rows by promise and cost.</strong> Turn the menu state into a small structured table contributors can claim from. See the <a href="content/menu-summary.html">Menu</a>.</li>
+<li><strong>Build an exact-certificate browser.</strong> Make the Farkas / verifier artifacts inspectable online so a reader checks a kill without cloning anything. See <a href="content/computations-and-certificates.html">Computations and Certificates</a>.</li>
+<li><strong>Draw the residual-tower diagram.</strong> A clean visual of <code>[72] → [56] → [40] → [24]</code> for the <a href="content/hierarchy.html">Hierarchy</a> page. See <a href="content/open-problems.html">Open Problems</a>.</li>
+</ul>
+<hr />
+<h2 id="how-to-verify-a-result-yourself">How to verify a result yourself</h2>
+<p>Every proof-grade elimination ships a <strong>reproduction bundle</strong>: a small verifier that re-derives that test's published result from public data (pinned by sha256), so you can check the proof rather than trust the script.</p>
+<p>The <code>8</code> proof-grade kills are all 🟢 <em>exact-replayable</em> — pure Python standard library, exact arithmetic, no solver. To re-check all of them at once (plus the <code>T01</code> re-enumeration of the <code>132</code>):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="ex">python3</span> repro/verify_all.py</span></code></pre></div>
+<p>This reports <code>9/9 bundles reproduced</code>. The kills it replays:</p>
+<ul>
+<li><code>T02</code> parent-image dimension bound</li>
+<li><code>T05</code> three-block nonnegativity (Farkas)</li>
+<li><code>T06</code> toggle-stabilizer Smith congruence</li>
+<li><code>T08</code> Johnson/Delsarte two-point bound (<code>247</code>)</li>
+<li><code>T13</code> double-shortening Johnson bound (<code>7657/67</code>)</li>
+<li><code>T19</code> Simonis order-4 Farkas</li>
+<li><code>T20</code> coupled genus-2 biweight Farkas</li>
+<li><code>T32</code> route-3A witnesses</li>
+</ul>
+<p>The solver-required saturations (🟡) and the cluster/licensed exceptions (🔴: <code>T17</code>, <code>T18</code>, <code>T23</code>, <code>T29</code>, the empty-exhaust) ship a payload and spec rather than a one-click run. See <a href="content/computations-and-certificates.html">Computations and Certificates</a> and the <a href="content/tests/index.html">Tests index</a>.</p>
+<h2 id="how-to-submit">How to submit</h2>
+<p>A result that should change project status needs two things:</p>
+<ol>
+<li><strong>Exact input</strong> — the data the claim consumes, with a checksum, so anyone can confirm they are checking the same thing (no coefficients rounded at read time).</li>
+<li><strong>A replayable certificate or an independent verifier</strong> — a Farkas/dual certificate, a route-3A witness/exhaust, or a pure-Python <code>verify.py</code> that re-derives the claim and exits <code>0</code> iff it holds. Match the <a href="content/computations-and-certificates.html">reproduction-bundle</a> format so it slots into <code>verify_all.py</code>.</li>
+</ol>
+<p>Then bring it to <strong>#extremal72</strong> on the <a href="https://discord.gg/gg3pJZNYxQ">Discord</a> for review. A row leaves the public menu only once its obstruction is exact and independently checkable.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

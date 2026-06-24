@@ -1,0 +1,105 @@
+{
+  "primes": [
+    2899999957,
+    2899999931
+  ],
+  "K_points": 200,
+  "results": {
+    "2899999957": {
+      "n_points": 200,
+      "rank_visible": 1,
+      "kernel_dim": 4,
+      "R0_nonzero_points": 200,
+      "kernel_combos": [
+        [
+          2473529348,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          2558823489,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1535294093,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          341176458,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "2899999931": {
+      "n_points": 200,
+      "rank_visible": 1,
+      "kernel_dim": 4,
+      "R0_nonzero_points": 200,
+      "kernel_combos": [
+        [
+          426470551,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          341176460,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1364705848,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          2558823461,
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  },
+  "consistent": true,
+  "conclusion": {
+    "freedom_dim": 5,
+    "theta_visible_dim": 1,
+    "ker_theta_dim": 4,
+    "visible_generator": "F_1 (V pivot orbit j=82; ordered disjoint weight-16 triple count)",
+    "exact_theta_relations": {
+      "Theta(F_2)": "(921/34)*Theta(F_1)",
+      "Theta(F_3)": "(42/17)*Theta(F_1)",
+      "Theta(F_4)": "(32/17)*Theta(F_1)",
+      "Theta(F_5)": "(128/17)*Theta(F_1)"
+    },
+    "exact_kernel_generators": [
+      "34*F_2-921*F_1",
+      "17*F_3-42*F_1",
+      "17*F_4-32*F_1",
+      "17*F_5-128*F_1"
+    ],
+    "j8_squarefree": true,
+    "j8_squarefree_evidence": "grad(j_8)!=0 at 200/200 generic points of {j_8=0}",
+    "verified_third_prime": 2899999903,
+    "third_prime_check": "F_1 nonzero at 120/120; all 4 kernel combos vanish at 120/120",
+    "implication": "factorization(#6)+Fourier-Jacobi(#7) can cut at most 1 of 5 freedom dims; the other 4 (ker Theta=<j_8>) are reachable only by code-side levers (positivity, 5-design integrality, anchored SDP)."
+  }
+}

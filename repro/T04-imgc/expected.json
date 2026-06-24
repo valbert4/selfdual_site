@@ -1,0 +1,7 @@
+{
+  "test": "T04",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "a consistent 16-coordinate image code exists for every row",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

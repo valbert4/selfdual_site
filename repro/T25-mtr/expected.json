@@ -1,0 +1,7 @@
+{
+  "test": "T25",
+  "tier": "solver-required",
+  "kind": "saturates (0 kills)",
+  "result": "menu->triweight feedback LP feasible (triweight freedom absorbs it)",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

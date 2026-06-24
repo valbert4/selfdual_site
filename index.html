@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>(function(){var d=0,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script>
+    <title>Searching for a [72,36,16] extremal code</title>
+    <link rel="stylesheet" href="prototype/styles.css?v=3">
+    <link rel="stylesheet" href="prototype/dark-skin.css?v=3">
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">72</span>
+        <div>
+          <p class="eyebrow">Local preview</p>
+          <h1>Searching for a [72,36,16] extremal code</h1>
+        </div>
+      </div>
+      <button class="button-link" type="button" data-tab-target="contribute" style="background:#e23b3b;border-color:#e23b3b;color:#fff;">Contribute</button>
+    </header>
+
+    <main class="app-shell">
+      <nav class="tabbar" aria-label="Main sections">
+        <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab-target="overview">Overview</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="hierarchy">72-56-40-24</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="menu">MENU2</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="tests">Tests T1-T32</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="enumerators">Enumerators</button>
+        <button class="tab" type="button" role="tab" aria-selected="false" data-tab-target="references">References</button>
+      </nav>
+
+      <section class="panel is-active" id="overview" role="tabpanel">
+        <div class="dashboard-grid">
+          <article class="lede-panel">
+            <p class="eyebrow">Public mission</p>
+            <h2>A crowd search for the missing extremal Type II code</h2>
+            <p>
+              The project tries to find or rule out a binary doubly-even self-dual
+              [72,36,16] code. A construction would feed directly into related
+              objects such as a self-dual quantum CSS code and conformal-field-theory
+              data; a nonexistence proof would settle a long-standing coding-theory
+              problem.
+            </p>
+            <div class="callout">
+              <strong>Current public posture:</strong>
+              72 compatible shadows remain. 51 have witnessed nonempty descendants;
+              21 are still unresolved as existence questions.
+            </div>
+          </article>
+
+          <aside class="status-board" aria-label="Headline statistics">
+            <div class="stat">
+              <span class="stat-value">132</span>
+              <span class="stat-label">raw MENU2 candidates</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">60</span>
+              <span class="stat-label">proof-grade eliminations</span>
+            </div>
+            <div class="stat accent-green">
+              <span class="stat-value">72</span>
+              <span class="stat-label">surviving shadows</span>
+            </div>
+            <div class="stat accent-gold">
+              <span class="stat-value">21</span>
+              <span class="stat-label">unresolved rows</span>
+            </div>
+          </aside>
+        </div>
+
+        <div class="split-layout">
+          <section>
+            <h3>Why this is a good crowd problem</h3>
+            <div class="plain-list">
+              <p><strong>Many doors:</strong> algebra, coding theory, design theory, SDP, exact enumeration, and computational proof can all contribute.</p>
+              <p><strong>Finite checkpoints:</strong> every test has a page, an input menu row, a status, and a way to reproduce or improve the obstruction.</p>
+              <p><strong>Useful outcomes on both sides:</strong> construction gives new highly structured objects; impossibility resolves the length-72 extremal question.</p>
+            </div>
+          </section>
+
+          <section>
+            <h3>Project name candidates</h3>
+            <div class="name-grid">
+              <span>Extremal 72 (recommended)</span>
+              <span>The Extremal 72 Project</span>
+              <span>The 72/56/40/24 Project</span>
+              <span>The 72 Code Challenge</span>
+              <span>Project Type II-72</span>
+              <span>The Sloane 72 Challenge</span>
+            </div>
+          </section>
+        </div>
+
+        <section class="strip">
+          <h3>Automorphism group: narrowed, but not assumed</h3>
+          <p>
+            A long series of papers has reduced the possible automorphism group of a
+            hypothetical [72,36,16] code to one of just five:
+            <strong>C<sub>1</sub></strong> (trivial), <strong>C<sub>2</sub></strong>,
+            <strong>C<sub>3</sub></strong>, <strong>C<sub>2</sub>&times;C<sub>2</sub></strong>,
+            or <strong>C<sub>5</sub></strong>. Excluded along the way:
+            order&nbsp;2 with fixed points (Bouyuklieva 2002);
+            Z<sub>7</sub>, Z<sub>3</sub><sup>2</sup>, D<sub>10</sub> (Feulner&ndash;Nebe 2011);
+            C<sub>8</sub>, Q<sub>8</sub>, Z<sub>4</sub>&times;Z<sub>2</sub>, Z<sub>10</sub> (Nebe 2012);
+            order&nbsp;6 (Borello 2012); C<sub>4</sub> (Yorgov&ndash;Yorgov 2013);
+            S<sub>3</sub>, A<sub>4</sub>, D<sub>8</sub> (Borello&ndash;Dalla&nbsp;Volta&ndash;Nebe 2013);
+            C<sub>2</sub><sup>3</sup> (Borello 2014); with the short list and solvability
+            consolidated by O'Brien&ndash;Willems (2011) and
+            Bouyuklieva&ndash;O'Brien&ndash;Willems (2024). Full citations are in the
+            References catalogue.
+          </p>
+          <p>
+            <strong>We make no automorphism assumption.</strong> The trivial group
+            C<sub>1</sub> imposes no structure &mdash; every codeword orbit has size one
+            &mdash; so it is the hardest case to rule out, and every test and enumerator
+            on this site is automorphism-agnostic: it must hold irrespective of any
+            symmetry. The narrowed list drives a parallel prescribed-automorphism search;
+            it is not an assumption the menu relies on.
+          </p>
+        </section>
+
+        <section class="strip">
+          <h3>If the code is found, these structures come with it</h3>
+          <p>
+            A construction is not an isolated object &mdash; three structures follow, each
+            by a proven map:
+          </p>
+          <div class="plain-list">
+            <p>
+              <strong>A 5-(72,16,78) design.</strong> The 249849 weight-16 codewords form
+              a 5-design: every 5 coordinates sit together in exactly 78 of them.
+              <em>Why:</em> the Assmus&ndash;Mattson theorem applied to the extremal Type II
+              code (minimum weight 16, dual distance 16) makes each weight class a
+              5-design, and counting fixes
+              &lambda; = 249849&middot;C(16,5)/C(72,5) = 78.
+            </p>
+            <p>
+              <strong>A code CFT at central charge c = 36.</strong> The code maps to a
+              chiral conformal field theory of central charge c = n/2 = 36.
+              <em>Why:</em> in the code&ndash;CFT dictionary (Henriksson&ndash;Kakkar&ndash;McPeak,
+              arXiv:2112.05168) a length-n doubly-even self-dual code yields a chiral CFT
+              of central charge n/2, whose genus-g partition function is the theta lift
+              &Theta; of the genus-g weight enumerator &mdash; a degree-g, weight-18 Siegel
+              modular form. This site computes that genus-3 &Theta;-projection (see the
+              Enumerators tab).
+            </p>
+            <p>
+              <strong>A [[71,1,&ge;15]] self-dual CSS code.</strong> Puncturing the
+              self-dual [72,36,16] code in one coordinate and using the punctured dual
+              C<sup>&perp;</sup> as both the X- and Z-stabilizer gives a self-dual CSS
+              code (C<sub>X</sub> = C<sub>Z</sub>) with parameters [[71,1,&ge;15]].
+              <em>Why:</em> puncturing gives C = [71,36,&ge;15] with
+              C<sup>&perp;</sup> &sube; C, so CSS(C<sup>&perp;</sup>,C<sup>&perp;</sup>) is
+              valid with k = 71 &minus; 2&middot;35 = 1 and distance &ge; d&minus;1 = 15
+              (Jain&ndash;Albert, arXiv:2408.12752).
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="panel" id="hierarchy" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Main route</p>
+            <h2>The 72 -> 56 -> 40 -> 24 hierarchy</h2>
+          </div>
+          <p>
+            The public story should center this descent: start from a hypothetical
+            [72,36,16] Type II code, take a weight-16 word, study the length-56 residual,
+            descend through length-40 menus, and finally reach length-24 endpoint tests.
+          </p>
+        </div>
+
+        <div class="hierarchy-stage" aria-label="Residual hierarchy diagram">
+          <canvas id="hierarchyCanvas" width="1200" height="360" aria-hidden="true"></canvas>
+          <div class="stage-card stage-72">
+            <span>Start</span>
+            <strong>[72,36,16]</strong>
+            <small>Type II code, A_16 = 249849</small>
+          </div>
+          <div class="stage-card stage-56">
+            <span>Residual</span>
+            <strong>[56,21,16]</strong>
+            <small>5082 minimum words forced</small>
+          </div>
+          <div class="stage-card stage-40">
+            <span>Menu</span>
+            <strong>[40,k,16]</strong>
+            <small>132 shadows, 72 surviving</small>
+          </div>
+          <div class="stage-card stage-24">
+            <span>Endpoint</span>
+            <strong>[24,1,24]</strong>
+            <small>local tests and exhaustions</small>
+          </div>
+        </div>
+
+        <div class="two-column">
+          <article>
+            <h3>What the hierarchy buys</h3>
+            <p>
+              The descent turns a global code-existence question into a finite set of
+              compatible length-40 shadows. Each row can then be attacked by exact
+              divisibility, local gluing, support-weight constraints, SDP layers, or
+              direct existence searches.
+            </p>
+          </article>
+          <article>
+            <h3>How to present it publicly</h3>
+            <p>
+              Show the hierarchy first, then show the menu ledger. Visitors should
+              immediately understand that "surviving" means "not yet contradicted,"
+              not "known to lift to the length-72 code."
+            </p>
+          </article>
+        </div>
+
+        <div class="formula-grid">
+          <section class="formula-block">
+            <h3>Forced n=72 enumerator (genus 1, Gleason)</h3>
+            <pre><code>W_72 = 1 + 249849 y^16 + 18106704 y^20 + 462962955 y^24
+  + 4397342400 y^28 + 16602715899 y^32 + 25756721120 y^36
+  + 16602715899 y^40 + 4397342400 y^44 + 462962955 y^48
+  + 18106704 y^52 + 249849 y^56 + y^72</code></pre>
+          </section>
+          <section class="formula-block">
+            <h3>Forced n=56 residual enumerator</h3>
+            <pre><code>W_56 = 1 + 5082 y^16 + 91168 y^20 + 507045 y^24 + 890560 y^28
+  + 507045 y^32 + 91168 y^36 + 5082 y^40 + y^56</code></pre>
+          </section>
+          <section class="formula-block">
+            <h3>n=40 menu row family (a,b)</h3>
+            <pre><code>W_40(a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40
+  |E| = 2 + 2a + b  (a power of two),  d(E) = 16</code></pre>
+          </section>
+          <section class="formula-block">
+            <h3>Higher-genus n=72 (also computed)</h3>
+            <pre><code>genus-2 biweight : uniquely forced (1177 coeffs)
+genus-3 triweight: exact 6-dim invariant space
+  (1 forced row + 5-dim freedom, none pinned)
+  -> Enumerators tab</code></pre>
+          </section>
+        </div>
+      </section>
+
+      <section class="panel" id="menu" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Ledger from MENU2.md</p>
+            <h2>MENU2 at a glance</h2>
+          </div>
+          <p>
+            The site should keep a small, checkable ledger: how many rows exist,
+            which tests killed rows, what proof standard each test meets, and which
+            rows have existence witnesses.
+          </p>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><b>132</b><span>raw rows</span></div>
+          <div class="metric"><b>60</b><span>eliminated</span></div>
+          <div class="metric"><b>72</b><span>surviving</span></div>
+          <div class="metric"><b>51</b><span>witnessed nonempty</span></div>
+          <div class="metric"><b>21</b><span>unresolved existence</span></div>
+        </div>
+
+        <div class="ledger">
+          <article>
+            <h3>Proof-grade eliminators</h3>
+            <table>
+              <thead>
+                <tr><th>Test</th><th>Rows</th><th>Public label</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>T02 pImg</td><td>32</td><td>dimension and fiber divisibility</td></tr>
+                <tr><td>T05 3bNN</td><td>7</td><td>three-block nonnegativity</td></tr>
+                <tr><td>T06 Smth</td><td>16</td><td>toggle-stabilizer Smith congruence</td></tr>
+                <tr><td>T08 John</td><td>1</td><td>Johnson/Delsarte two-point bound</td></tr>
+                <tr><td>T13 dShr</td><td>1</td><td>double-shortening forced intersections</td></tr>
+                <tr><td>T19 Sim</td><td>1</td><td>Simonis support-weight feasibility</td></tr>
+                <tr><td>T20 g2</td><td>1</td><td>coupled genus-2 biweight feasibility</td></tr>
+                <tr><td>T32 exists</td><td>1</td><td>route-3A direct existence exhaust</td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <aside class="validation-card">
+            <h3>Stringency for public tests</h3>
+            <p>
+              A test should move the public count only when it has exact input data,
+              an independently replayable certificate, or a separate verifier that
+              checks the claimed obstruction.
+            </p>
+            <p>
+              Floating-point solver output, unchecked image counts, and local
+              projections are useful probes, but they should be labeled as probes
+              until exact reconstruction and row-level verification are complete.
+            </p>
+            <p>
+              The first direct empty row is <strong>(6,29,4)</strong> under T32:
+              route-3A exhaust, 301872 states, 0 codes.
+            </p>
+          </aside>
+        </div>
+
+        <section class="strip">
+          <h3>C<sub>5</sub> sub-menu &mdash; an automorphism-conditional tag</h3>
+          <p>
+            The menu assumes no symmetry, but the C<sub>5</sub> branch leaves a clean
+            fingerprint: a code with a C<sub>5</sub> automorphism forces
+            <strong>a &equiv; 0 (mod&nbsp;5)</strong> on the length-40 row of a fixed
+            disjoint anchor pair. So a C<sub>5</sub>-symmetric code must cast one of these
+            <strong>16 surviving rows</strong> (14, plus the two reinstated
+            <code>(7,15,96)</code> and <code>(8,55,144)</code>):
+          </p>
+          <p>
+            <code>k6: (5,52) (15,32) (25,12)</code><br>
+            <code>k7: (15,96) (25,76) (35,56) (45,36) (55,16)</code><br>
+            <code>k8: (55,144) (75,104) (95,64) (115,24)</code><br>
+            <code>k9: (135,240) (175,160) (215,80)</code><br>
+            <code>k10: (295,432)</code>
+          </p>
+          <p>
+            <strong>What the tag means.</strong> Eliminating <em>all</em> of these by
+            automorphism-agnostic tests would close the C<sub>5</sub> branch with no
+            Hermitian F<sub>16</sub> search. The converse does <em>not</em> hold: ruling
+            out C<sub>5</sub> does not remove these rows, since a trivial-automorphism
+            code could still realize any of them (RECURSIVE.md &sect;30). Full list on the
+            <a href="content/menu-summary.html">Menu page</a>.
+          </p>
+        </section>
+      </section>
+
+      <section class="panel" id="tests" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Public test pages</p>
+            <h2>T1 through T32</h2>
+          </div>
+          <p>
+            Every test gets a stable page with purpose, inputs, result, certificate
+            status, caveats, and the next useful improvement. This panel is the tabbed
+            index for those pages.
+          </p>
+        </div>
+
+        <div class="test-toolbar">
+          <div class="filter-tabs" role="tablist" aria-label="Test filters">
+            <button class="mini-tab is-active" type="button" data-filter="all">All</button>
+            <button class="mini-tab" type="button" data-filter="kills">Kills</button>
+            <button class="mini-tab" type="button" data-filter="saturates">Saturates</button>
+            <button class="mini-tab" type="button" data-filter="open">Open</button>
+            <button class="mini-tab" type="button" data-filter="validation">Validation</button>
+          </div>
+          <label class="search-box">
+            <span>Search</span>
+            <input id="testSearch" type="search" placeholder="title, status, category">
+          </label>
+        </div>
+
+        <div class="test-summary" id="testSummary" aria-live="polite"></div>
+        <div class="test-grid" id="testGrid"></div>
+      </section>
+
+      <section class="panel" id="enumerators" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Downloadable data</p>
+            <h2>Weight enumerator catalog</h2>
+          </div>
+          <p>
+            The public enumerator page should be a data shelf: all calculated
+            one-weight, biweight, triweight, and genus-3 invariant-space outputs,
+            plus source bundles for the triweight computation routines.
+          </p>
+        </div>
+
+        <div class="download-panel">
+          <article>
+            <h3>Enumerator JSON</h3>
+            <p>
+              The JSON bundle collects the enumerator-like outputs now staged for
+              public review. Large triweight coefficients should stay machine-readable;
+              the page can show summaries and let visitors download the data.
+            </p>
+            <div class="download-actions">
+              <a class="button-link" href="downloads/enumerators-json-bundle.tar.gz">JSON bundle</a>
+              <a class="button-link secondary" href="downloads/enumerators-index.json">Manifest JSON</a>
+            </div>
+          </article>
+          <article>
+            <h3>Genus-3 invariant spaces</h3>
+            <p>
+              The invariant-space bundle collects AGL/GL nullbases, n=40 converted
+              bases, d_n+ atoms, and n=72 candidate-space reconstruction artifacts.
+            </p>
+            <div class="download-actions">
+              <a class="button-link" href="downloads/genus3-invariant-space-bundle.tar.gz">Invariant bundle</a>
+            </div>
+          </article>
+          <article>
+            <h3>Full triweight routines</h3>
+            <p>
+              The routines bundle is meant to include row/column symmetrization,
+              support-pruned transforms, different-prime runs, and reconciliation
+              scripts. That makes the computation useful beyond this project.
+            </p>
+            <div class="download-actions">
+              <a class="button-link" href="downloads/triweight-routines-source.tar.gz">Source bundle</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="formula-grid">
+          <section class="formula-block">
+            <h3>Length-40 row family</h3>
+            <pre><code>W_E(y; a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40</code></pre>
+          </section>
+          <section class="formula-block">
+            <h3>Triweight service goal</h3>
+            <pre><code>row/column symmetrization
+  + modular prime runs
+  + reconstruction/reconciliation
+  -> reusable genus-3 enumerator tooling</code></pre>
+          </section>
+        </div>
+
+        <div class="enumerator-summary" id="enumeratorSummary" aria-live="polite"></div>
+        <div class="enumerator-grid" id="enumeratorGrid"></div>
+      </section>
+
+      <section class="panel" id="contribute" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Community surface</p>
+            <h2>How people can help</h2>
+          </div>
+          <p>
+            The public site should make contribution paths concrete: choose a menu row,
+            choose a test layer, improve a certificate, or propose a new obstruction.
+          </p>
+        </div>
+
+        <section class="strip">
+          <h3>Join the discussion</h3>
+          <p>
+            Questions, ideas, and progress live in the <strong>#extremal72</strong>
+            channel of the Error Correction Zoo Discord — the place to ask where to
+            start, claim an open problem, or share a computation.
+          </p>
+          <a class="button-link" href="https://discord.gg/gg3pJZNYxQ" target="_blank"
+             rel="noopener" style="background:#5865F2;border-color:#5865F2;color:#fff;">
+            Join the EC Zoo Discord &mdash; #extremal72
+          </a>
+        </section>
+
+        <div class="workboard">
+          <article>
+            <h3>Immediate public tasks</h3>
+            <ul>
+              <li>Turn each T-page into a short, checkable mathematical statement.</li>
+              <li>Package the T32 direct-existence exhaust for independent replay.</li>
+              <li>Upgrade T29 from linear feasibility to a stronger PSD-certified layer.</li>
+              <li>Rank the 21 unresolved surviving rows by promise and cost.</li>
+              <li>Prepare the full triweight routine bundle for public reuse.</li>
+              <li>Write a one-page explainer connecting the code to CFT and CSS objects.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Ideas sketched but not yet pursued</h3>
+            <ul>
+              <li>Sharper design-theoretic constraints on length-56 minimum words.</li>
+              <li>Alternative anchored SDP formulations with smaller exact blocks.</li>
+              <li>Independent reconstruction from the length-24 endpoint upward.</li>
+              <li>Classification-assisted searches in the length-40 layer.</li>
+              <li>Public leaderboard for verified row eliminations and witnesses.</li>
+            </ul>
+          </article>
+
+          <article>
+            <h3>Hosting plan</h3>
+            <p>
+              Use this local prototype for private review. When ready, create a new
+              public repository containing only curated site files. A custom domain is
+              optional; GitHub Pages can host at the default github.io URL, but a normal
+              non-Enterprise Pages site should be assumed public.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel" id="references" role="tabpanel" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Bibliography</p>
+            <h2>References</h2>
+          </div>
+          <p>
+            Every paper the project drew on, each tagged with the tests and enumerator
+            objects it fed. Generated from <code>data/references.yml</code> (81 entries).
+          </p>
+        </div>
+
+        <div class="test-toolbar">
+          <label class="search-box">
+            <span>Search</span>
+            <input id="refSearch" type="search" placeholder="author, title, T19, biweight, sdp">
+          </label>
+        </div>
+
+        <div class="test-summary" id="referenceSummary" aria-live="polite"></div>
+        <div class="enumerator-grid" id="referenceGrid"></div>
+      </section>
+    </main>
+
+    <script src="prototype/tabs.js?v=4"></script>
+  </body>
+</html>

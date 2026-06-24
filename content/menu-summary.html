@@ -1,0 +1,63 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>The Length-40 Menu - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="the-length-40-menu">The Length-40 Menu</h1>
+<p>The length-40 menu is the public ledger of the residual search.</p>
+<p>Every hypothetical <code>[72,36,16]</code> Type II code casts one of these length-40 shadows:</p>
+<pre class="text"><code>E = [40,k,&gt;=16], doubly-even, self-orthogonal, 1_40 in E.
+</code></pre>
+<p>The weight enumerator is:</p>
+<pre class="text"><code>W_E(y; a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40.
+</code></pre>
+<h2 id="current-counts">Current Counts</h2>
+<pre class="text"><code>132 raw candidates
+60 eliminated by exact obstructions
+72 surviving at the menu level
+51 witnessed nonempty
+21 not yet exhausted
+</code></pre>
+<h2 id="how-to-read-these-numbers">How To Read These Numbers</h2>
+<ul>
+<li><code>132</code> is the complete arithmetic menu from the current exact validity filter.</li>
+<li><code>60</code> rows have proof-grade eliminations.</li>
+<li><code>72</code> rows remain viable as shadows.</li>
+<li><code>51</code> surviving rows have explicit length-40 witnesses.</li>
+<li><code>21</code> rows are unresolved: not witnessed and not fully exhausted.</li>
+</ul>
+<p>A surviving row is not a <code>[72,36,16]</code> code. It is a compatible shadow.</p>
+<h2 id="c_5-sub-menu-automorphism-conditional-tag">C_5 Sub-Menu (Automorphism-Conditional Tag)</h2>
+<p>The menu makes <strong>no assumption</strong> about the code's automorphism group. A series of papers narrows that group to one of five — <code>C_1</code> (trivial), <code>C_2</code>, <code>C_3</code>, <code>C_2×C_2</code>, or <code>C_5</code> — but the trivial group <code>C_1</code> imposes no structure and is the hardest case, so every test here must hold for it. (See the Overview for the exclusion citations.)</p>
+<p>One branch still leaves a clean fingerprint on the menu. For <code>C_5</code>, orbit counting (<code>A_16 = 249849 ≡ 4</code> and the <code>5082 ≡ 2 (mod 5)</code> residual partners) forces a <code>σ</code>-fixed disjoint anchor pair whose length-40 residual carries a fixed-point-free <code>C_5</code> action, so its menu row satisfies <strong><code>a ≡ 0 (mod 5)</code></strong>.</p>
+<p>So a <code>C_5</code>-symmetric code must realize one of these <strong>16 surviving rows</strong> (<code>a ≡ 0 mod 5</code>; 14 core rows plus the two reinstated <code>(7,15,96)</code>, <code>(8,55,144)</code>):</p>
+<pre class="text"><code>k=6:  (5,52)   (15,32)   (25,12)
+k=7:  (15,96)  (25,76)   (35,56)  (45,36)  (55,16)
+k=8:  (55,144) (75,104)  (95,64)  (115,24)
+k=9:  (135,240)(175,160) (215,80)
+k=10: (295,432)
+</code></pre>
+<p><strong>What the tag means.</strong> If automorphism-agnostic tests eliminate <em>all</em> of these, the <code>C_5</code> branch closes with no Hermitian <code>F_16</code> search — a far cheaper target than killing the whole menu. The converse does <strong>not</strong> hold: ruling out <code>C_5</code> does not remove these rows, since a trivial-automorphism code could still cast any of them. The tag marks where the <code>C_5</code> branch overlaps the menu; it is not a kill.</p>
+<h2 id="public-presentation">Public Presentation</h2>
+<p>The website should show a compact table first, generated at build time from the menu data (one row per surviving menu row). The row below is a column template, not content — the build step fills it:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: right;">k</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th>status</th>
+<th>witness</th>
+<th>last exact test</th>
+<th>next step</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;"><em>generated at build time</em></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The full menu ledger is for specialists; link it as a technical reference rather than pasting it into the public page.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

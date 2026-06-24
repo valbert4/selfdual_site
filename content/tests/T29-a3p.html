@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T29 - Anchored 3-Point SDP - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t29---anchored-3-point-sdp">T29 - Anchored 3-Point SDP</h1>
+<p>Status: <code>linear layer done; PSD critical/open</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>The single-anchor anchored three-point SDP on the length-72 minimum-word structure, coupled to the menu. The deepest test attempted so far; its PSD layer sits exactly on a feasibility boundary and has not produced a proof-grade kill.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the anchored three-point configuration of length-72 minimum words, coupled to the menu mixture.</li>
+<li>Input: the menu, the anchored linear gate, and the moment-matrix (PSD) blocks.</li>
+<li>Necessary condition: the anchored SDP is feasible (linear gate) and the moment matrix is positive semidefinite.</li>
+<li>Output: rows or mixtures the SDP excludes.</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code>.</li>
+<li>Status: the linear layer is proof-grade and exhausted (exact <code>glpsol</code>, all mixtures feasible — it does not pin the triweight beyond V-positivity). The PSD layer is <strong>open</strong>: it sits at the double-precision floor (MOSEK boundary margin ≈ 0, sign-undeterminable; SDP solvers either unresolved or out of memory).</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: linear layer — exact <code>glpsol</code> feasibility (done). PSD layer — an exact / high-precision SDP certificate is required and not yet obtained.</li>
+<li>Reproduce: download the reproduction bundle below and run it. exact SDP (e.g. CSDP) or a symmetry block-diagonalization.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T29-a3p-repro.tar.gz">Download <code>T29-a3p-repro.tar.gz</code></a> — a 🔴 bundle. This test is open / validation-only: anchored 3-pt SDP: linear layer 0 kills (exact); PSD layer open at the boundary. The archive ships a spec and the source path, not a one-click run. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Resolve the PSD boundary: block-diagonalize by the anchor symmetry to shrink the SDP, or run an exact/high-precision solver that can determine the sign at the margin.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

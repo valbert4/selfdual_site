@@ -1,0 +1,7 @@
+{
+  "test": "T18",
+  "tier": "cluster/licensed",
+  "kind": "validation target (no public kill)",
+  "result": "a Mode-1 kill needs exact image counts and witness-preserving checks",
+  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+}

@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T28 - Polak B4 Quadruple SDP - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t28---polak-b4-quadruple-sdp">T28 - Polak B4 Quadruple SDP</h1>
+<p>Status: <code>saturates; closed</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test runs the Polak four-point (B4) constant-weight SDP at length 40, the strongest moment-hierarchy layer attempted on the menu. It provably cannot cut: B4 equals the exact Delsarte bound at length 40.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the weight-16 words of <code>E</code> under the four-point (B4) SDP hierarchy.</li>
+<li>Input: the row <code>(k,a,b)</code> and the B4 constraint system.</li>
+<li>Necessary condition: the required count is at most the B4 bound.</li>
+<li>Output: rows exceeding B4 (none possible).</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code> (run on all surviving rows, 2026-06-12).</li>
+<li>Status: saturates and closed. The B4 optimum equals the exact Delsarte bound at <code>n = 40</code> (<code>{8} → 114.28</code>, <code>{4,8} → 247</code>, <code>{4,6,8} → 686.1</code>), all far above the rows' required counts. No length-40 kill is available from this hierarchy.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: converged B4 SDP optima matching exact PPL Delsarte values.</li>
+<li>Reproduce: download the reproduction bundle below and run it. optima.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T28-b4-repro.tar.gz">Download <code>T28-b4-repro.tar.gz</code></a> — a 🟡 solver-required bundle. Polak B4 equals exact Delsarte at n=40 (no kill possible). Reproduce in the research repo (the bundle ships the source script and the exact command); for the proof-grade kills a one-click pure-Python verifier is the next upgrade. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>This layer is closed — do not rebuild it unchanged. The next moment lever must be anchored (length-72) rather than a higher hierarchy at length 40.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

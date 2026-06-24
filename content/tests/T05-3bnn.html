@@ -1,0 +1,27 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T05 - Three-Block Nonnegativity - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t05---three-block-nonnegativity">T05 - Three-Block Nonnegativity</h1>
+<p>Status: <code>proof-grade kills</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>Anchor two disjoint weight-16 words and study the induced <code>16|16|40</code> split. Some menu rows force a negative count somewhere in that split, which no real code can have.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: the three-block <code>16|16|40</code> split of the length-72 code at two disjoint anchors.</li>
+<li>Input: the row <code>(k,a,b)</code>, the forced length-72 enumerator, and design moments.</li>
+<li>Necessary condition: every count in the exact three-block partition-MacWilliams system is nonnegative.</li>
+<li>Output: rows that force a negative block count.</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>7</code> — high-<code>a</code> rows at <code>k=10</code> (<code>a = 311..407</code>).</li>
+<li>Status: proof-grade. The counts are nonnegative integers in any genuine code, so infeasibility of the exact-rational system is a true elimination.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<p><code>three_block_macwilliams</code> engine).</p>
+<ul>
+<li>Certificate type: exact-rational (<code>QQ</code> / PPL) nonnegativity infeasibility.</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T05-3bnn-repro.tar.gz">Download <code>T05-3bnn-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to reproduce: all 7 high-a k=10 rows killed by exact three-block nonnegativity (Farkas-certified). The Farkas certificate was generated once by the solver (<code>reproduce/</code>); the verifier only checks it. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>; run all with <code>python3 verify_all.py</code>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Replay the seven kills from the exact-rational system and produce a compact per-row nonnegativity certificate suitable for an independent checker.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

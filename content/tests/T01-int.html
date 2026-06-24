@@ -1,0 +1,26 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=2,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>T01 - Integer and Self-Orthogonal Validity - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="t01---integer-and-self-orthogonal-validity">T01 - Integer and Self-Orthogonal Validity</h1>
+<p>Status: <code>defines raw menu</code></p>
+<h2 id="public-summary">Public Summary</h2>
+<p>This test generates the length-40 menu. It enumerates every weight enumerator a doubly-even self-orthogonal <code>[40,k,&gt;=16]</code> code containing the all-ones word could have, and keeps the ones that pass the basic arithmetic. Its output is the universe of "shadows" every later test works on.</p>
+<h2 id="what-it-tests">What It Tests</h2>
+<ul>
+<li>Object: a hypothetical length-40 residual child <code>E</code>.</li>
+<li>Input: the constrained enumerator <code>W_E(y; a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40</code>.</li>
+<li>Necessary condition: <code>|E| = 2 + 2a + b</code> is a power of two; the length-40 MacWilliams dual is nonnegative and integral; <code>E</code> is self-orthogonal (<code>A_w &lt;= B_w</code>).</li>
+<li>Output: the complete list of valid <code>(k,a,b)</code>.</li>
+</ul>
+<h2 id="result">Result</h2>
+<ul>
+<li>Kills: <code>0</code> (this test defines the menu rather than pruning it).</li>
+<li>Status: produces exactly <code>132</code> raw candidates, <code>k = 1..11</code>, distribution <code>{1,2,4,8,16,32,25,19,16,8,1}</code>. Exhaustive over the full self-orthogonal range (<code>k &lt;= 20</code>); nothing valid exists outside the 132.</li>
+</ul>
+<h2 id="verification">Verification</h2>
+<ul>
+<li>Certificate type: exact integer enumeration (power-of-two size, exact MacWilliams transform, self-orthogonality).</li>
+<li>Reproduce: download the reproduction bundle below and run it.</li>
+</ul>
+<h2 id="reproduction-bundle">Reproduction bundle</h2>
+<p><a href="downloads/repro/T01-int-repro.tar.gz">Download <code>T01-int-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to reproduce: re-enumerates exactly 132 candidates. Checksums in <a href="downloads/repro/manifest.json">manifest.json</a>; run every test's bundle with <code>python3 verify_all.py</code>.</p>
+<h2 id="how-to-help">How To Help</h2>
+<p>Provide an independent re-enumeration (different language or method) that reproduces exactly the same 132 <code>(k,a,b)</code> and confirms none are missed.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

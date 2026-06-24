@@ -1,0 +1,135 @@
+{
+  "format": "packed sparse integer polynomial certificate",
+  "pack_base": 73,
+  "variables": [
+    "x_000",
+    "x_001",
+    "x_010",
+    "x_011",
+    "x_100",
+    "x_101",
+    "x_110",
+    "x_111"
+  ],
+  "monomial_order": {
+    "type": "weighted lex",
+    "weights": [
+      1,
+      5,
+      4,
+      1,
+      1,
+      5,
+      5,
+      4
+    ],
+    "key": "sum_i weights[i]*e_i, then lex by packed exponent"
+  },
+  "divisor": {
+    "name": "J = j_8 / 1344",
+    "j8_content": 1344,
+    "term_count": 471,
+    "leading_exp": [
+      0,
+      4,
+      0,
+      0,
+      0,
+      4,
+      4,
+      4
+    ],
+    "leading_coeff": -1,
+    "sha256_packed_terms": "3ba2efa8c620fd70f836621ffe2d102537740f06ae7bc2fc6aab6cd0ea06aee8"
+  },
+  "relations": [
+    {
+      "name": "34*F_2-921*F_1",
+      "combo_on_F1_to_F5": [
+        -921,
+        34,
+        0,
+        0,
+        0
+      ],
+      "identity": "34*F_2-921*F_1 = (j_8/1344) * quotient",
+      "dividend": {
+        "term_count": 3469627,
+        "max_abs_coeff_bits": 47,
+        "sha256_packed_terms": "20db70aed76bfdc9deae9496a290d250d7f90a82ff797ce3de6360827547a5d0"
+      },
+      "quotient": {
+        "term_count": 736021,
+        "max_abs_coeff_bits": 39,
+        "sha256_packed_terms": "f2c4eee598f43e904f32a3fb1e40eb4b6837e36ceeff0e3acf71b43d10bd575d"
+      },
+      "remainder_terms": 0
+    },
+    {
+      "name": "17*F_3-42*F_1",
+      "combo_on_F1_to_F5": [
+        -42,
+        0,
+        17,
+        0,
+        0
+      ],
+      "identity": "17*F_3-42*F_1 = (j_8/1344) * quotient",
+      "dividend": {
+        "term_count": 3469515,
+        "max_abs_coeff_bits": 42,
+        "sha256_packed_terms": "4f818f89a02e2bca51f431d5b19bf207950e30a3ae4cc5607a1dda46e7cce40c"
+      },
+      "quotient": {
+        "term_count": 735013,
+        "max_abs_coeff_bits": 35,
+        "sha256_packed_terms": "6ba02dca5cff6022875d5c293306902b486676853a0faec5d2503b78c109e65b"
+      },
+      "remainder_terms": 0
+    },
+    {
+      "name": "17*F_4-32*F_1",
+      "combo_on_F1_to_F5": [
+        -32,
+        0,
+        0,
+        17,
+        0
+      ],
+      "identity": "17*F_4-32*F_1 = (j_8/1344) * quotient",
+      "dividend": {
+        "term_count": 3468619,
+        "max_abs_coeff_bits": 42,
+        "sha256_packed_terms": "282ccb989274f80b1a674996cfc117a8f4b58efacd1dd3ebad5fc2ccd501a0c0"
+      },
+      "quotient": {
+        "term_count": 735461,
+        "max_abs_coeff_bits": 35,
+        "sha256_packed_terms": "c3b967f8ccea55b7c75ff261510e2ae64f340bc0a6b40798181fa5d3375a65d1"
+      },
+      "remainder_terms": 0
+    },
+    {
+      "name": "17*F_5-128*F_1",
+      "combo_on_F1_to_F5": [
+        -128,
+        0,
+        0,
+        0,
+        17
+      ],
+      "identity": "17*F_5-128*F_1 = (j_8/1344) * quotient",
+      "dividend": {
+        "term_count": 3469291,
+        "max_abs_coeff_bits": 44,
+        "sha256_packed_terms": "65c69e6eb8ed997579c1a2f66fd97d2b08990325b300fa243a2779f25a04014e"
+      },
+      "quotient": {
+        "term_count": 734789,
+        "max_abs_coeff_bits": 36,
+        "sha256_packed_terms": "e5b91ad1921afc6b838a62ad3439dd2ac9cc536ed4d7399c584bc45c37d552bf"
+      },
+      "remainder_terms": 0
+    }
+  ]
+}

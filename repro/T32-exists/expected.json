@@ -1,0 +1,11 @@
+{
+  "test": "T32",
+  "name": "Route-3A direct existence (witness side)",
+  "tier": "exact-replayable",
+  "kind": "constructive witness re-certification",
+  "witnesses_min": 1528,
+  "failures": 0,
+  "realized_rows_min": 27,
+  "solver": "none (pure Python standard library; F_2 linear algebra)",
+  "note": "Re-derives each [40,k,16] code from its stored l-vector and checks weights {0,16,20,24,40}, doubly-even/self-orthogonal, 1_40 in E, full rank k, and the Parseval identity. This verifies the NONEMPTY side of T32; the empty-exhaust proof for (6,29,4) is the separate cluster-scale piece."
+}

@@ -1,0 +1,19 @@
+# Extremal 72 enumerator data (one-weight / biweight / triweight)
+# Self-contained data bundle for the Extremal 72 project. Files:
+  baby_triweight.json
+  biweight_child68.json
+  biweight_forced.json
+  biweight_genus2_result.json
+  biweight_global_mixture.json
+  biweight_global_mixture_row_probes.json
+  biweight_n40_results.json
+  biweight_n56_family.json
+  biweight_n56_summary.json
+  c1_d12sq_genus3.json
+  envelope56_enumerator.json
+  golay_genus3.json
+  triweight_coupled_screen_73.json
+  triweight_mode1_filter.json
+  triweight_pin.json
+  triweight_q_constraint.json
+  weight_enum_W68.json

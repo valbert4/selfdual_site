@@ -1,0 +1,33 @@
+site:
+  title: "Extremal 72"
+  subtitle: "A community search for the missing Type II [72,36,16] code"
+
+primary:
+  - title: "Home"
+    path: "content/index.md"
+  - title: "Current Map"
+    path: "content/current-map.md"
+  - title: "Hierarchy"
+    path: "content/hierarchy.md"
+  - title: "Length-40 Menu"
+    path: "content/menu-summary.md"
+  - title: "Tests"
+    path: "content/tests/index.md"
+  - title: "Weight Enumerators"
+    path: "content/weight-enumerators-pipeline.md"
+  - title: "UI Layout"
+    path: "content/ui-layout.md"
+  - title: "Validation Standards"
+    path: "content/audit-trail.md"
+  - title: "Ideas Not Pursued"
+    path: "content/ideas-not-pursued.md"
+
+future:
+  - title: "Open Problems"
+    path: "content/open-problems.md"
+  - title: "Computations and Certificates"
+    path: "content/computations-and-certificates.md"
+  - title: "Contribute"
+    path: "content/contribute.md"
+  - title: "Glossary"
+    path: "content/glossary.md"

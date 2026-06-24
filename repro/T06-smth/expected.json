@@ -1,0 +1,12 @@
+{
+  "test": "T06",
+  "name": "Toggle-stabilizer Smith congruence",
+  "tier": "exact-replayable",
+  "kind": "integer-divisibility kill",
+  "k": 6,
+  "killed_even_a": [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30],
+  "n_kills": 16,
+  "solver": "none for verification (pure Python integer Smith-form solvability); certificate generated once by Sage",
+  "cross_checked": "pure-Python solvability agrees with Sage smith_form on all 32 systems",
+  "reproduces": "the reproduction bundle section 15.1"
+}

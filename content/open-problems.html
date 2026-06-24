@@ -1,0 +1,162 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>Open Problems - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="open-problems">Open Problems</h1>
+<p>This is the community engine of the project. Each card is a bounded, concrete task — not "help wanted," but a specific input, a specific expected output, and a specific certificate that decides whether the task is done. We deliberately favor work whose result is <strong>independently checkable</strong>: a route-3A witness, an exact Farkas certificate, a re-verification in a second language, or a reproducible cluster payload.</p>
+<p>Two standing rules apply to everything below:</p>
+<ul>
+<li>A surviving <a href="content/menu-summary.html">length-40 menu</a> row is a still-compatible <em>shadow</em>, not a code; the <strong>21 unresolved rows</strong> are "not yet exhausted," never "likely empty."</li>
+<li>Project status changes require an exact certificate or an independently replayable computation. Numerical evidence is welcome as a scout, but it does not move the <a href="content/menu-summary.html">menu</a> or the <a href="content/tests/index.html">test ledger</a>.</li>
+</ul>
+<p>The current state: <code>132</code> length-40 candidates <code>→ 60</code> proof-grade eliminations <code>→ 72</code> surviving, of which <code>51</code> are witnessed nonempty and <code>21</code> are unresolved. All <code>8</code> proof-grade kills now ship 🟢 exact-replayable reproduction bundles (<code>python3 repro/verify_all.py</code> runs <code>9/9</code>). The frontier is the unresolved rows, the open anchored SDP (<code>T29</code>), the design subproblems, and the precise payoff bridges.</p>
+<p>Discussion for every card happens in the <strong><code>#extremal72</code></strong> channel of the Error Correction Zoo Discord: <a href="https://discord.gg/gg3pJZNYxQ">https://discord.gg/gg3pJZNYxQ</a>. Claim a card there before starting long compute so we don't duplicate it.</p>
+<hr />
+<h2 id="e72-101--exhaust-the-smallest-unresolved-length-40-rows">E72-101 — Exhaust the smallest unresolved length-40 rows</h2>
+<p><strong>One-line goal:</strong> Convert the smallest-<code>m</code> unresolved route-3A rows from <code>⏳</code> to <code>✔️</code> (witness) or <code>❌</code> (proof-grade empty).</p>
+<p><strong>Mathematical input:</strong> The unresolved rows of the length-40 menu — surviving <code>(k,a,b)</code> with no witness and no completed exhaust. Each row is a doubly-even, self-orthogonal <code>[40,k,≥16]</code> shadow with <code>W_E(y) = 1 + a(y^{16}+y^{24}) + b\,y^{20} + y^{40}</code>.</p>
+<p><strong>Repository input:</strong> The route-3A enumeration engine (per <code>Σ ℓ² = sq</code> stratum) and the <a href="content/tests/T32-exists.html">T32</a> reproduction bundle, which already re-certifies <code>1528</code> witnesses in pure Python.</p>
+<p><strong>Expected output:</strong> For each targeted row, either a constructive witness code or a complete zero-leaf exhaust tree.</p>
+<p><strong>Success certificate:</strong> A witness is a stored <code>ℓ</code>-vector that expands to a valid <code>[40,k,16]</code> code (replayable by the T32 verifier). An empty proof is a complete zero-leaf exhaust with a reproducible state count, like the <code>(6,29,4)</code> empty proof (<code>301,872</code> states, <code>0</code> codes).</p>
+<p><strong>Difficulty:</strong> Medium per row, rising sharply with <code>m</code>.</p>
+<p><strong>Skills:</strong> Coding theory, combinatorial enumeration, performance-aware C++/Rust or Python.</p>
+<p><strong>Compute needed:</strong> Workstation for the smallest rows; the larger <code>k</code>/<code>a</code> rows push toward many-core / cluster.</p>
+<p><strong>Status:</strong> Open. <code>21</code> rows unresolved; smallest-<code>m</code> first is the recommended order.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-102--independent-replay-of-the-6294-empty-exhaust">E72-102 — Independent replay of the <code>(6,29,4)</code> empty exhaust</h2>
+<p><strong>One-line goal:</strong> Reproduce the first exhaustion kill in a second, independent implementation.</p>
+<p><strong>Mathematical input:</strong> The row <code>(6,29,4)</code> and the claim that no <code>[40,6,16]</code> code realizes it (the first proof-grade kill of a row that survived every algebraic screen, recorded by <a href="content/tests/T32-exists.html">T32</a>).</p>
+<p><strong>Repository input:</strong> The route-3A exhaust spec for <code>(6,29,4)</code> (<code>301,872</code> states, <code>0</code> leaves) shipped as the 🔴 part of the T32 bundle.</p>
+<p><strong>Expected output:</strong> An independent enumerator that reaches the same zero-leaf verdict, plus a one-click replay package (its own <code>run.sh</code>).</p>
+<p><strong>Success certificate:</strong> A second-implementation exhaust whose leaf/state counts match and that terminates with <code>0</code> codes; ideally a canonical-augmentation tree that a third party can re-walk.</p>
+<p><strong>Difficulty:</strong> Medium.</p>
+<p><strong>Skills:</strong> Computational group theory, isomorph rejection (canonical augmentation), reproducible packaging.</p>
+<p><strong>Compute needed:</strong> Single workstation (this row is small).</p>
+<p><strong>Status:</strong> Open. The empty proof exists but ships as a spec, not a one-click 🟢 bundle — a second language closes that gap.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-103--exact-certificate-for-the-open-anchored-sdp-t29">E72-103 — Exact certificate for the open anchored SDP (<code>T29</code>)</h2>
+<p><strong>One-line goal:</strong> Turn the anchored three-point SDP from a boundary-margin numerical screen into a proof-grade verdict.</p>
+<p><strong>Mathematical input:</strong> The single-anchor anchored three-point (Terwilliger-type) SDP on the length-72 minimum-word structure, coupled to the menu. Its linear layer is exact and exhausted (<code>glpsol</code>, all mixtures feasible); its PSD layer sits at the double-precision floor with boundary margin <code>≈ 0</code>, sign undeterminable. See <a href="content/tests/T29-a3p.html">T29</a>.</p>
+<p><strong>Repository input:</strong> The T29 payload (constraint system, moment-matrix blocks) and the exact linear gate.</p>
+<p><strong>Expected output:</strong> Either a rigorous infeasibility certificate (a kill) or a rigorous feasibility witness at the margin (the screen genuinely saturates).</p>
+<p><strong>Success certificate:</strong> An exact / verified-precision dual certificate — a PSD multiplier matrix with rational or interval-arithmetic entries whose sign is provable — or a constructive feasible moment matrix. A raw double-precision solver verdict at margin <code>≈ 0</code> does <strong>not</strong> count.</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> SDP duality, exact/interval SDP, symmetry-adapted block-diagonalization.</p>
+<p><strong>Compute needed:</strong> Workstation for the block-reduced problem; cluster + licensed or exact solver for the full system.</p>
+<p><strong>Status:</strong> Open / blocked by scale at the PSD boundary. The most valuable single upgrade on the SDP line.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-104--non-aggregate-per-anchor-coupling-beyond-t29">E72-104 — Non-aggregate per-anchor coupling beyond <code>T29</code></h2>
+<p><strong>One-line goal:</strong> Replace the aggregated anchored mixtures with a per-anchor coupling that can separate where the aggregate saturates.</p>
+<p><strong>Mathematical input:</strong> The observation that several anchored / Mode-1 aggregate tests (<a href="content/tests/T26-tag.html">T26</a>, <a href="content/tests/T30-am1.html">T30</a>) are feasible even when strengthened, because aggregation averages away a per-anchor obstruction. The target is a coupling that constrains each anchor's residual individually rather than the mixture.</p>
+<p><strong>Repository input:</strong> The anchored linear gate, the genus-2 Jacobi coupling that reduces the <code>[56,21]</code> residual biweight family from <code>9-dim</code> to <code>5-dim</code>, and the per-coset image counts.</p>
+<p><strong>Expected output:</strong> A new exact feasibility system, with at least one row it excludes that the aggregate test passes — or a proof that the per-anchor system collapses to the aggregate (a saturation result, also valuable).</p>
+<p><strong>Success certificate:</strong> A Farkas certificate for any newly excluded row, replayable in pure Python like the existing 🟢 kills.</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> LP/SDP modeling, MacWilliams/Jacobi duality, exact certificates.</p>
+<p><strong>Compute needed:</strong> Workstation (exact LP via PPL / <code>glpsol --exact</code>), occasional cluster for large per-anchor systems.</p>
+<p><strong>Status:</strong> Open / exploratory.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-105--second-language-re-verification-of-the-8-proof-grade-kills">E72-105 — Second-language re-verification of the 8 proof-grade kills</h2>
+<p><strong>One-line goal:</strong> Independently re-derive all <code>8</code> proof-grade eliminations in a language other than the published Python verifiers.</p>
+<p><strong>Mathematical input:</strong> The eight kills — <a href="content/tests/T02-pimg.html">T02</a> parent-image dimension bound, <a href="content/tests/T05-3bnn.html">T05</a> three-block nonnegativity (Farkas), <a href="content/tests/T06-smth.html">T06</a> toggle-stabilizer Smith congruence, <a href="content/tests/T08-john.html">T08</a> Johnson/Delsarte bound <code>247</code>, <a href="content/tests/T13-dshr.html">T13</a> double-shortening Johnson bound, <a href="content/tests/T19-sim.html">T19</a> Simonis order-4 Farkas, <a href="content/tests/T20-g2.html">T20</a> coupled genus-2 biweight Farkas, and <a href="content/tests/T32-exists.html">T32</a> route-3A witnesses — plus T01's re-enumeration of the <code>132</code>.</p>
+<p><strong>Repository input:</strong> The 🟢 reproduction bundles, each shipping <code>expected.json</code>, the data pinned by sha256, and a pure-Python verifier.</p>
+<p><strong>Expected output:</strong> A parallel verifier suite (e.g. Sage, GAP, Julia, Rust, or Lean) that recomputes each <code>expected.json</code> from the same pinned inputs.</p>
+<p><strong>Success certificate:</strong> Independent agreement on every value (the bound <code>247</code>, the <code>132</code>, each Farkas/Smith certificate) using exact arithmetic in the new language; bonus for a machine-checked proof of any single kill.</p>
+<p><strong>Difficulty:</strong> Medium (per kill); harder for a formalized proof.</p>
+<p><strong>Skills:</strong> Exact linear algebra, Smith normal form, Delsarte LP, formal methods (optional).</p>
+<p><strong>Compute needed:</strong> Single workstation.</p>
+<p><strong>Status:</strong> Open. The 🟢 bundles run <code>9/9</code> in Python; a second language is the strongest trust signal we can add.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-106--independent-verifier-for-the-forced-split--5621-residual-enumerator">E72-106 — Independent verifier for the forced split / <code>[56,21]</code> residual enumerator</h2>
+<p><strong>One-line goal:</strong> Re-derive the forced weight-16 split enumerator and the <code>[56,21,≥16]</code> residual with its <code>5082</code> minimum words from scratch.</p>
+<p><strong>Mathematical input:</strong> Anchoring one weight-16 word in a hypothetical <code>[72,36,16]</code> code forces a unique split enumerator and a residual <code>[56,21,≥16]</code> object with exactly <code>5082</code> weight-16 words; the forced minimum-word count of the parent is <code>A_16 = 249849</code>.</p>
+<p><strong>Repository input:</strong> The published split-enumerator and residual-enumerator JSON (pinned by sha256), and the partition-MacWilliams solution that fixes them.</p>
+<p><strong>Expected output:</strong> An independent solver that recovers the unique split and the <code>5082</code> count, plus a one-click verifier consuming the published data.</p>
+<p><strong>Success certificate:</strong> Bit-for-bit agreement with <code>A_16 = 249849</code> and the <code>5082</code> residual minimum words, derived from the MacWilliams system rather than read from the file.</p>
+<p><strong>Difficulty:</strong> Medium.</p>
+<p><strong>Skills:</strong> MacWilliams identities, partition/Jacobi enumerators, exact rational linear algebra.</p>
+<p><strong>Compute needed:</strong> Single workstation.</p>
+<p><strong>Status:</strong> Open. Listed in SCOPE §9 as <code>E72-001</code>/<code>E72-002</code>; this card is the independent-verifier half.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-107--constrain-the-5-721678-minimum-word-design">E72-107 — Constrain the <code>5-(72,16,78)</code> minimum-word design</h2>
+<p><strong>One-line goal:</strong> Add exact design-theoretic obstructions on the <code>249849</code> minimum words that survive what the enumerator already forces.</p>
+<p><strong>Mathematical input:</strong> If the code exists, its <code>249849</code> weight-16 words form a <code>5-(72,16,78)</code> design. Block intersection numbers, derived/residual designs, and higher-incidence constraints are partly fixed by the enumerator but not exhausted.</p>
+<p><strong>Repository input:</strong> The forced parent enumerator, the genus-2 biweight of <code>[72,36,16]</code> (uniquely forced), and the higher-genus design-moment data (note: the genus-3 design-moment equalities have rank <code>0</code>, so the leverage must come from elsewhere).</p>
+<p><strong>Expected output:</strong> An exact contradiction in the design parameters (a kill), or a sharpened set of forced intersection/incidence numbers that feeds back into the menu.</p>
+<p><strong>Success certificate:</strong> A proof-grade design infeasibility (e.g. an integer or Farkas obstruction on block intersections), independently checkable.</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> Design theory, finite geometry, integer feasibility.</p>
+<p><strong>Compute needed:</strong> Workstation; possibly cluster for large incidence systems.</p>
+<p><strong>Status:</strong> Open. A genuine independent angle — design constraints are not subsumed by the menu recursion.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-108--pin-the-5082-residual-minimum-words">E72-108 — Pin the <code>5082</code> residual minimum words</h2>
+<p><strong>One-line goal:</strong> Determine or obstruct the configuration of the <code>5082</code> weight-16 words in the forced <code>[56,21]</code> residual.</p>
+<p><strong>Mathematical input:</strong> The forced <code>[56,21,≥16]</code> residual carries exactly <code>5082</code> minimum words. Its genus-2 biweight is known only as a family: exactly <code>9-dim</code> (affine, after its own marginals), reducing to exactly <code>5-dim</code> under the length-72 anchored genus-2 Jacobi coupling.</p>
+<p><strong>Repository input:</strong> The residual biweight family data and the anchored Jacobi coupling that performs the <code>9→5</code> reduction.</p>
+<p><strong>Expected output:</strong> A constraint (exact LP/SDP, design, or geometric) that pins or excludes part of the remaining <code>5-dim</code> freedom, or a proof that the <code>5082</code> words cannot be packed into <code>56</code> coordinates consistently.</p>
+<p><strong>Success certificate:</strong> A proof-grade narrowing of the <code>5-dim</code> family or a Farkas-style infeasibility for the residual word configuration.</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> Constant-weight packing, MacWilliams/Jacobi families, design theory.</p>
+<p><strong>Compute needed:</strong> Workstation (exact LP); cluster for finer packing systems.</p>
+<p><strong>Status:</strong> Open. Note that plain length-56 constant-weight bounds are far too loose for <code>5082</code> — leverage must use residual/glue/code-level structure.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-109--conditionally-close-the-c_5-sub-menu-automorphism-agnostically">E72-109 — Conditionally close the <code>C_5</code> sub-menu, automorphism-agnostically</h2>
+<p><strong>One-line goal:</strong> Kill all <code>16</code> length-40 rows with <code>a ≡ 0 (mod 5)</code> using only tests that hold for the trivial automorphism group.</p>
+<p><strong>Mathematical input:</strong> The code's automorphism group is one of <code>{C_1, C_2, C_3, C_2×C_2, C_5}</code>, with <strong>nothing assumed</strong> (<code>C_1</code> is the hardest case). Orbit counting (<code>A_16 = 249849 ≡ 4</code>, residual <code>5082 ≡ 2 (mod 5)</code>) forces a <code>C_5</code>-symmetric code to realize one of <code>16</code> surviving rows with <code>a ≡ 0 (mod 5)</code>; these are listed on the <a href="content/menu-summary.html">menu page</a>.</p>
+<p><strong>Repository input:</strong> The <code>16</code>-row sub-menu and the automorphism-agnostic test pipeline.</p>
+<p><strong>Expected output:</strong> Proof-grade eliminations (or witnesses) for the <code>16</code> rows, using only <code>C_1</code>-valid tests.</p>
+<p><strong>Success certificate:</strong> A 🟢-style replayable kill for each of the <code>16</code> rows; if all <code>16</code> fall, the <code>C_5</code> branch closes with no Hermitian <code>F_16</code> search. Note the converse does <strong>not</strong> hold — these rows are not removed from the full menu by ruling out <code>C_5</code>, since a <code>C_1</code> code could still cast any of them.</p>
+<p><strong>Difficulty:</strong> Medium to hard (varies by row; the large-<code>k</code> rows are exhaust-heavy).</p>
+<p><strong>Skills:</strong> Coding theory, computational group theory, exact certificates.</p>
+<p><strong>Compute needed:</strong> Workstation for small rows; cluster for <code>k=9,10</code>.</p>
+<p><strong>Status:</strong> Open. A far cheaper target than the full menu — <code>16</code> specific rows.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-110--cluster-ready-exact-anchored-sdp-payload--memory-estimate">E72-110 — Cluster-ready exact anchored SDP payload + memory estimate</h2>
+<p><strong>One-line goal:</strong> Package a proof-grade, cluster-scale anchored SDP run with an honest resource budget.</p>
+<p><strong>Mathematical input:</strong> The anchored three-point SDP of <a href="content/tests/T29-a3p.html">T29</a>, whose PSD layer is unresolved at the boundary at local scale.</p>
+<p><strong>Repository input:</strong> The T29 constraint system and moment-matrix blocks; the linear gate that is already exact.</p>
+<p><strong>Expected output:</strong> A self-contained payload — exact/high-precision SDP input, solver invocation, expected wall-clock, <strong>and a memory estimate</strong> (the prior exact attempt OOM'd; block sizes drive the budget) — plus the certificate path that would make a result proof-grade.</p>
+<p><strong>Success certificate:</strong> A reproducible spec a contributor can run on a known cluster, ending in a checkable dual certificate (ties into E72-103).</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> HPC, SDP solver internals, exact/high-precision arithmetic, reproducibility.</p>
+<p><strong>Compute needed:</strong> Cluster-scale; licensed (MOSEK) or exact (e.g. SDPA-GMP-class) solver, with the memory budget that the payload must publish up front.</p>
+<p><strong>Status:</strong> Open / blocked by scale. Listed in SCOPE §9 as <code>E72-006</code>.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-111--precise-code--cft-c--36-bridge-note">E72-111 — Precise code → CFT (c = 36) bridge note</h2>
+<p><strong>One-line goal:</strong> Write the exact construction taking the <code>[72,36,16]</code> code to a chiral / Narain-style code CFT at central charge <code>c = 36</code>, with explicit assumptions.</p>
+<p><strong>Mathematical input:</strong> A binary Type II <code>[72,36,16]</code> code, the Construction-A even unimodular lattice route in dimension 72, and the standard lattice → CFT map. <strong>Caveat to carry:</strong> the Construction-A lattice <code>Λ = (1/√2){x ∈ ℤ^{72} : x mod 2 ∈ C}</code> is even unimodular but has minimum norm <code>2</code>, <strong>not</strong> <code>8</code>; do not call it extremal.</p>
+<p><strong>Repository input:</strong> The forced enumerator (which fixes the CFT character / partition-function data) and the modular-bootstrap notes.</p>
+<p><strong>Expected output:</strong> A public bridge page: the precise CFT object, what the forced weight enumerator pins about its partition function, and exactly which steps are standard vs. conjectural.</p>
+<p><strong>Success certificate:</strong> Every "→" in the bridge is either a cited standard construction or a flagged assumption; no "the CFT proves…" without an explicit map.</p>
+<p><strong>Difficulty:</strong> Hard.</p>
+<p><strong>Skills:</strong> CFT / modular bootstrap, lattices, code-CFT correspondence.</p>
+<p><strong>Compute needed:</strong> None (expository), optional character-arithmetic check.</p>
+<p><strong>Status:</strong> Open. Listed in SCOPE §9 as <code>E72-008</code>.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="e72-112--precise-code--71115-self-dual-css-bridge-note">E72-112 — Precise code → <code>[[71,1,≥15]]</code> self-dual CSS bridge note</h2>
+<p><strong>One-line goal:</strong> Write down the exact CSS quantum code obtained from a <code>[72,36,16]</code> Type II code, with the distance argument.</p>
+<p><strong>Mathematical input:</strong> A binary self-dual doubly-even <code>[72,36,16]</code> code yields, via the standard self-dual-classical → CSS construction, a self-dual CSS quantum code; the target package is <code>[[71,1,≥15]]</code>. The distance bound and the exact length/dimension bookkeeping must be stated, not asserted.</p>
+<p><strong>Repository input:</strong> The forced enumerator and minimum-distance data.</p>
+<p><strong>Expected output:</strong> A public bridge page giving the explicit CSS construction, the parameters, and a proof (or precise citation) of the <code>≥15</code> distance.</p>
+<p><strong>Success certificate:</strong> The construction is reproducible from the classical generator matrix and the distance bound is argued, not quoted; a small worked check (e.g. on a known smaller Type II code) accompanies it.</p>
+<p><strong>Difficulty:</strong> Medium.</p>
+<p><strong>Skills:</strong> Quantum CSS codes, self-dual codes, distance arguments.</p>
+<p><strong>Compute needed:</strong> None to light (expository plus a sanity-check on a small code).</p>
+<p><strong>Status:</strong> Open. Listed in SCOPE §9 as <code>E72-009</code>.</p>
+<p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
+<hr />
+<h2 id="how-to-claim-a-card">How to claim a card</h2>
+<ol>
+<li>Post in <code>#extremal72</code> on the <a href="https://discord.gg/gg3pJZNYxQ">Discord</a> naming the card ID (e.g. <code>E72-101</code>).</li>
+<li>Read the matching <a href="content/tests/index.html">test page</a> and pull its reproduction bundle.</li>
+<li>Return a result with a <strong>certificate</strong>, not just a number — a witness, a Farkas/Smith/dual certificate, or a one-click replay package.</li>
+</ol>
+<p>See also: <a href="content/menu-summary.html">The Length-40 Menu</a>, <a href="content/tests/index.html">Tests</a>, <a href="content/current-map.html">Current Map</a>, and the <a href="content/audit-trail.html">Audit Trail</a> for why we publish corrections as part of the result.</p>
+</article></main><footer class="doc-footer">Extremal 72 - static site. Status numbers mirror <code>data/menu-summary.yml</code>.</footer></body></html>

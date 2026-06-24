@@ -1,0 +1,461 @@
+{
+  "aggregate_integer_feasible": true,
+  "audit_notes": [
+    "The earlier Sage GLPK/exact wrapper result was invalid: it falsely rejected a rational fixed-point control.",
+    "Plain PySCIPOpt 6.2.1 imports and works under sage -python, but the unscaled SCIP model gave a false infeasible answer on this numerically awkward instance.",
+    "The accepted path writes integer-scaled LP files and verifies the fixed integer witness with glpsol --exact."
+  ],
+  "continuous_exact_status": "optimal",
+  "description": "Corrected global biweight/menu aggregate mixture check using integer-scaled direct GLPK LP files.",
+  "elapsed_sec": 141.23,
+  "fixed_integer_exact_status": "optimal",
+  "integer_mip_status": "integer_optimal",
+  "menu_count": 54,
+  "menu_source": "MENU.md",
+  "minword_row_source": "minword_row_n56.json",
+  "multiplicities": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5082
+  ],
+  "nonzero_multiplicities": [
+    {
+      "a": 103,
+      "b": 48,
+      "k": 8,
+      "multiplicity": 5082
+    }
+  ],
+  "row_probe_results": [
+    {
+      "a": 1,
+      "b": 60,
+      "index": 0,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 3,
+      "b": 56,
+      "index": 1,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 5,
+      "b": 52,
+      "index": 2,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 7,
+      "b": 48,
+      "index": 3,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 9,
+      "b": 44,
+      "index": 4,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 11,
+      "b": 40,
+      "index": 5,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 13,
+      "b": 36,
+      "index": 6,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 15,
+      "b": 32,
+      "index": 7,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 17,
+      "b": 28,
+      "index": 8,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 19,
+      "b": 24,
+      "index": 9,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 21,
+      "b": 20,
+      "index": 10,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 23,
+      "b": 16,
+      "index": 11,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 25,
+      "b": 12,
+      "index": 12,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 27,
+      "b": 8,
+      "index": 13,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 29,
+      "b": 4,
+      "index": 14,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 31,
+      "b": 0,
+      "index": 15,
+      "k": 6,
+      "status": "feasible"
+    },
+    {
+      "a": 15,
+      "b": 96,
+      "index": 16,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 17,
+      "b": 92,
+      "index": 17,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 19,
+      "b": 88,
+      "index": 18,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 21,
+      "b": 84,
+      "index": 19,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 23,
+      "b": 80,
+      "index": 20,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 25,
+      "b": 76,
+      "index": 21,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 27,
+      "b": 72,
+      "index": 22,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 29,
+      "b": 68,
+      "index": 23,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 31,
+      "b": 64,
+      "index": 24,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 33,
+      "b": 60,
+      "index": 25,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 35,
+      "b": 56,
+      "index": 26,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 37,
+      "b": 52,
+      "index": 27,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 39,
+      "b": 48,
+      "index": 28,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 41,
+      "b": 44,
+      "index": 29,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 43,
+      "b": 40,
+      "index": 30,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 45,
+      "b": 36,
+      "index": 31,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 47,
+      "b": 32,
+      "index": 32,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 49,
+      "b": 28,
+      "index": 33,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 51,
+      "b": 24,
+      "index": 34,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 53,
+      "b": 20,
+      "index": 35,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 55,
+      "b": 16,
+      "index": 36,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 57,
+      "b": 12,
+      "index": 37,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 59,
+      "b": 8,
+      "index": 38,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 61,
+      "b": 4,
+      "index": 39,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 63,
+      "b": 0,
+      "index": 40,
+      "k": 7,
+      "status": "feasible"
+    },
+    {
+      "a": 55,
+      "b": 144,
+      "index": 41,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 59,
+      "b": 136,
+      "index": 42,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 63,
+      "b": 128,
+      "index": 43,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 67,
+      "b": 120,
+      "index": 44,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 71,
+      "b": 112,
+      "index": 45,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 75,
+      "b": 104,
+      "index": 46,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 79,
+      "b": 96,
+      "index": 47,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 83,
+      "b": 88,
+      "index": 48,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 87,
+      "b": 80,
+      "index": 49,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 91,
+      "b": 72,
+      "index": 50,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 95,
+      "b": 64,
+      "index": 51,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 99,
+      "b": 56,
+      "index": 52,
+      "k": 8,
+      "status": "feasible"
+    },
+    {
+      "a": 103,
+      "b": 48,
+      "index": 53,
+      "k": 8,
+      "status": "feasible"
+    }
+  ],
+  "rows_killed_by_row_probe": []
+}

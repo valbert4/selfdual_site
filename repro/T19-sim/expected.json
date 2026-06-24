@@ -1,0 +1,8 @@
+{
+  "test": "T19",
+  "tier": "exact-replayable",
+  "kind": "Simonis support-weight kill",
+  "result": "(6,1,60) proven infeasible at order 4, Farkas-certified",
+  "solver": "none for verification (pure Python Farkas check); certificate found once by the solver",
+  "reproduces": "section 9"
+}
