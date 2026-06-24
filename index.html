@@ -69,28 +69,14 @@
           </aside>
         </div>
 
-        <div class="split-layout">
-          <section>
-            <h3>Why this is a good crowd problem</h3>
-            <div class="plain-list">
-              <p><strong>Many doors:</strong> algebra, coding theory, design theory, SDP, exact enumeration, and computational proof can all contribute.</p>
-              <p><strong>Finite checkpoints:</strong> every test has a page, an input menu row, a status, and a way to reproduce or improve the obstruction.</p>
-              <p><strong>Useful outcomes on both sides:</strong> construction gives new highly structured objects; impossibility resolves the length-72 extremal question.</p>
-            </div>
-          </section>
-
-          <section>
-            <h3>Project name candidates</h3>
-            <div class="name-grid">
-              <span>Extremal 72 (recommended)</span>
-              <span>The Extremal 72 Project</span>
-              <span>The 72/56/40/24 Project</span>
-              <span>The 72 Code Challenge</span>
-              <span>Project Type II-72</span>
-              <span>The Sloane 72 Challenge</span>
-            </div>
-          </section>
-        </div>
+        <section class="strip">
+          <h3>Why this is a good crowd problem</h3>
+          <div class="plain-list">
+            <p><strong>Many doors:</strong> algebra, coding theory, design theory, SDP, exact enumeration, and computational proof can all contribute.</p>
+            <p><strong>Finite checkpoints:</strong> every test has a page, an input menu row, a status, and a way to reproduce or improve the obstruction.</p>
+            <p><strong>Useful outcomes on both sides:</strong> construction gives new highly structured objects; impossibility resolves the length-72 extremal question.</p>
+          </div>
+        </section>
 
         <section class="strip">
           <h3>Automorphism group: narrowed, but not assumed</h3>
@@ -196,25 +182,15 @@
           </div>
         </div>
 
-        <div class="two-column">
-          <article>
-            <h3>What the hierarchy buys</h3>
-            <p>
-              The descent turns a global code-existence question into a finite set of
-              compatible length-40 shadows. Each row can then be attacked by exact
-              divisibility, local gluing, support-weight constraints, SDP layers, or
-              direct existence searches.
-            </p>
-          </article>
-          <article>
-            <h3>How to present it publicly</h3>
-            <p>
-              Show the hierarchy first, then show the menu ledger. Visitors should
-              immediately understand that "surviving" means "not yet contradicted,"
-              not "known to lift to the length-72 code."
-            </p>
-          </article>
-        </div>
+        <article class="strip">
+          <h3>What the hierarchy buys</h3>
+          <p>
+            The descent turns a global code-existence question into a finite set of
+            compatible length-40 shadows. Each row can then be attacked by exact
+            divisibility, local gluing, support-weight constraints, SDP layers, or
+            direct existence searches.
+          </p>
+        </article>
 
         <div class="formula-grid">
           <section class="formula-block">
@@ -250,11 +226,6 @@ genus-3 triweight: exact 6-dim invariant space
             <p class="eyebrow">Ledger from MENU</p>
             <h2>MENU at a glance</h2>
           </div>
-          <p>
-            The site should keep a small, checkable ledger: how many rows exist,
-            which tests killed rows, what proof standard each test meets, and which
-            rows have existence witnesses.
-          </p>
         </div>
 
         <div class="metric-row">
@@ -265,44 +236,24 @@ genus-3 triweight: exact 6-dim invariant space
           <div class="metric"><b>21</b><span>unresolved existence</span></div>
         </div>
 
-        <div class="ledger">
-          <article>
-            <h3>Proof-grade eliminators</h3>
-            <table>
-              <thead>
-                <tr><th>Test</th><th>Rows</th><th>Public label</th></tr>
-              </thead>
-              <tbody>
-                <tr><td>T02 pImg</td><td>32</td><td>dimension and fiber divisibility</td></tr>
-                <tr><td>T05 3bNN</td><td>7</td><td>three-block nonnegativity</td></tr>
-                <tr><td>T06 Smth</td><td>16</td><td>toggle-stabilizer Smith congruence</td></tr>
-                <tr><td>T08 John</td><td>1</td><td>Johnson/Delsarte two-point bound</td></tr>
-                <tr><td>T13 dShr</td><td>1</td><td>double-shortening forced intersections</td></tr>
-                <tr><td>T19 Sim</td><td>1</td><td>Simonis support-weight feasibility</td></tr>
-                <tr><td>T20 g2</td><td>1</td><td>coupled genus-2 biweight feasibility</td></tr>
-                <tr><td>T32 exists</td><td>1</td><td>route-3A direct existence exhaust</td></tr>
-              </tbody>
-            </table>
-          </article>
-
-          <aside class="validation-card">
-            <h3>Stringency for public tests</h3>
-            <p>
-              A test should move the public count only when it has exact input data,
-              an independently replayable certificate, or a separate verifier that
-              checks the claimed obstruction.
-            </p>
-            <p>
-              Floating-point solver output, unchecked image counts, and local
-              projections are useful probes, but they should be labeled as probes
-              until exact reconstruction and row-level verification are complete.
-            </p>
-            <p>
-              The first direct empty row is <strong>(6,29,4)</strong> under T32:
-              route-3A exhaust, 301872 states, 0 codes.
-            </p>
-          </aside>
-        </div>
+        <section class="strip">
+          <h3>Proof-grade eliminators</h3>
+          <table>
+            <thead>
+              <tr><th>Test</th><th>Rows</th><th>Public label</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>T02 pImg</td><td>32</td><td>dimension and fiber divisibility</td></tr>
+              <tr><td>T05 3bNN</td><td>7</td><td>three-block nonnegativity</td></tr>
+              <tr><td>T06 Smth</td><td>16</td><td>toggle-stabilizer Smith congruence</td></tr>
+              <tr><td>T08 John</td><td>1</td><td>Johnson/Delsarte two-point bound</td></tr>
+              <tr><td>T13 dShr</td><td>1</td><td>double-shortening forced intersections</td></tr>
+              <tr><td>T19 Sim</td><td>1</td><td>Simonis support-weight feasibility</td></tr>
+              <tr><td>T20 g2</td><td>1</td><td>coupled genus-2 biweight feasibility</td></tr>
+              <tr><td>T32 exists</td><td>1</td><td>route-3A direct existence exhaust</td></tr>
+            </tbody>
+          </table>
+        </section>
 
         <section class="strip">
           <h3>C<sub>5</sub> sub-menu &mdash; an automorphism-conditional tag</h3>
@@ -338,11 +289,6 @@ genus-3 triweight: exact 6-dim invariant space
             <p class="eyebrow">Public test pages</p>
             <h2>T1 through T32</h2>
           </div>
-          <p>
-            Every test gets a stable page with purpose, inputs, result, certificate
-            status, caveats, and the next useful improvement. This panel is the tabbed
-            index for those pages.
-          </p>
         </div>
 
         <div class="test-toolbar">
@@ -369,11 +315,6 @@ genus-3 triweight: exact 6-dim invariant space
             <p class="eyebrow">Downloadable data</p>
             <h2>Weight enumerator catalog</h2>
           </div>
-          <p>
-            The public enumerator page should be a data shelf: all calculated
-            one-weight, biweight, triweight, and genus-3 invariant-space outputs,
-            plus source bundles for the triweight computation routines.
-          </p>
         </div>
 
         <div class="download-panel">
