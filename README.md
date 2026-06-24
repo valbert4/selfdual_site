@@ -38,9 +38,10 @@ works at a domain root or a project sub-path like `/extremal72/`.
 This repository's CI workflow builds, verifies, link-checks, and deploys the
 static site to GitHub Pages on every push to `main`.
 
-One-time GitHub setup: in the repository, go to **Settings -> Pages** and set
-**Build and deployment -> Source** to **GitHub Actions**. After the next push to
-`main`, the site will publish at `https://valbert4.github.io/selfdual_site/`
+The workflow asks GitHub to enable Pages automatically. If the first deploy is
+blocked by repository or organization settings, go to **Settings -> Pages** and
+set **Build and deployment -> Source** to **GitHub Actions**, then re-run the
+workflow. The site will publish at `https://valbert4.github.io/selfdual_site/`
 unless the repository is renamed or a custom domain is configured.
 
 ## Verify the proof-grade results yourself
