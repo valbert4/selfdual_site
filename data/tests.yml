@@ -1,4 +1,4 @@
-last_updated: "2026-06-20"
+last_updated: "2026-07-01"
 
 tests:
   - id: T01
@@ -289,3 +289,12 @@ tests:
     result: "(6,29,4) empty; 51 witnessed; 21 unresolved"
     public_category: "the project sources"
     page: "content/tests/T32-exists.md"
+  - id: T33
+    abbr: d32
+    slug: T33-d32
+    title: "Forced sibling D32 classification"
+    status: "saturates; structural result"
+    kills: 0
+    result: "unique [32,k-4] sibling per k; no new kill"
+    public_category: "sibling classification"
+    page: "content/tests/T33-d32.md"

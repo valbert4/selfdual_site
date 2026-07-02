@@ -132,7 +132,7 @@ def build_landing():
         ("Current Map", "/content/current-map.html", "The short status view."),
         ("The Hierarchy", "/content/hierarchy.html", "72 - 56 - 40 - 24 descent."),
         ("Length-40 Menu", "/content/menu-summary.html", "The finite menu and counts."),
-        ("Tests T01-T32", "/content/tests/index.html", "One page per exact test."),
+        ("Tests T01-T33", "/content/tests/index.html", "One page per exact test."),
         ("Weight Enumerators", "/content/weight-enumerators-pipeline.html", "Downloadable data."),
         ("Validation Standards", "/content/audit-trail.html", "What counts as proof-grade."),
         ("Ideas Not Pursued", "/content/ideas-not-pursued.html", "Parked and closed routes."),
@@ -183,7 +183,7 @@ def build_landing():
         + stats
         + "<h2>Start here</h2>"
         + f'<div class="cards">{cards}</div>'
-        + "<h2>Tests T01-T32</h2>"
+        + "<h2>Tests T01-T33</h2>"
         + '<p class="lede">Every exact filter applied to the length-40 menu, '
         "one checkable page each.</p>"
         + tgrid

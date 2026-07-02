@@ -158,5 +158,10 @@
     "file": "downloads/repro/T32-exists-repro.tar.gz",
     "sha256": "d50d4451e56a0f61d4e21459c3cb9b23b839bced5437ec79907315053412a35e",
     "files": 272
+  },
+  "T33-d32": {
+    "file": "downloads/repro/T33-d32-repro.tar.gz",
+    "sha256": "0bfa2ba5c34f2ebf73365e842d206095e6d4ba24af312c03dba74507b0f56acf",
+    "files": 3
   }
 }

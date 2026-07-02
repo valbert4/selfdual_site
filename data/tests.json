@@ -319,6 +319,16 @@
 "result": "(6,29,4) empty; 51 witnessed; 21 unresolved",
 "category": "the project sources",
 "page": "content/tests/T32-exists.html"
+},
+{
+"id": "T33",
+"abbr": "d32",
+"title": "Forced sibling D32 classification",
+"status": "saturates; structural result",
+"kills": 0,
+"result": "unique [32,k-4] sibling per k; no new kill",
+"category": "sibling classification",
+"page": "content/tests/T33-d32.html"
 }
 ]
 }

@@ -1,0 +1,7 @@
+{
+  "test": "T33",
+  "tier": "solver-required",
+  "kind": "saturates; structural result",
+  "result": "D32 is the unique [32,k-4] subcode of RM(1,5) containing 1_32; W = 1 + (2^(k-4)-2) y^16 + y^32; saturates (no new kill)",
+  "reproduce": "pure Python in the research repo: classification/d32_sibling/ (python3 classify_d32.py --selftest); no Sage/GAP needed"
+}

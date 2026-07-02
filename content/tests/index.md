@@ -43,3 +43,4 @@ Each test page records:
 - [T30 - Anchored-aggregated Mode-1 mixture](T30-am1.md)
 - [T31 - Wei-duality weight-hierarchy partition](T31-whp.md)
 - [T32 - Route-3A direct existence exhaust](T32-exists.md)
+- [T33 - Forced sibling D32 classification](T33-d32.md)

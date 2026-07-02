@@ -1,5 +1,5 @@
 # Extremal 72 - reference catalogue (first-pass, machine-tagged, for curation).
-# 81 papers. Each entry: bibliographic fields + relevant_tests (T01..T32) + relevant_enumerators.
+# 81 papers. Each entry: bibliographic fields + relevant_tests (T01..T33) + relevant_enumerators.
 # Tags are grounded in each paper plus its usage across the repo; confidence is flagged per entry.
 # by category: gleason-extremal=2, invariant-theory=14, jacobi-designs=8, sdp-lp-bound=5, higher-weights=8, classification=13, construction=2, automorphism-exclusion=15, cft=9, quantum=1, zeta=2, background=2
 # low-confidence (verify before publishing): none

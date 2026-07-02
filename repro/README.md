@@ -47,5 +47,5 @@ what the site publishes*. This wires Verification ↔ Enumerators and prevents d
 - **T06** — integer Smith-form solvability verifier (pure Python); certificate
   generated once by the Sage three-block script.
 
-The remaining 29 tests follow the same template; T29 (anchored SDP) and the
+The remaining 30 tests follow the same template; T29 (anchored SDP) and the
 `(6,29,4)` empty-exhaust are the 🔴 exceptions that ship a spec, not a one-click run.
