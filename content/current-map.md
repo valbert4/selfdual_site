@@ -4,7 +4,7 @@
 
 - Any `[72,36,16]` Type II code has a fixed Gleason weight enumerator.
 - In particular, the number of weight-16 codewords is `A_16 = 249849`.
-- Anchoring one weight-16 word forces a residual `[56,21,>=16]` object with
+- Anchoring one weight-16 word forces a residual `[56,21,16]` object with
   exactly `5082` weight-16 words.
 - Anchoring again produces a finite length-40 menu.
 
@@ -14,7 +14,7 @@ The current public reduction is:
 
 ```text
 [72,36,16]
-  -> [56,21,>=16]
+  -> [56,21,16]
   -> [40,k,>=16] menu
   -> [24,1,24]
 ```

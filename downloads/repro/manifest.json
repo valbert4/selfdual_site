@@ -141,8 +141,8 @@
   },
   "T29-a3p": {
     "file": "downloads/repro/T29-a3p-repro.tar.gz",
-    "sha256": "1931f8d54df4ea29196bded5657e2fa4e83c74c5210aba442a6f13cf6afea503",
-    "files": 3
+    "sha256": "2f44341f8d4809aa43df218c9588c57fa3517d703699fbd62f6dbaaa3ac8e4ca",
+    "files": 9
   },
   "T30-am1": {
     "file": "downloads/repro/T30-am1-repro.tar.gz",

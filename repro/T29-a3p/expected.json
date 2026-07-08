@@ -1,7 +1,9 @@
 {
   "test": "T29",
-  "tier": "cluster/licensed",
-  "kind": "open (cluster/licensed)",
-  "result": "anchored 3-pt SDP: linear layer 0 kills (exact); PSD layer open at the boundary",
-  "reproduce": "(this result was produced by the project's research code; reproduce it in the research repository)"
+  "tier": "exact-replayable",
+  "kind": "moment-matrix assembly (verifiable core of an open test)",
+  "result": "assembles the 5 anchored PSD blocks (sizes 25/57/75/83/85 = 325 pair types) and certifies the pair_type -> (block,row,col) map; 291 pair types pinned affinely + 34 to zero from triweight_pin.json",
+  "map_sha256": "ca655e18511c15cbe531267cbe4a144f0a7dcad5a369853e88a464ce1ba5bdcf",
+  "solver": "none (pure Python standard library)",
+  "note": "This reproduces the moment-matrix ASSEMBLY exactly. The final PSD-margin verdict at the boundary (kill vs saturation) is still open and needs an exact/high-precision SDP solve, which is the separate licensed step."
 }

@@ -91,6 +91,12 @@
 "file": "downloads/enumerators/triweight_pin.json"
 },
 {
+"title": "T29 moment-matrix map",
+"kind": "triweight",
+"note": "Map from triweight_pin.json pair_type keys to the anchored 3-point moment matrix (block, row, col), with the 5-parameter pinning. See the T29-a3p repro bundle.",
+"file": "downloads/enumerators/t29_moment_matrix_map.json"
+},
+{
 "title": "Anchored coupled screen",
 "kind": "triweight",
 "note": "Prime-73 coupled triweight screen data.",

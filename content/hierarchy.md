@@ -19,7 +19,7 @@ Shorten on the anchor:
 C_B = { x restricted to B^c : x in C and x_B = 0 }.
 ```
 
-The forced residual is a doubly-even self-orthogonal `[56,21,>=16]` code
+The forced residual is a doubly-even self-orthogonal `[56,21,16]` code
 containing the all-ones word, with exactly `5082` weight-16 words.
 
 This residual is the first major narrowing of the problem.
