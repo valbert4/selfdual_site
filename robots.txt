@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://valbert4.github.io/selfdual_site/sitemap.xml

@@ -16,6 +16,9 @@ import tarfile
 ROOT = os.path.dirname(os.path.abspath(__file__))
 CONTENT = os.path.join(ROOT, "content")
 
+# Canonical deploy URL (used for <link rel=canonical>, Open Graph, sitemap).
+SITE_URL = "https://valbert4.github.io/selfdual_site"
+
 # Paths are base-relative (no leading slash); a per-page <base> tag (injected by
 # page() below) makes them resolve against the site root, so the site works at a
 # domain root OR a project sub-path (e.g. /extremal72/).
@@ -57,13 +60,60 @@ def base_tag(depth):
     ) % depth
 
 
-def page(title, body, depth=1):
+def meta_description(text, limit=155):
+    """First prose paragraph of a Markdown page, cleaned for a <meta
+    description> (skips the H1, the `Status:` line, and table/heading lines)."""
+    import html as _html
+    body = re.sub(r"```.*?```", " ", text, flags=re.S)  # drop code fences
+    para = []
+    for line in body.splitlines():
+        s = line.strip()
+        if not s:
+            if para:
+                break
+            continue
+        if s.startswith("#") or s.lower().startswith("status:") or s.startswith("|"):
+            continue
+        para.append(s)
+    desc = " ".join(para)
+    desc = re.sub(r"!?\[([^\]]*)\]\([^)]*\)", r"\1", desc)   # [t](u) -> t
+    desc = desc.replace("`", "").replace("*", "").replace("_", " ")
+    desc = re.sub(r"\s+", " ", desc).strip()
+    if len(desc) > limit:
+        desc = desc[:limit].rsplit(" ", 1)[0] + "…"
+    return _html.escape(desc, quote=True)
+
+
+def head_meta(title, description, canonical):
+    """SEO/social <head> tags: description, canonical, Open Graph, Twitter."""
+    esc_title = title.replace('"', "&quot;")
+    tags = ""
+    if description:
+        tags += f'<meta name=description content="{description}">'
+    if canonical:
+        tags += (
+            f'<link rel=canonical href="{canonical}">'
+            '<meta property="og:type" content="article">'
+            '<meta property="og:site_name" content="Extremal 72">'
+            f'<meta property="og:title" content="{esc_title}">'
+            + (f'<meta property="og:description" content="{description}">'
+               if description else "")
+            + f'<meta property="og:url" content="{canonical}">'
+            f'<meta property="og:image" content="{SITE_URL}/og-image.png">'
+            '<meta name="twitter:card" content="summary_large_image">'
+            f'<meta name="twitter:image" content="{SITE_URL}/og-image.png">'
+        )
+    return tags
+
+
+def page(title, body, depth=1, description="", canonical=""):
     return (
         "<!doctype html><html lang=en><head><meta charset=utf-8>"
         '<meta name=viewport content="width=device-width, initial-scale=1">'
         + base_tag(depth)
         + f"<title>{title} - Extremal 72</title>"
-        '<link rel=stylesheet href="prototype/styles.css?v=3">'
+        + head_meta(f"{title} - Extremal 72", description, canonical)
+        + '<link rel=stylesheet href="prototype/styles.css?v=3">'
         '<link rel=stylesheet href="prototype/dark-skin.css?v=3">'
         '<link rel=stylesheet href="site.css?v=3"></head><body>'
         f'{navbar()}<main class="app-shell"><article class="doc">{body}</article></main>'
@@ -122,9 +172,30 @@ def build_content():
         # content/tests/Txx.html -> 2); pagedir = the page's dir relative to root.
         depth = len(rel.split(os.sep)) - 1
         pagedir = os.path.dirname(rel).replace(os.sep, "/")
+        canonical = SITE_URL + "/" + rel.replace(os.sep, "/")
         open(html_path, "w", encoding="utf-8").write(
-            page(title, render_md(md, pagedir), depth))
+            page(title, render_md(md, pagedir), depth,
+                 description=meta_description(text), canonical=canonical))
     return md_files
+
+
+def build_sitemap():
+    """Write sitemap.xml: the homepage + every rendered content page (the
+    prototype/ duplicate dashboard is intentionally excluded)."""
+    paths = [os.path.join(ROOT, "index.html")]
+    paths += glob.glob(os.path.join(CONTENT, "**", "*.html"), recursive=True)
+    urls = []
+    for p in sorted(set(paths)):
+        if not os.path.exists(p):
+            continue
+        rel = os.path.relpath(p, ROOT).replace(os.sep, "/")
+        loc = SITE_URL + "/" + ("" if rel == "index.html" else rel)
+        urls.append(f"  <url><loc>{loc}</loc></url>")
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join(urls) + "\n</urlset>\n")
+    open(os.path.join(ROOT, "sitemap.xml"), "w", encoding="utf-8").write(xml)
+    print(f"wrote sitemap.xml ({len(urls)} urls)")
 
 
 def build_landing():
@@ -275,4 +346,5 @@ if __name__ == "__main__":
     except Exception as exc:  # noqa: BLE001
         print("data json generation skipped:", exc)
     build_repro_bundles()
+    build_sitemap()
     print(f"rendered {len(files)} content detail pages")

@@ -1,24 +1,21 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>The 72 -> 56 -> 40 -> 24 Hierarchy - Extremal 72</title><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="the-72---56---40---24-hierarchy">The 72 -&gt; 56 -&gt; 40 -&gt; 24 Hierarchy</h1>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width, initial-scale=1"><script>(function(){var d=1,p=location.pathname.split("/");p=p.slice(0,p.length-1-d);document.write('<base href="'+p.join("/")+'/">');})();</script><title>The 72 -> 56 -> 40 -> 24 Hierarchy - Extremal 72</title><meta name=description content="The main idea pursued so far is to replace the full [72,36,16] search by a sequence of forced residual shadows."><link rel=canonical href="https://valbert4.github.io/selfdual_site/content/hierarchy.html"><meta property="og:type" content="article"><meta property="og:site_name" content="Extremal 72"><meta property="og:title" content="The 72 -> 56 -> 40 -> 24 Hierarchy - Extremal 72"><meta property="og:description" content="The main idea pursued so far is to replace the full [72,36,16] search by a sequence of forced residual shadows."><meta property="og:url" content="https://valbert4.github.io/selfdual_site/content/hierarchy.html"><meta property="og:image" content="https://valbert4.github.io/selfdual_site/og-image.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://valbert4.github.io/selfdual_site/og-image.png"><link rel=stylesheet href="prototype/styles.css?v=3"><link rel=stylesheet href="prototype/dark-skin.css?v=3"><link rel=stylesheet href="site.css?v=3"></head><body><header class="topbar"><div class="brand"><span class="brand-mark" aria-hidden="true">72</span><div><p class="eyebrow">Extremal 72</p><h1>Research dossier</h1></div></div><nav class="docnav"><a href="index.html">Dashboard</a><a href="content/current-map.html">Current Map</a><a href="content/hierarchy.html">Hierarchy</a><a href="content/menu-summary.html">Menu</a><a href="content/tests/index.html">Tests</a><a href="content/weight-enumerators-pipeline.html">Enumerators</a><a href="content/audit-trail.html">Validation</a><a href="content/ideas-not-pursued.html">Ideas</a><a href="content/glossary.html">Glossary</a></nav></header><main class="app-shell"><article class="doc"><h1 id="the-72---56---40---24-hierarchy">The 72 -&gt; 56 -&gt; 40 -&gt; 24 Hierarchy</h1>
 <p>The main idea pursued so far is to replace the full <code>[72,36,16]</code> search by a sequence of forced residual shadows.</p>
 <h2 id="step-1-anchor-at-72">Step 1: Anchor at 72</h2>
 <p>Assume a Type II <code>[72,36,16]</code> code <code>C</code> exists. It has <code>249849</code> weight-16 codewords. Choose one and call its support <code>B</code>.</p>
 <p>This does not lose generality for a proof attempt: every candidate code has many such words.</p>
 <h2 id="step-2-the-forced-56-point-residual">Step 2: The Forced 56-Point Residual</h2>
 <p>Shorten on the anchor:</p>
-<pre class="text"><code>C_B = { x restricted to B^c : x in C and x_B = 0 }.
-</code></pre>
-<p>The forced residual is a doubly-even self-orthogonal <code>[56,21,&gt;=16]</code> code containing the all-ones word, with exactly <code>5082</code> weight-16 words.</p>
+<pre class="text"><code>C_B = { x restricted to B^c : x in C and x_B = 0 }.</code></pre>
+<p>The forced residual is a doubly-even self-orthogonal <code>[56,21,16]</code> code containing the all-ones word, with exactly <code>5082</code> weight-16 words.</p>
 <p>This residual is the first major narrowing of the problem.</p>
 <h2 id="step-3-the-length-40-menu">Step 3: The Length-40 Menu</h2>
 <p>Choose a residual weight-16 word and shorten again. The resulting length-40 child <code>E</code> is a doubly-even self-orthogonal <code>[40,k,&gt;=16]</code> code containing the all-ones word.</p>
 <p>Its weight enumerator has the constrained form:</p>
-<pre class="text"><code>W_E(y; a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40.
-</code></pre>
+<pre class="text"><code>W_E(y; a,b) = 1 + a(y^16 + y^24) + b y^20 + y^40.</code></pre>
 <p>The repo calls each possible <code>(k,a,b)</code> a menu row.</p>
 <h2 id="step-4-the-rigid-24-point-bottom-rung">Step 4: The Rigid 24-Point Bottom Rung</h2>
 <p>The next residual bottom rung is rigid:</p>
-<pre class="text"><code>[24,1,24]
-</code></pre>
+<pre class="text"><code>[24,1,24]</code></pre>
 <p>This is why the hierarchy is finite and why the length-40 menu is such a useful public artifact.</p>
 <h2 id="what-this-means">What This Means</h2>
 <p>The project is not a blind search over all length-72 codes. It is an attempt to force every hypothetical code to cast one of a small number of residual shadows, then either realize that shadow or prove it impossible.</p>
