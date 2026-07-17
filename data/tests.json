@@ -329,6 +329,16 @@
 "result": "unique [32,k-4] sibling per k; no new kill",
 "category": "sibling classification",
 "page": "content/tests/T33-d32.html"
+},
+{
+"id": "T34",
+"abbr": "hoD3",
+"title": "Higher-order Delsarte LP, level 3",
+"status": "saturates; screen",
+"kills": 0,
+"result": "0 kills on 21 unresolved rows; level-3 genus-3 feasibility (screen)",
+"category": "higher-order LP hierarchy",
+"page": "content/tests/T34-hod3.html"
 }
 ]
 }

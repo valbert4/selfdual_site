@@ -44,3 +44,4 @@ Each test page records:
 - [T31 - Wei-duality weight-hierarchy partition](T31-whp.md)
 - [T32 - Route-3A direct existence exhaust](T32-exists.md)
 - [T33 - Forced sibling D32 classification](T33-d32.md)
+- [T34 - Higher-order Delsarte LP, level 3](T34-hod3.md)

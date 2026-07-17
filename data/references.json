@@ -1246,6 +1246,24 @@
 "genus1-weight-enumerator"
 ],
 "confidence": "high"
+},
+{
+"id": "coregliano-higher-order-delsarte-dual",
+"title": "Higher-order Delsarte Dual LPs: Lifting, Constructions and Completeness",
+"authors": "Coregliano, L.N., Jeronimo, F.G., Jones, C., Linial, N., Loyfer, E.",
+"year": "2025",
+"source": "arXiv:2501.04854",
+"category": "sdp-lp-bound",
+"provides": "Analyses the higher-order Delsarte LP hierarchies for linear codes (Coregliano-Jeronimo-Jones and Loyfer-Linial), whose level-l variables count l-tuples of codewords by the weight configuration of their span, via the dual formulation: an explicit lift of a level-k dual solution to level l (k | l), an MRRW-matching dual construction at constant level for balanced codes, and a completeness proof from the dual. This is the exact source for the project's T34 higher-order Delsarte LP (the project's code): level 2 of the hierarchy equals the coupled genus-2 biweight model (T20), and level 3 is the per-row genus-3 (triweight) E<->E^perp feasibility LP run on the length-40 menu. The paper supplies only structural/asymptotic results (no new numeric bounds); T34 supplies the exact level-3 feasibility screen at n=40, which saturates (0 kills).",
+"relevant_tests": [
+"T20",
+"T34"
+],
+"relevant_enumerators": [
+"genus2-biweight",
+"genus3-triweight"
+],
+"confidence": "high"
 }
 ]
 }

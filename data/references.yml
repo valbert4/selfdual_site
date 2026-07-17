@@ -1,7 +1,7 @@
 # Extremal 72 - reference catalogue (first-pass, machine-tagged, for curation).
-# 81 papers. Each entry: bibliographic fields + relevant_tests (T01..T33) + relevant_enumerators.
+# 82 papers. Each entry: bibliographic fields + relevant_tests (T01..T34) + relevant_enumerators.
 # Tags are grounded in each paper plus its usage across the repo; confidence is flagged per entry.
-# by category: gleason-extremal=2, invariant-theory=14, jacobi-designs=8, sdp-lp-bound=5, higher-weights=8, classification=13, construction=2, automorphism-exclusion=15, cft=9, quantum=1, zeta=2, background=2
+# by category: gleason-extremal=2, invariant-theory=14, jacobi-designs=8, sdp-lp-bound=6, higher-weights=8, classification=13, construction=2, automorphism-exclusion=15, cft=9, quantum=1, zeta=2, background=2
 # low-confidence (verify before publishing): none
 # background / no test+enumerator tag (candidates to filter out of the tab): classification-self-orthogonal-f3-f4, 2classsub, 2008-gulliver-harada, borello-dallavolta-nebe-2013, borello-dissertation, borello-martino-2014, borello-willems-2013, bouyuklieva-2002, bouyuklieva-obrien-willems, gulliver-double-circulant, hannusch-major-2025, kiermaier-2013, obrien-willems-2011, yorgov-yorgov-2013, dlm-9703016, dong-nagatomo-9808088, lam-yamauchi-0605176, arxiv-2408-10323
 
@@ -827,4 +827,14 @@ references:
     provides: "A short survey of the central open problem this whole project targets: existence of a binary Type II [72,36,16] code. It states the Gleason-forced weight enumerator (A_16 = 249849), the 5-(72,16,78) design implication, the allowed automorphism prime orders (2,3,5,7) and Yorgov's possible group orders, and child-code equivalences ([70,35,14] Type I, [72,36,14] Type I via Gulliver-Harada-Kim) as background context for the search."
     relevant_tests: []
     relevant_enumerators: ["genus1-weight-enumerator"]
+    confidence: "high"
+  - id: "coregliano-higher-order-delsarte-dual"
+    title: "Higher-order Delsarte Dual LPs: Lifting, Constructions and Completeness"
+    authors: "Coregliano, L.N., Jeronimo, F.G., Jones, C., Linial, N., Loyfer, E."
+    year: "2025"
+    source: "arXiv:2501.04854"
+    category: "sdp-lp-bound"
+    provides: "Analyses the higher-order Delsarte LP hierarchies for linear codes (Coregliano-Jeronimo-Jones and Loyfer-Linial), whose level-l variables count l-tuples of codewords by the weight configuration of their span, via the dual formulation: an explicit lift of a level-k dual solution to level l (k | l), an MRRW-matching dual construction at constant level for balanced codes, and a completeness proof from the dual. This is the exact source for the project's T34 higher-order Delsarte LP (the project's code): level 2 of the hierarchy equals the coupled genus-2 biweight model (T20), and level 3 is the per-row genus-3 (triweight) E<->E^perp feasibility LP run on the length-40 menu. The paper supplies only structural/asymptotic results (no new numeric bounds); T34 supplies the exact level-3 feasibility screen at n=40, which saturates (0 kills)."
+    relevant_tests: ["T20", "T34"]
+    relevant_enumerators: ["genus2-biweight", "genus3-triweight"]
     confidence: "high"

@@ -1,0 +1,7 @@
+{
+  "test": "T34",
+  "tier": "exact-replayable",
+  "kind": "saturates; level-3 higher-order Delsarte LP",
+  "result": "genus-3 transform core reproduced exactly (2593 valid types, 26 AGL(3,2) orbits, e8 MacWilliams identity, sparse_coeff); full level-3 sweep saturates (0 kills / 21 unresolved rows)",
+  "solver": "none (pure Python standard library) for this core check; the full feasibility sweep is solver-required (exact PPL) in the research repo"
+}

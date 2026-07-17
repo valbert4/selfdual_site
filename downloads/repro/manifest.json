@@ -163,5 +163,10 @@
     "file": "downloads/repro/T33-d32-repro.tar.gz",
     "sha256": "0bfa2ba5c34f2ebf73365e842d206095e6d4ba24af312c03dba74507b0f56acf",
     "files": 3
+  },
+  "T34-hod3": {
+    "file": "downloads/repro/T34-hod3-repro.tar.gz",
+    "sha256": "82a468aa2d9aa7ed11f2860c45ff4c86aec5f19b242fbe0e3efa0b7b072bc90a",
+    "files": 4
   }
 }

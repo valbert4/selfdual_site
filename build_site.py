@@ -99,7 +99,7 @@ def _to_site_root_relative(html, pagedir):
 
 def render_md(md_path, pagedir):
     out = subprocess.run(
-        ["pandoc", "-f", "gfm", "-t", "html5", md_path],
+        ["pandoc", "-f", "gfm", "-t", "html5", "--wrap=none", md_path],
         capture_output=True, text=True, check=True,
     ).stdout
     out = LINK_RE.sub(r'href="\1.html\2"', out)
