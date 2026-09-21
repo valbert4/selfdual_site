@@ -1,12 +1,12 @@
-last_updated: "2026-06-20"
+last_updated: "2026-09-21"
 public_status: open
 
 headline:
   raw_candidates: 132
   eliminated: 60
   surviving: 72
-  witnessed_nonempty: 51
-  unresolved_existence: 21
+  witnessed_nonempty: 52
+  unresolved_existence: 20
 
 forced_numbers:
   A16: 249849
