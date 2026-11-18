@@ -66,7 +66,7 @@ exact rational vector, a Farkas/Smith witness, or an exhaustive enumeration.
 | **T13** `dShr` | Single-distance Johnson bound `7657/67` after forced intersections | exact rational bound | recompute the bound as an exact fraction; it kills `(9,247,16)` |
 | **T19** `Sim` | Simonis order-4 support-weight infeasibility | Farkas vector (exact rational) | replay the support-weight Farkas certificate; kills `(6,1,60)` |
 | **T20** `g2` | Coupled genus-2 biweight nonnegativity fails | Farkas vector (exact rational) | replay the biweight Farkas certificate; kills `(9,239,32)` |
-| **T32** `exists` | The `1528` route-3A nonempty witnesses are genuine | explicit constructive witnesses | re-certify each of the `1528` witnesses from scratch |
+| **T32** `exists` | The `1529` nonempty witnesses (`1528` route-3A, `1` from the `C_5` search) are genuine | explicit constructive witnesses | re-certify each of the `1529` witnesses from scratch |
 
 `T02`, `T05`, `T06`, `T08`, `T13`, `T19`, `T20`, and `T32` are the **8
 proof-grade kills**; `T01` fixes the `132` they all start from. Together they

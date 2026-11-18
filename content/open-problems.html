@@ -2,22 +2,22 @@
 <p>This is the community engine of the project. Each card is a bounded, concrete task — not "help wanted," but a specific input, a specific expected output, and a specific certificate that decides whether the task is done. We deliberately favor work whose result is <strong>independently checkable</strong>: a route-3A witness, an exact Farkas certificate, a re-verification in a second language, or a reproducible cluster payload.</p>
 <p>Two standing rules apply to everything below:</p>
 <ul>
-<li>A surviving <a href="content/menu-summary.html">length-40 menu</a> row is a still-compatible <em>shadow</em>, not a code; the <strong>21 unresolved rows</strong> are "not yet exhausted," never "likely empty."</li>
+<li>A surviving <a href="content/menu-summary.html">length-40 menu</a> row is a still-compatible <em>shadow</em>, not a code; the <strong>20 unresolved rows</strong> are "not yet exhausted," never "likely empty."</li>
 <li>Project status changes require an exact certificate or an independently replayable computation. Numerical evidence is welcome as a scout, but it does not move the <a href="content/menu-summary.html">menu</a> or the <a href="content/tests/index.html">test ledger</a>.</li>
 </ul>
-<p>The current state: <code>132</code> length-40 candidates <code>→ 60</code> proof-grade eliminations <code>→ 72</code> surviving, of which <code>51</code> are witnessed nonempty and <code>21</code> are unresolved. All <code>8</code> proof-grade kills now ship 🟢 exact-replayable reproduction bundles (<code>python3 repro/verify_all.py</code> runs <code>9/9</code>). The frontier is the unresolved rows, the open anchored SDP (<code>T29</code>), the design subproblems, and the precise payoff bridges.</p>
+<p>The current state: <code>132</code> length-40 candidates <code>→ 60</code> proof-grade eliminations <code>→ 72</code> surviving, of which <code>52</code> are witnessed nonempty and <code>20</code> are unresolved. All <code>8</code> proof-grade kills now ship 🟢 exact-replayable reproduction bundles (<code>python3 repro/verify_all.py</code> runs <code>9/9</code>). The frontier is the unresolved rows, the open anchored SDP (<code>T29</code>), the design subproblems, and the precise payoff bridges.</p>
 <p>Discussion for every card happens in the <strong><code>#extremal72</code></strong> channel of the Error Correction Zoo Discord: <a href="https://discord.gg/gg3pJZNYxQ">https://discord.gg/gg3pJZNYxQ</a>. Claim a card there before starting long compute so we don't duplicate it.</p>
 <hr />
 <h2 id="e72-101--exhaust-the-smallest-unresolved-length-40-rows">E72-101 — Exhaust the smallest unresolved length-40 rows</h2>
 <p><strong>One-line goal:</strong> Convert the smallest-<code>m</code> unresolved route-3A rows from <code>⏳</code> to <code>✔️</code> (witness) or <code>❌</code> (proof-grade empty).</p>
 <p><strong>Mathematical input:</strong> The unresolved rows of the length-40 menu — surviving <code>(k,a,b)</code> with no witness and no completed exhaust. Each row is a doubly-even, self-orthogonal <code>[40,k,≥16]</code> shadow with <code>W_E(y) = 1 + a(y^{16}+y^{24}) + b\,y^{20} + y^{40}</code>.</p>
-<p><strong>Repository input:</strong> The route-3A enumeration engine (per <code>Σ ℓ² = sq</code> stratum) and the <a href="content/tests/T32-exists.html">T32</a> reproduction bundle, which already re-certifies <code>1528</code> witnesses in pure Python.</p>
+<p><strong>Repository input:</strong> The route-3A enumeration engine (per <code>Σ ℓ² = sq</code> stratum) and the <a href="content/tests/T32-exists.html">T32</a> reproduction bundle, which already re-certifies <code>1529</code> witnesses in pure Python.</p>
 <p><strong>Expected output:</strong> For each targeted row, either a constructive witness code or a complete zero-leaf exhaust tree.</p>
 <p><strong>Success certificate:</strong> A witness is a stored <code>ℓ</code>-vector that expands to a valid <code>[40,k,16]</code> code (replayable by the T32 verifier). An empty proof is a complete zero-leaf exhaust with a reproducible state count, like the <code>(6,29,4)</code> empty proof (<code>301,872</code> states, <code>0</code> codes).</p>
 <p><strong>Difficulty:</strong> Medium per row, rising sharply with <code>m</code>.</p>
 <p><strong>Skills:</strong> Coding theory, combinatorial enumeration, performance-aware C++/Rust or Python.</p>
 <p><strong>Compute needed:</strong> Workstation for the smallest rows; the larger <code>k</code>/<code>a</code> rows push toward many-core / cluster.</p>
-<p><strong>Status:</strong> Open. <code>21</code> rows unresolved; smallest-<code>m</code> first is the recommended order.</p>
+<p><strong>Status:</strong> Open. <code>20</code> rows unresolved; smallest-<code>m</code> first is the recommended order.</p>
 <p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
 <hr />
 <h2 id="e72-102--independent-replay-of-the-6294-empty-exhaust">E72-102 — Independent replay of the <code>(6,29,4)</code> empty exhaust</h2>
@@ -47,7 +47,7 @@
 <h2 id="e72-104--non-aggregate-per-anchor-coupling-beyond-t29">E72-104 — Non-aggregate per-anchor coupling beyond <code>T29</code></h2>
 <p><strong>One-line goal:</strong> Replace the aggregated anchored mixtures with a per-anchor coupling that can separate where the aggregate saturates.</p>
 <p><strong>Mathematical input:</strong> The observation that several anchored / Mode-1 aggregate tests (<a href="content/tests/T26-tag.html">T26</a>, <a href="content/tests/T30-am1.html">T30</a>) are feasible even when strengthened, because aggregation averages away a per-anchor obstruction. The target is a coupling that constrains each anchor's residual individually rather than the mixture.</p>
-<p><strong>Repository input:</strong> The anchored linear gate, the genus-2 Jacobi coupling that reduces the <code>[56,21]</code> residual biweight family from <code>9-dim</code> to <code>5-dim</code>, and the per-coset image counts.</p>
+<p><strong>Repository input:</strong> The anchored linear gate, the genus-2 Jacobi coupling that reduces the <code>[56,21]</code> residual biweight family from <code>9-dim</code> to <code>5-dim</code> (a reduction that turns out to be exactly the <code>(u,v) → (u,u+v)</code> symmetry of linear codes; see E72-108), and the per-coset image counts.</p>
 <p><strong>Expected output:</strong> A new exact feasibility system, with at least one row it excludes that the aggregate test passes — or a proof that the per-anchor system collapses to the aggregate (a saturation result, also valuable).</p>
 <p><strong>Success certificate:</strong> A Farkas certificate for any newly excluded row, replayable in pure Python like the existing 🟢 kills.</p>
 <p><strong>Difficulty:</strong> Hard.</p>
@@ -94,7 +94,7 @@
 <hr />
 <h2 id="e72-108--pin-the-5082-residual-minimum-words">E72-108 — Pin the <code>5082</code> residual minimum words</h2>
 <p><strong>One-line goal:</strong> Determine or obstruct the configuration of the <code>5082</code> weight-16 words in the forced <code>[56,21]</code> residual.</p>
-<p><strong>Mathematical input:</strong> The forced <code>[56,21,≥16]</code> residual carries exactly <code>5082</code> minimum words. Its genus-2 biweight is known only as a family: exactly <code>9-dim</code> (affine, after its own marginals), reducing to exactly <code>5-dim</code> under the length-72 anchored genus-2 Jacobi coupling.</p>
+<p><strong>Mathematical input:</strong> The forced <code>[56,21,≥16]</code> residual carries exactly <code>5082</code> minimum words. Its genus-2 biweight is known only as a family: exactly <code>9-dim</code> (affine, after its own marginals), reducing to exactly <code>5-dim</code> under the length-72 anchored genus-2 Jacobi coupling. That <code>9→5</code> reduction is exactly the <code>(u,v) → (u,u+v)</code> symmetry of any linear code, which the standalone solve did not impose, so the coupling adds no linear condition on the residual biweight (2026-11-18).</p>
 <p><strong>Repository input:</strong> The residual biweight family data and the anchored Jacobi coupling that performs the <code>9→5</code> reduction.</p>
 <p><strong>Expected output:</strong> A constraint (exact LP/SDP, design, or geometric) that pins or excludes part of the remaining <code>5-dim</code> freedom, or a proof that the <code>5082</code> words cannot be packed into <code>56</code> coordinates consistently.</p>
 <p><strong>Success certificate:</strong> A proof-grade narrowing of the <code>5-dim</code> family or a Farkas-style infeasibility for the residual word configuration.</p>
@@ -102,6 +102,7 @@
 <p><strong>Skills:</strong> Constant-weight packing, MacWilliams/Jacobi families, design theory.</p>
 <p><strong>Compute needed:</strong> Workstation (exact LP); cluster for finer packing systems.</p>
 <p><strong>Status:</strong> Open. Note that plain length-56 constant-weight bounds are far too loose for <code>5082</code> — leverage must use residual/glue/code-level structure.</p>
+<p><strong>Update (2026-11-18):</strong> The <code>5082</code> words can be packed. A search in the research repository (<code>gluing/c5_d56/</code>) found <code>496</code> pairwise inequivalent <code>σ</code>-invariant doubly-even self-orthogonal <code>[56,21,16]</code> codes with exactly the forced enumerator. None of them is the residual of a <code>[72,36,16]</code> code: each has at most <code>85</code> of the <code>120</code> deep cosets (minimum weight <code>≥ 14</code>) that the glue back to length 72 needs. Their exact biweights all lie in the <code>5-dim</code> family, and the anchored genus-2 system stays feasible with each of them, so genus-2 data cannot tell them from a true residual; a narrowing has to use finer structure, such as how the cosets of the residual in its dual are filled.</p>
 <p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
 <hr />
 <h2 id="e72-109--conditionally-close-the-c_5-sub-menu-automorphism-agnostically">E72-109 — Conditionally close the <code>C_5</code> sub-menu, automorphism-agnostically</h2>
@@ -113,7 +114,7 @@
 <p><strong>Difficulty:</strong> Medium to hard (varies by row; the large-<code>k</code> rows are exhaust-heavy).</p>
 <p><strong>Skills:</strong> Coding theory, computational group theory, exact certificates.</p>
 <p><strong>Compute needed:</strong> Workstation for small rows; cluster for <code>k=9,10</code>.</p>
-<p><strong>Status:</strong> Open. A far cheaper target than the full menu — <code>16</code> specific rows.</p>
+<p><strong>Status:</strong> Open. A far cheaper target than the full menu — <code>16</code> specific rows, and only <code>4</code> if the 2026-11-18 refinement on the <a href="content/menu-summary.html">menu page</a> holds up: <code>(6,5,52)</code>, <code>(6,15,32)</code>, <code>(6,25,12)</code> and <code>(10,295,432)</code>. All four are witnessed nonempty as length-40 codes, so their eliminations must come from tests that use the length-72 parent, not from existence exhausts.</p>
 <p><strong>Discussion:</strong> <code>#extremal72</code>.</p>
 <hr />
 <h2 id="e72-110--cluster-ready-exact-anchored-sdp-payload--memory-estimate">E72-110 — Cluster-ready exact anchored SDP payload + memory estimate</h2>

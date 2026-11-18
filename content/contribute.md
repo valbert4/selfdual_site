@@ -24,16 +24,16 @@ So you can aim at something real, not a generic "help wanted":
 
 - The search reduces to a finite [length-40 menu](menu-summary.md): `132`
   arithmetic shadows, `60` eliminated proof-grade, `72` still viable.
-- Of the `72`, `51` are witnessed nonempty and `21` are **unresolved** — not yet
+- Of the `72`, `52` are witnessed nonempty and `20` are **unresolved** — not yet
   exhausted, which is *not* evidence of emptiness. Closing or witnessing any of
-  these `21` is the cleanest open prize.
+  these `20` is the cleanest open prize.
 - All `8` proof-grade kills now ship pure-Python verifiers; the open frontier is
   the solver-required saturations, the `3` validation-only tests
   (`T17`/`T18`/`T23`), and the cluster-scale anchored SDP (`T29`).
 - The automorphism group is narrowed to one of `{C_1, C_2, C_3, C_2×C_2, C_5}`
   but **nothing is assumed** — every test must hold for the trivial group `C_1`,
   the hardest case. There is a [`C_5` sub-menu](menu-summary.md) of 16 rows with
-  `a ≡ 0 (mod 5)`.
+  `a ≡ 0 (mod 5)` (4 after the 2026-11-18 refinement).
 
 ---
 
@@ -63,7 +63,7 @@ relaxation saturates but an integer/structural argument might still cut.
 
 First tasks:
 
-- **Find a new exact obstruction for an unresolved row.** Pick one of the `21`
+- **Find a new exact obstruction for an unresolved row.** Pick one of the `20`
   unresolved [menu](menu-summary.md) rows and produce an argument no continuous
   LP/SDP can absorb (integer divisibility, forced intersection, design moment).
   See [Open Problems](open-problems.md).
@@ -72,7 +72,8 @@ First tasks:
   target. Tighten it with design-theoretic / intersection structure on the
   minimum words (`5-(72,16,78)` consequences). See [Open Problems](open-problems.md).
 - **Close the `C_5` branch on paper.** If automorphism-agnostic tests can
-  eliminate all `16` rows with `a ≡ 0 (mod 5)`, the `C_5` case closes with no
+  eliminate all `16` rows with `a ≡ 0 (mod 5)` (or just the `4` that the
+  2026-11-18 refinement leaves), the `C_5` case closes with no
   Hermitian `F_16` search. See the [Menu](menu-summary.md).
 
 ## "I can code exact algebra / verification"
@@ -89,7 +90,7 @@ First tasks:
   MacWilliams system, in your own code, and compare against the published JSON
   (pinned by sha256). See [Computations and Certificates](computations-and-certificates.md).
 - **Package the `T32` direct-existence exhaust for independent replay.** The
-  route-3A `(6,29,4)` empty row and the `51` nonempty witnesses should be
+  route-3A `(6,29,4)` empty row and the `52` nonempty witnesses should be
   re-checkable from scratch (the `T32` bundle already re-certifies the witness
   side). See the [Tests index](tests/index.md) and `T32`.
 - **Convert a solver-required test to a replayable verifier.** Most of the
@@ -105,7 +106,7 @@ reproducible payload.
 
 First tasks:
 
-- **Exhaust an unresolved menu row.** Take one of the `21` unresolved
+- **Exhaust an unresolved menu row.** Take one of the `20` unresolved
   [menu](menu-summary.md) rows through a route-3A direct-existence search to a
   definite verdict (witness or empty), and ship the state count plus a
   replayable result. See `T32` in the [Tests index](tests/index.md).
@@ -169,7 +170,7 @@ notes visible.
 
 First tasks:
 
-- **Rank the `21` unresolved rows by promise and cost.** Turn the menu state
+- **Rank the `20` unresolved rows by promise and cost.** Turn the menu state
   into a small structured table contributors can claim from. See the
   [Menu](menu-summary.md).
 - **Build an exact-certificate browser.** Make the Farkas / verifier artifacts

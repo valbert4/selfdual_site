@@ -30,8 +30,8 @@ The project is open. The current public headline is:
 132 possible length-40 shadows
 60 eliminated by exact obstructions
 72 still viable at the menu level
-51 witnessed nonempty
-21 not yet exhausted
+52 witnessed nonempty
+20 not yet exhausted
 ```
 
 A surviving menu row is not a code. It is a still-compatible shadow that a

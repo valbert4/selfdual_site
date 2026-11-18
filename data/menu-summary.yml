@@ -1,12 +1,12 @@
-last_updated: "2026-06-20"
+last_updated: "2026-11-18"
 public_status: open
 
 headline:
   raw_candidates: 132
   eliminated: 60
   surviving: 72
-  witnessed_nonempty: 51
-  unresolved_existence: 21
+  witnessed_nonempty: 52
+  unresolved_existence: 20
 
 forced_numbers:
   A16: 249849
@@ -30,6 +30,7 @@ c5_submenu:
   constraint: "a = 0 (mod 5)"
   note: "Surviving length-40 rows a C_5-symmetric code must realize (sigma-fixed disjoint pair). Automorphism-conditional tag, NOT a kill: killing all of them closes the C_5 branch, but ruling out C_5 does not empty them (a trivial-automorphism code can realize any row)."
   count: 16
+  refinement: "2026-11-18 (research repo gluing/c5_d56/, not yet a replayable bundle): a sigma-fixed disjoint pair's second residual has fixed part {0,x,y,x+y}, so only (6,5,52), (6,15,32), (6,25,12), (10,295,432) can occur; all four are witnessed nonempty as length-40 codes, so eliminating them needs a test that uses the length-72 parent"
   rows:
     k6: ["(5,52)", "(15,32)", "(25,12)"]
     k7: ["(15,96)", "(25,76)", "(35,56)", "(45,36)", "(55,16)"]

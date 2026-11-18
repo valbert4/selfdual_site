@@ -22,9 +22,13 @@ a row permanently nonempty; a complete zero-leaf exhaust proves a row empty.
 - Kills: `1` — `(6,29,4)` is proven empty by a complete exhaust (301,872 states,
   0 codes). This is the first proof-grade kill of a row that survived every
   algebraic screen.
-- Status: active. Of the 72 surviving rows, `51` are witnessed nonempty and `21`
+- Status: active. Of the 72 surviving rows, `52` are witnessed nonempty and `20`
   are unresolved (no witness yet, but **not** evidence of emptiness — witnessed
   rows behave identically under the unseeded probe).
+- 2026-11-18: `(10,295,432)` is witnessed nonempty by an explicit `σ`-invariant
+  code from the `C_5` search in the research repository (`gluing/c5_d56/`), the
+  first witness not found by the route-3A engine; the bundle ships it as
+  `results/witness_l/k10_sq40_c5.txt`.
 
 ## Verification
 
@@ -37,7 +41,7 @@ a row permanently nonempty; a complete zero-leaf exhaust proves a row empty.
 
 [Download `T32-exists-repro.tar.gz`](/downloads/repro/T32-exists-repro.tar.gz) — a
 🟢 exact-replayable bundle. Run `sh run.sh` (pure Python standard library, **no
-solver**) to re-certify all **1528** route-3A witnesses from scratch (expand each
+solver**) to re-certify all **1529** stored witnesses from scratch (expand each
 stored `l`-vector to its `2^k` codewords and check the [40,k,16] properties) —
 the *nonempty* side of T32. Checksums:
 [manifest.json](/downloads/repro/manifest.json). (The *empty* proof for
@@ -46,4 +50,4 @@ the *nonempty* side of T32. Checksums:
 ## How To Help
 
 Package the `(6,29,4)` exhaust for independent replay, and run full exhausts on
-the 21 unresolved rows (smallest-`m` first) to convert each `⏳` into `✔️` or `❌`.
+the 20 unresolved rows (smallest-`m` first) to convert each `⏳` into `✔️` or `❌`.

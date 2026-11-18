@@ -10,14 +10,14 @@ cluster payload.
 Two standing rules apply to everything below:
 
 - A surviving [length-40 menu](menu-summary.md) row is a still-compatible
-  *shadow*, not a code; the **21 unresolved rows** are "not yet exhausted," never
+  *shadow*, not a code; the **20 unresolved rows** are "not yet exhausted," never
   "likely empty."
 - Project status changes require an exact certificate or an independently
   replayable computation. Numerical evidence is welcome as a scout, but it does
   not move the [menu](menu-summary.md) or the [test ledger](tests/index.md).
 
 The current state: `132` length-40 candidates `→ 60` proof-grade eliminations
-`→ 72` surviving, of which `51` are witnessed nonempty and `21` are unresolved.
+`→ 72` surviving, of which `52` are witnessed nonempty and `20` are unresolved.
 All `8` proof-grade kills now ship 🟢 exact-replayable reproduction bundles
 (`python3 repro/verify_all.py` runs `9/9`). The frontier is the unresolved rows,
 the open anchored SDP (`T29`), the design subproblems, and the precise payoff
@@ -40,7 +40,7 @@ self-orthogonal `[40,k,≥16]` shadow with `W_E(y) = 1 + a(y^{16}+y^{24}) + b\,y
 
 **Repository input:** The route-3A enumeration engine (per `Σ ℓ² = sq` stratum)
 and the [T32](tests/T32-exists.md) reproduction bundle, which already
-re-certifies `1528` witnesses in pure Python.
+re-certifies `1529` witnesses in pure Python.
 
 **Expected output:** For each targeted row, either a constructive witness code or
 a complete zero-leaf exhaust tree.
@@ -58,7 +58,7 @@ or Python.
 **Compute needed:** Workstation for the smallest rows; the larger `k`/`a` rows
 push toward many-core / cluster.
 
-**Status:** Open. `21` rows unresolved; smallest-`m` first is the recommended
+**Status:** Open. `20` rows unresolved; smallest-`m` first is the recommended
 order.
 
 **Discussion:** `#extremal72`.
@@ -147,8 +147,9 @@ target is a coupling that constrains each anchor's residual individually rather
 than the mixture.
 
 **Repository input:** The anchored linear gate, the genus-2 Jacobi coupling that
-reduces the `[56,21]` residual biweight family from `9-dim` to `5-dim`, and the
-per-coset image counts.
+reduces the `[56,21]` residual biweight family from `9-dim` to `5-dim` (a
+reduction that turns out to be exactly the `(u,v) → (u,u+v)` symmetry of linear
+codes; see E72-108), and the per-coset image counts.
 
 **Expected output:** A new exact feasibility system, with at least one row it
 excludes that the aggregate test passes — or a proof that the per-anchor system
@@ -285,7 +286,9 @@ weight-16 words in the forced `[56,21]` residual.
 **Mathematical input:** The forced `[56,21,≥16]` residual carries exactly `5082`
 minimum words. Its genus-2 biweight is known only as a family: exactly `9-dim`
 (affine, after its own marginals), reducing to exactly `5-dim` under the length-72
-anchored genus-2 Jacobi coupling.
+anchored genus-2 Jacobi coupling. That `9→5` reduction is exactly the `(u,v) → (u,u+v)` symmetry
+of any linear code, which the standalone solve did not impose, so the coupling adds
+no linear condition on the residual biweight (2026-11-18).
 
 **Repository input:** The residual biweight family data and the anchored Jacobi
 coupling that performs the `9→5` reduction.
@@ -305,6 +308,16 @@ Farkas-style infeasibility for the residual word configuration.
 
 **Status:** Open. Note that plain length-56 constant-weight bounds are far too
 loose for `5082` — leverage must use residual/glue/code-level structure.
+
+**Update (2026-11-18):** The `5082` words can be packed. A search in the research
+repository (`gluing/c5_d56/`) found `496` pairwise inequivalent `σ`-invariant
+doubly-even self-orthogonal `[56,21,16]` codes with exactly the forced enumerator.
+None of them is the residual of a `[72,36,16]` code: each has at most `85` of the
+`120` deep cosets (minimum weight `≥ 14`) that the glue back to length 72 needs.
+Their exact biweights all lie in the `5-dim` family, and the anchored genus-2
+system stays feasible with each of them, so genus-2 data cannot tell them from a
+true residual; a narrowing has to use finer structure, such as how the cosets of
+the residual in its dual are filled.
 
 **Discussion:** `#extremal72`.
 
@@ -338,7 +351,11 @@ ruling out `C_5`, since a `C_1` code could still cast any of them.
 
 **Compute needed:** Workstation for small rows; cluster for `k=9,10`.
 
-**Status:** Open. A far cheaper target than the full menu — `16` specific rows.
+**Status:** Open. A far cheaper target than the full menu — `16` specific rows,
+and only `4` if the 2026-11-18 refinement on the [menu page](menu-summary.md)
+holds up: `(6,5,52)`, `(6,15,32)`, `(6,25,12)` and `(10,295,432)`. All four are
+witnessed nonempty as length-40 codes, so their eliminations must come from
+tests that use the length-72 parent, not from existence exhausts.
 
 **Discussion:** `#extremal72`.
 

@@ -15,7 +15,7 @@ Walks every stored witness (`results/witness_l/*.txt`, `results/witness_k8.json`
 and checks: weights ⊆ `{0,16,20,24,40}`, doubly-even ⟹ self-orthogonal,
 `1₄₀ ∈ E`, full rank `k`, `A₁₆ = A₂₄ = a`, `2 + 2a + b = 2^k`, and the Parseval
 identity `sq·2^k = (a+25)·128`. Exits `0` iff all pass; writes
-`results/verified_witnesses.json`. Expected: **1528 witnesses, 0 failures, 27
+`results/verified_witnesses.json`. Expected: **1529 witnesses, 0 failures, 28
 distinct realized rows**.
 
 **Independence.** The verifier shares no code with the search engine beyond
@@ -28,8 +28,11 @@ This bundle clears the shift by checking `sq·2^k == (a+25)·128`, exact for all
 `k`. (Worth upstreaming.)
 
 **Inputs:** the witness `l`-vectors in `results/` are the actual codes found by
-the route-3A engine — the constructive data behind the "51 witnessed nonempty"
-count on the Menu tab.
+the route-3A engine — the constructive data behind the "52 witnessed nonempty"
+count on the Menu tab — with one exception: `results/witness_l/k10_sq40_c5.txt`
+(row `(10,295,432)`, added 2026-11-18) is the σ-invariant code found by the C5
+search in the research repository (`gluing/c5_d56/`); the route-3A engine's own
+`k10_sq40.txt` is empty.
 
 **Out of scope here:** the *empty* proof for `(6,29,4)` is a ~68-billion-node
 exhaustion (the C++ `unfold` engine), not a one-click reproduction; it ships

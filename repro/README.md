@@ -43,7 +43,7 @@ what the site publishes*. This wires Verification ↔ Enumerators and prevents d
 ## Pilot status (this batch)
 
 - 🟢 **T08** — exact Delsarte bound `247` via pure-Python vertex enumeration; kills `(9,255,0)`.
-- 🟢 **T32** — re-certifies 1528 route-3A witnesses (the nonempty side) from scratch.
+- 🟢 **T32** — re-certifies 1529 witnesses (1528 route-3A, 1 from the C_5 search; the nonempty side) from scratch.
 - **T06** — integer Smith-form solvability verifier (pure Python); certificate
   generated once by the Sage three-block script.
 

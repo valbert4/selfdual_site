@@ -12,7 +12,8 @@
 <h2 id="result">Result</h2>
 <ul>
 <li>Kills: <code>1</code> — <code>(6,29,4)</code> is proven empty by a complete exhaust (301,872 states, 0 codes). This is the first proof-grade kill of a row that survived every algebraic screen.</li>
-<li>Status: active. Of the 72 surviving rows, <code>51</code> are witnessed nonempty and <code>21</code> are unresolved (no witness yet, but <strong>not</strong> evidence of emptiness — witnessed rows behave identically under the unseeded probe).</li>
+<li>Status: active. Of the 72 surviving rows, <code>52</code> are witnessed nonempty and <code>20</code> are unresolved (no witness yet, but <strong>not</strong> evidence of emptiness — witnessed rows behave identically under the unseeded probe).</li>
+<li>2026-11-18: <code>(10,295,432)</code> is witnessed nonempty by an explicit <code>σ</code>-invariant code from the <code>C_5</code> search in the research repository (<code>gluing/c5_d56/</code>), the first witness not found by the route-3A engine; the bundle ships it as <code>results/witness_l/k10_sq40_c5.txt</code>.</li>
 </ul>
 <h2 id="verification">Verification</h2>
 <ul>
@@ -20,7 +21,7 @@
 <li>Reproduce: download the reproduction bundle below and run it. count cap quickly, empty rows complete with zero leaves.</li>
 </ul>
 <h2 id="reproduction-bundle">Reproduction bundle</h2>
-<p><a href="downloads/repro/T32-exists-repro.tar.gz">Download <code>T32-exists-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to re-certify all <strong>1528</strong> route-3A witnesses from scratch (expand each stored <code>l</code>-vector to its <code>2^k</code> codewords and check the [40,k,16] properties) — the <em>nonempty</em> side of T32. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>. (The <em>empty</em> proof for <code>(6,29,4)</code> is the separate cluster-scale exhaustion.)</p>
+<p><a href="downloads/repro/T32-exists-repro.tar.gz">Download <code>T32-exists-repro.tar.gz</code></a> — a 🟢 exact-replayable bundle. Run <code>sh run.sh</code> (pure Python standard library, <strong>no solver</strong>) to re-certify all <strong>1529</strong> stored witnesses from scratch (expand each stored <code>l</code>-vector to its <code>2^k</code> codewords and check the [40,k,16] properties) — the <em>nonempty</em> side of T32. Checksums: <a href="downloads/repro/manifest.json">manifest.json</a>. (The <em>empty</em> proof for <code>(6,29,4)</code> is the separate cluster-scale exhaustion.)</p>
 <h2 id="how-to-help">How To Help</h2>
-<p>Package the <code>(6,29,4)</code> exhaust for independent replay, and run full exhausts on the 21 unresolved rows (smallest-<code>m</code> first) to convert each <code>⏳</code> into <code>✔️</code> or <code>❌</code>.</p>
+<p>Package the <code>(6,29,4)</code> exhaust for independent replay, and run full exhausts on the 20 unresolved rows (smallest-<code>m</code> first) to convert each <code>⏳</code> into <code>✔️</code> or <code>❌</code>.</p>
 </article></main><footer class="doc-footer">Extremal 72. Proof-grade claims include replayable reproduction bundles.</footer></body></html>

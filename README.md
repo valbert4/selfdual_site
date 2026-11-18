@@ -15,7 +15,7 @@ proof-grade kill ships an exact, independently re-runnable certificate.
 ## Quick status
 
 `132` length-40 residual candidates `→ 60` eliminated (proof-grade) `→ 72`
-surviving; of those, `51` are witnessed nonempty and `21` are unresolved
+surviving; of those, `52` are witnessed nonempty and `20` are unresolved
 (not yet exhausted — *not* evidence of emptiness). All `8` proof-grade kills are
 reproducible in pure Python with no solver.
 
