@@ -25,10 +25,12 @@ a row permanently nonempty; a complete zero-leaf exhaust proves a row empty.
 - Status: active. Of the 72 surviving rows, `52` are witnessed nonempty and `20`
   are unresolved (no witness yet, but **not** evidence of emptiness — witnessed
   rows behave identically under the unseeded probe).
-- 2026-11-18: `(10,295,432)` is witnessed nonempty by an explicit `σ`-invariant
-  code from the `C_5` search in the research repository (`gluing/c5_d56/`), the
-  first witness not found by the route-3A engine; the bundle ships it as
-  `results/witness_l/k10_sq40_c5.txt`.
+- `(10,295,432)` is witnessed nonempty. A witness was first submitted on
+  2026-09-21 in [pull request #1](https://github.com/valbert4/selfdual_site/pull/1)
+  (archived at [doi:10.5281/zenodo.22845480](https://doi.org/10.5281/zenodo.22845480);
+  awaiting review). An independent, inequivalent `σ`-invariant witness from the
+  `C_5` search in the research repository (`gluing/c5_d56/`, 2026-11-17) ships
+  in the bundle as `results/witness_l/k10_sq40_c5.txt`.
 
 ## Verification
 

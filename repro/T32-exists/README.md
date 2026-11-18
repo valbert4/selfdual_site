@@ -32,7 +32,8 @@ the route-3A engine — the constructive data behind the "52 witnessed nonempty"
 count on the Menu tab — with one exception: `results/witness_l/k10_sq40_c5.txt`
 (row `(10,295,432)`, added 2026-11-18) is the σ-invariant code found by the C5
 search in the research repository (`gluing/c5_d56/`); the route-3A engine's own
-`k10_sq40.txt` is empty.
+`k10_sq40.txt` is empty. An earlier, inequivalent witness for the same row was
+submitted on 2026-09-21 in pull request #1 (doi:10.5281/zenodo.22845480).
 
 **Out of scope here:** the *empty* proof for `(6,29,4)` is a ~68-billion-node
 exhaustion (the C++ `unfold` engine), not a one-click reproduction; it ships
